@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="_images/dask_icon_no_pad.svg">
+
+    <title>Dask: Scalable analytics in Python</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="_static/main-page.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <header>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-brand">
+        <a href="index.html"><img src="_images/dask_icon_no_pad.svg" style="height: 2rem;"></a>
+      </div>
+      <div class="navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/why.html">Why Dask?</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Documentation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://docs.dask.org/en/latest/">Overview</a>
+              <a class="dropdown-item" href="https://docs.dask.org/en/latest/array.html">Arrays</a>
+              <a class="dropdown-item" href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a>
+              <a class="dropdown-item" href="https://ml.dask.org/">Machine Learning</a>
+              <a class="dropdown-item" href="https://docs.dask.org/en/latest/delayed.html">Custom Applications</a>
+              <a class="dropdown-item" href="https://docs.dask.org/en/latest/futures.html">Real Time</a>
+            </div>
+          </li>
+
+          <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/install.html">Install</a></li>
+          <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/setup.html">Deploy</a></li>
+          <li class="navbar-item"><a class="nav-link" href="https://github.com/dask/dask-tutorial">Tutorial</a></li>
+          <li class="navbar-item"><a class="nav-link" href="users.html">Who uses Dask?</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Users of Dask (both companies and software projects)
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing p-md-5">
+
+        <h2 class="featurette-heading">Currently in use at</h2>
+        <p class="lead">Companies and Institutions using Dask</p>
+        <div class="row featurette">
+          <div class="col user">
+            <a href="https://anaconda.com"><img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png"></a>
+          </div>
+          <div class="col user">
+            <a href="https://www.darpa.mil"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/DARPA_Logo.jpg/320px-DARPA_Logo.jpg"></a>
+          </div>
+          <div class="col user">
+            <a href="https://www.moore.org"><img src="https://www.moore.org/content/images/logo-light.png"></a>
+          </div>
+          <div class="col user">
+            <a href="https://www.nsf.gov"><img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png"></a>
+          </div>
+          <div class="col user">
+            <a href="https://www.janelia.org"><img src="_images/HHMI_Janelia_Color.png"></a>
+          </div>
+          <div class="col user">
+            <a href="https://www.nvidia.com"><img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg"></a>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-12">
+            <h2 class="featurette-heading">Related projects</h2>
+            <p class="lead">Software projects using Dask</>
+              <div class="container">
+                <div class="row">
+                  <div class="col user">
+                    <a href=""><img src="_images/pangeo_card_green.svg"></a>
+                  </div>
+                  <div class="col user">
+                    <a href=""><img src="_images/xarray-logo.png"></a>
+                  </div>
+                  <div class="col user">
+                    <a href=""><img src="_images/datashader_logo.png"></a>
+                  </div>
+                  <div class="col user">
+                    <a href=""><img src="_images/scikit-image-logo.png"></a>
+                  </div>
+                </div>
+              </div>
+                <ul>
+                  <li><a href="https://pangeo-data.github.io">Pangeo</a>: A community effort for big data geoscience in the cloud.</li>
+                  <li><a href="http://xarray.pydata.org/en/stable/">XArray</a>: Brings the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures.</li>
+                  <li><a href="https://intake.readthedocs.io/en/latest/">Intake</a>: A lightweight package for finding, investigating, loading and disseminating data.</li>
+                  <li><a href="https://scikit-image.org/">Scikit-image</a>: A collection of algorithms for image processing in Python.</li>
+                  <li><a href="https://datashader.org">Datashader</a>, <a href="https://geo.holoviews.org">geoviews</a>, <a href="https://holoviews.org">holoviews</a>: Visualization packages for large data.</li>
+                  <li><a href="https://satpy.readthedocs.io/">SatPy</a>: Library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats. </li>
+                  <li><a href="https://docs.prefect.io/">Prefect Core</a>: A workflow management system, designed for modern infrastructure.</li>
+                  <li><a href="https://streamz.readthedocs.io/en/latest/">Streamz</a>: A package to help build pipelines to manage continuous streams of data.</li>
+                  <li><a href="https://scikit-allel.readthedocs.io/en/stable/">Scikit-allel</a>: Provides utilities for exploratory analysis of large scale genetic variation data.</li>
+                  <li><a href="https://www.featuretools.com">Featuretools</a>: A Python framework for automated feature engineering.</li>
+                  <li><a href="https://github.com/TDAmeritrade/stumpy">Stumpy</a>: A Python library that can be used for a variety of time series data mining tasks.</li>
+                  <li><a href="https://tsfresh.readthedocs.io/en/latest/">tsfresh</a>: Automatic extraction of relevant features from time series.</li>
+                </ul>
+          </div>
+
+        </div>
+
+        <hr class="featurette-divider"></hr>
+
+      </div>
+
+      <!-- /END THE FEATURETTES -->
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right">New-BSD Licensed</p>
+        <p>&copy; 2018 Dask core developers</p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+              integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+              crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+      <!-- Code highlighting -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-python.min.js"></script>
+
+      <!-- Google Analytics -->
+      <script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new
+Date;
+ga('create', 'UA-18218894-5', 'auto');
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+      </script>
+      <script async
+              src='https://www.google-analytics.com/analytics.js'></script>
+      <!-- End Google Analytics -->
+  </body>
+</html>

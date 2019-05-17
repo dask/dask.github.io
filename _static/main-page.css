@@ -136,6 +136,27 @@ body {
 
 }
 
+/* Users
+ * ----------------------------*/
+
+.users {
+  text-align: center;
+}
+
+.user {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.user img{
+  max-height: 100%;
+  max-width: 85%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
