@@ -138,29 +138,12 @@ body {
 /* Users
  * ----------------------------*/
 
-.users {
-  text-align: center;
-}
-
-.user {
-  margin: 0.5rem 0;
-  width: 100%;
-}
-
-.user img{
-  max-height: 100%;
-  max-width: 95%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .flex-item {
   display:flex;
   align-items: center;
 }
 
-.flex-item a{
+.flex-item-left{
   margin-right: 12px;
   flex-grow: 0;
   flex-shrink: 0;
@@ -185,6 +168,11 @@ body {
 
 .top-padding-small{
   padding-top: 30px;
+}
+
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 
