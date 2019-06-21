@@ -74,8 +74,9 @@ body {
 }
 
 .solid-dask:hover {
-  color: #212529;
-  background-color: #EC9050;
+  color: #FDA061;
+  background: #000000;
+  border-color: #FDA061;
 }
 
 
@@ -84,8 +85,8 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
   text-align: center;
+  border: 0;
 }
 .marketing .col-lg-4 p {
   margin-right: .75rem;
@@ -186,7 +187,4 @@ body {
 }
 
 @media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 3rem;
-  }
 }
