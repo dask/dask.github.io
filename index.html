@@ -69,27 +69,36 @@
       </div>
     </nav>
 
-    <div class="hero position-relative overflow-hidden p-3 text-center text-light">
-      <div class="col-md-5 p-lg-1 mx-auto my-5">
-        <img src="_images/dask_horizontal_white_no_pad.svg" style="max-width: 100rem;">
-		  <p class="lead font-weight-normal">
-        Dask natively scales Python
-      </p>
-		  <p class="lead ">
-        Dask provides advanced parallelism for analytics,
-        enabling performance at scale for the tools you love
-      </p>
-        <a class="btn outline-dask btn-lg" href="https://docs.dask.org/en/latest/">Learn More</a>
-        <a class="btn solid-dask btn-lg" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab" role="button">Try Now &raquo;</a>
+    <div class="hero text-light">
+      <div class="row mx-auto container">
+
+        <div class="col-md-5 p-lg-1 mx-auto my-4 text-center">
+          <img src="_images/dask_horizontal_white_no_pad.svg" style="max-width: 30rem;">
+          <p class="lead font-weight-normal">
+          Dask natively scales Python
+          </p>
+        </div>
+
+        <div class="col-md-5 p-lg-1 mx-auto my-5">
+          <p class="lead ">
+          Dask delivers advanced parallelism
+          </p>
+          <p class="lead ">
+          Enabling performance at scale for the tools you love
+          </p>
+          <a class="btn outline-dask btn-lg" href="https://docs.dask.org/en/latest/">Learn More</a>
+          <a class="btn solid-dask btn-lg" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab" role="button">Try Now &raquo;</a>
+        </div>
+
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
       </div>
-      <div class="product-device box-shadow d-none d-md-block"></div>
-      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
     </div>
 
 
     <main role="main">
 
-      <!-- Marketing messaging and featurettes
+    <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
@@ -106,8 +115,8 @@
             <img src="_images/dask-array-black-text.svg" class="top-image">
             <p>Dask arrays scale Numpy workflows, enabling multi-dimensional data analysis in earth science, satellite imagery, genomics, biomedical applications, and machine learning algorithms.</p>
             <p>
-              <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/array.html" role="button">Learn More &raquo;</a>
-              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/array.ipynb" role="button">Try Now &raquo;</a>
+            <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/array.html" role="button">Learn More &raquo;</a>
+            <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/array.ipynb" role="button">Try Now &raquo;</a>
             </p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
@@ -115,8 +124,8 @@
             <img src="_images/dask-dataframe.svg" class="top-image">
             <p>Dask dataframes scale Pandas workflows, enabling applications in time series, business intelligence, and general data munging on big data.</p>
             <p>
-              <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/dataframe.html" role="button">Learn More &raquo;</a>
-              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/dataframe.ipynb" role="button">Try Now &raquo;</a>
+            <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/dataframe.html" role="button">Learn More &raquo;</a>
+            <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/dataframe.ipynb" role="button">Try Now &raquo;</a>
             </p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
@@ -125,8 +134,8 @@
             <img src="https://www.inria.fr/var/inria/storage/images/medias/saclay/actualites-images/saclay_scikit_learn_classification_398x195/841331-1-fre-FR/saclay_scikit_learn_classification_398x195.jpg" class="top-image">
             <p>Dask-ML scales machine learning APIs like Scikit-Learn and XGBoost to enable scalable training and prediction on large models and large datasets.</p>
             <p>
-              <a class="btn btn-outline-secondary" href="https://ml.dask.org/" role="button">Learn More &raquo;</a>
-              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/machine-learning.ipynb" role="button">Try Now &raquo;</a>
+            <a class="btn btn-outline-secondary" href="https://ml.dask.org/" role="button">Learn More &raquo;</a>
+            <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/machine-learning.ipynb" role="button">Try Now &raquo;</a>
             </p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
@@ -209,222 +218,222 @@ lr.fit(train, test)</code></pre>
           <div class="col-md-12">
             <h2 class="featurette-heading">Powered by Dask</h2>
             <p class="lead">These software projects are built on Dask, or use Dask to power components of their infrastructure.</>
-              <div class="container">
+            <div class="container">
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                      <a class="flex-item-left" href="https://scikit-learn.org/stable/">
-                        <img src="_images/scikit-learn-logo.png" alt="scikit-learn logo">
-                      </a>
-                    <div>
-                      <h4>Scikit-learn</h4>
-                      <p>Machine learning in Python</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://scikit-image.org/">
-                      <img src="_images/scikit-image-logo.png" alt="scikit-image logo">
-                    </a>
-                    <div>
-                      <h4>Scikit-image</h4>
-                      <p>A collection of algorithms for image processing in Python</p>
-                    </div>
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://scikit-learn.org/stable/">
+                    <img src="_images/scikit-learn-logo.png" alt="scikit-learn logo">
+                  </a>
+                  <div>
+                    <h4>Scikit-learn</h4>
+                    <p>Machine learning in Python</p>
                   </div>
                 </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://epistasislab.github.io/tpot/">
-                      <img src="_images/tpot-logo.jpg" alt="tpot logo">
-                    </a>
-                    <div>
-                      <h4>TPOT</h4>
-                      <p>A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://xgboost.ai/">
-                      <img src="_images/xgboost-logo.png" alt="XGBoost logo">
-                    </a>
-                    <div>
-                      <h4>XGBoost</h4>
-                      <p>Gradient boosted trees for machine learning </p>
-                      <p>XGBoost can use Dask to bootstrap itself for distributed training</p>
-                    </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://scikit-image.org/">
+                    <img src="_images/scikit-image-logo.png" alt="scikit-image logo">
+                  </a>
+                  <div>
+                    <h4>Scikit-image</h4>
+                    <p>A collection of algorithms for image processing in Python</p>
                   </div>
                 </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                      <a class="flex-item-left" href="http://xarray.pydata.org/en/stable/">
-                        <img src="_images/xarray-logo.png" alt="xarray logo">
-                      </a>
-                    <div>
-                      <h4>XArray</h4>
-                      <p>Brings the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://scitools.org.uk/iris/docs/latest/">
-                      <img src="_images/iris-logo.png" alt="iris logo">
-                    </a>
-                    <div>
-                      <h4>Iris</h4>
-                      <p>A Python library for analysing and visualising Earth science data</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                      <a class="flex-item-left" href="https://pangeo-data.github.io">
-                        <img src="_images/pangeo_card_green.svg" alt="pangeo logo">
-                      </a>
-                    <div>
-                      <h4>Pangeo</h4>
-                      <p>A community effort for big data geoscience in the cloud</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                      <a class="flex-item-left" href="https://rapids.ai">
-                        <img src="_images/rapids-logo.png" alt="rapids logo">
-                      </a>
-                    <div>
-                      <h4>RAPIDS</h4>
-                      <p>GPU Accelerated libraries for data science</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="http://datashader.org">
-                      <img src="_images/datashader_logo.png" alt="datashader logo">
-                    </a>
-                    <div>
-                      <h4>Datashader</h4>
-                      <p>Visualization packages for large data</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://intake.readthedocs.io/en/latest/">
-                      <img src="_images/intake-logo.svg" alt="intake logo">
-                    </a>
-                    <div>
-                      <h4>Intake</h4>
-                      <p>A lightweight package for finding, investigating, loading and disseminating data</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://docs.prefect.io/">
-                      <img src="_images/prefect-logo.svg" alt="prefect logo">
-                    </a>
-                    <div>
-                      <h4>Prefect</h4>
-                      <p>A workflow management system, designed for modern infrastructure</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                      <a class="flex-item-left" href="https://www.mdanalysis.org/">
-                        <img src="_images/mdanalysis-logo.png" alt="mdanalysis logo">
-                      </a>
-                    <div>
-                      <h4>MDAnalysis</h4>
-                      <p>A Python toolkit to analyze molecular dynamics trajectories generated by a wide range of popular simulation packages</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://github.com/TDAmeritrade/stumpy">
-                      <img src="_images/stumpy_logo_small.png" alt="stumpy logo">
-                    </a>
-                    <div>
-                      <h4>Stumpy</h4>
-                      <p>A Python library that can be used for a variety of time series data mining tasks</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://www.featuretools.com/">
-                      <img src="_images/featuretools-logo.png" alt="featuretools logo">
-                    </a>
-                    <div>
-                      <h4>Featuretools</h4>
-                      <p>A Python framework for automated feature engineering</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="http://cesium-ml.org">
-                      <img src="_images/cesium-logo.png" alt="cesium logo">
-                    </a>
-                    <div>
-                      <h4>Cesium-ML</h4>
-                      <p>Open-Source machine learning for time series analysis</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://skyportal.io">
-                      <img src="_images/skyportal_logo.png" alt="skyportal logo">
-                    </a>
-                    <div>
-                      <h4>SkyPortal</h4>
-                      <p>An astronomical data platform</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://satpy.readthedocs.io/">
-                        <h4>SatPy</h4>
-                      </a>
-                      <p>Library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://streamz.readthedocs.io/en/latest/">
-                        <h4>Streamz</h4>
-                      </a>
-                      <p>A package to help build pipelines to manage continuous streams of data</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://scikit-allel.readthedocs.io/en/stable/">
-                        <h4>Scikit-allel</h4>
-                      </a>
-                      <p>Provides utilities for exploratory analysis of large scale genetic variation data</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://tsfresh.readthedocs.io/en/latest/">
-                        <h4>tsfresh</h4>
-                      </a>
-                      <p>Automatic extraction of relevant features from time series</p>
-                    </div>
-                  </div>
-                </div>
-
               </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://epistasislab.github.io/tpot/">
+                    <img src="_images/tpot-logo.jpg" alt="tpot logo">
+                  </a>
+                  <div>
+                    <h4>TPOT</h4>
+                    <p>A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://xgboost.ai/">
+                    <img src="_images/xgboost-logo.png" alt="XGBoost logo">
+                  </a>
+                  <div>
+                    <h4>XGBoost</h4>
+                    <p>Gradient boosted trees for machine learning </p>
+                    <p>XGBoost can use Dask to bootstrap itself for distributed training</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="http://xarray.pydata.org/en/stable/">
+                    <img src="_images/xarray-logo.png" alt="xarray logo">
+                  </a>
+                  <div>
+                    <h4>XArray</h4>
+                    <p>Brings the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://scitools.org.uk/iris/docs/latest/">
+                    <img src="_images/iris-logo.png" alt="iris logo">
+                  </a>
+                  <div>
+                    <h4>Iris</h4>
+                    <p>A Python library for analysing and visualising Earth science data</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://pangeo-data.github.io">
+                    <img src="_images/pangeo_card_green.svg" alt="pangeo logo">
+                  </a>
+                  <div>
+                    <h4>Pangeo</h4>
+                    <p>A community effort for big data geoscience in the cloud</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://rapids.ai">
+                    <img src="_images/rapids-logo.png" alt="rapids logo">
+                  </a>
+                  <div>
+                    <h4>RAPIDS</h4>
+                    <p>GPU Accelerated libraries for data science</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="http://datashader.org">
+                    <img src="_images/datashader_logo.png" alt="datashader logo">
+                  </a>
+                  <div>
+                    <h4>Datashader</h4>
+                    <p>Visualization packages for large data</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://intake.readthedocs.io/en/latest/">
+                    <img src="_images/intake-logo.svg" alt="intake logo">
+                  </a>
+                  <div>
+                    <h4>Intake</h4>
+                    <p>A lightweight package for finding, investigating, loading and disseminating data</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://docs.prefect.io/">
+                    <img src="_images/prefect-logo.svg" alt="prefect logo">
+                  </a>
+                  <div>
+                    <h4>Prefect</h4>
+                    <p>A workflow management system, designed for modern infrastructure</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://www.mdanalysis.org/">
+                    <img src="_images/mdanalysis-logo.png" alt="mdanalysis logo">
+                  </a>
+                  <div>
+                    <h4>MDAnalysis</h4>
+                    <p>A Python toolkit to analyze molecular dynamics trajectories generated by a wide range of popular simulation packages</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://github.com/TDAmeritrade/stumpy">
+                    <img src="_images/stumpy_logo_small.png" alt="stumpy logo">
+                  </a>
+                  <div>
+                    <h4>Stumpy</h4>
+                    <p>A Python library that can be used for a variety of time series data mining tasks</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://www.featuretools.com/">
+                    <img src="_images/featuretools-logo.png" alt="featuretools logo">
+                  </a>
+                  <div>
+                    <h4>Featuretools</h4>
+                    <p>A Python framework for automated feature engineering</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="http://cesium-ml.org">
+                    <img src="_images/cesium-logo.png" alt="cesium logo">
+                  </a>
+                  <div>
+                    <h4>Cesium-ML</h4>
+                    <p>Open-Source machine learning for time series analysis</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <a class="flex-item-left" href="https://skyportal.io">
+                    <img src="_images/skyportal_logo.png" alt="skyportal logo">
+                  </a>
+                  <div>
+                    <h4>SkyPortal</h4>
+                    <p>An astronomical data platform</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <div class="flex-item-left"></div>
+                  <div>
+                    <a class="link-unstyled" href="https://satpy.readthedocs.io/">
+                      <h4>SatPy</h4>
+                    </a>
+                    <p>Library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <div class="flex-item-left"></div>
+                  <div>
+                    <a class="link-unstyled" href="https://streamz.readthedocs.io/en/latest/">
+                      <h4>Streamz</h4>
+                    </a>
+                    <p>A package to help build pipelines to manage continuous streams of data</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row top-padding-small">
+                <div class="col-md-6 flex-item">
+                  <div class="flex-item-left"></div>
+                  <div>
+                    <a class="link-unstyled" href="https://scikit-allel.readthedocs.io/en/stable/">
+                      <h4>Scikit-allel</h4>
+                    </a>
+                    <p>Provides utilities for exploratory analysis of large scale genetic variation data</p>
+                  </div>
+                </div>
+                <div class="col-md-6 flex-item">
+                  <div class="flex-item-left"></div>
+                  <div>
+                    <a class="link-unstyled" href="https://tsfresh.readthedocs.io/en/latest/">
+                      <h4>tsfresh</h4>
+                    </a>
+                    <p>Automatic extraction of relevant features from time series</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+        </div>
 
         <hr class="featurette-divider"></hr>
 
@@ -458,7 +467,7 @@ lr.fit(train, test)</code></pre>
         </div>
       </section>
 
-        <!-- /END THE FEATURETTES -->
+      <!-- /END THE FEATURETTES -->
 
       <!-- FOOTER -->
       <footer class="container">
@@ -481,8 +490,8 @@ lr.fit(train, test)</code></pre>
 
       <!-- Google Analytics -->
       <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new
-Date;
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new
+  Date;
 ga('create', 'UA-18218894-5', 'auto');
 ga('set', 'anonymizeIp', true);
 ga('send', 'pageview');
