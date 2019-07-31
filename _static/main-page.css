@@ -6,6 +6,27 @@ body {
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
+footer {
+  font-size: 14px;
+}
+.footer-row{
+  margin-bottom: 10px;
+  flex-wrap: nowrap;
+}
+.footer-text{
+  max-width: 630px;
+  flex: 0 1 630px;
+  text-align: justify;
+  margin-right: 20px;
+}
+.footer-link{
+  flex: 1 1 auto;
+  display: block;
+  text-align: right;
+}
+.footer-img{
+  max-width: 200px;
+}
 
 /* navbar
  * ----------------------------------------*/
@@ -115,6 +136,13 @@ body {
   margin: 1.2rem 0;
 }
 
+/* Sponsors
+ * ----------------------------*/
+
+.sponsors {
+  text-align: center;
+}
+
 /* Supporters
  * ----------------------------*/
 
@@ -188,5 +216,22 @@ body {
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 3rem;
+  }
+}
+
+@media (max-width: 768px){
+  .footer-text{
+    text-align: left;
+    margin-right: 0;
+  }
+  .footer-row{
+    display: block;
+    padding: 0 10px;
+  }
+  .footer-row:first-child{
+    margin-bottom: 30px;
+  }
+  .footer-link{
+    text-align: center;
   }
 }
