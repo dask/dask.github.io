@@ -33,6 +33,10 @@ footer {
 
 .navbar {
   background-color: #1a1a1a;
+  transition: background-color 0.25s ease-in;
+}
+.navbar:hover, .navbar.menu-open {
+  background-color: #0d0d0d;
 }
 .navbar li {
   transition: .3s background-color;
