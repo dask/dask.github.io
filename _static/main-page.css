@@ -32,7 +32,7 @@ footer {
  * ----------------------------------------*/
 
 .navbar {
-  background-color: #000000;
+  background-color: #1a1a1a;
 }
 .navbar li {
   transition: .3s background-color;
@@ -51,9 +51,15 @@ footer {
 .navbar li:hover .nav-link{
   color: #212529;
 }
+.dropdown.show {
+  background-color: #FDA061;
+}
+.dropdown.show .nav-link {
+  color: #212529;
+}
 
 .dropdown-menu {
-  background-color: #000000d0;
+  background-color: #0d0d0dd0;
 }
 
 .dropdown-item {
@@ -65,7 +71,7 @@ footer {
 }
 
 .hero {
-  background-color: rgba(0,0,0,0.92);
+  background-color: #1a1a1a;
   text-color: white;
 }
 
