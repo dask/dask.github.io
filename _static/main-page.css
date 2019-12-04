@@ -33,10 +33,6 @@ footer {
 
 .navbar {
   background-color: #1a1a1a;
-  transition: background-color 0.25s ease-in;
-}
-.navbar:hover, .navbar.menu-open {
-  background-color: #0d0d0d;
 }
 .navbar li {
   transition: .3s background-color;
@@ -53,6 +49,12 @@ footer {
   color: #FDA061;
 }
 .navbar li:hover .nav-link{
+  color: #212529;
+}
+.dropdown.show {
+  background-color: #FDA061;
+}
+.dropdown.show .nav-link {
   color: #212529;
 }
 
