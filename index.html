@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
 
     <!-- Custom styles for this template -->
     <link href="_static/main-page.css" rel="stylesheet">
@@ -22,497 +22,499 @@
 
     <header>
 
-    <nav class="navbar navbar-expand-lg">
-      <div class="navbar-brand">
-        <a href="index.html"><img src="_images/dask_icon_no_pad.svg" style="height: 2rem;"></a>
-      </div>
-      <div class="navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/why.html">Why Dask?</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Documentation
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="https://docs.dask.org/en/latest/">Overview</a>
-              <a class="dropdown-item" href="https://docs.dask.org/en/latest/array.html">Arrays</a>
-              <a class="dropdown-item" href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a>
-              <a class="dropdown-item" href="https://ml.dask.org/">Machine Learning</a>
-              <a class="dropdown-item" href="https://docs.dask.org/en/latest/delayed.html">Custom Applications</a>
-              <a class="dropdown-item" href="https://docs.dask.org/en/latest/futures.html">Real Time</a>
-            </div>
-          </li>
-
-          <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/install.html">Install</a></li>
-          <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/setup.html">Deploy</a></li>
-          <li class="navbar-item"><a class="nav-link" href="https://github.com/dask/dask-tutorial">Tutorial</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Community
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="https://docs.dask.org/en/latest/support.html">Ask for Help</a>
-              <a class="dropdown-item" href="https://github.com/dask">Github</a>
-              <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a>
-              <a class="dropdown-item" href="https://twitter.com/dask_dev">Twitter</a>
-              <a class="dropdown-item" href="https://blog.dask.org/"> Developer Blog </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="hero position-relative overflow-hidden p-3 text-center text-light">
-      <div class="col-md-5 p-lg-1 mx-auto my-5">
-        <img src="_images/dask_horizontal_white_no_pad.svg" style="max-width: 100rem;">
-		  <p class="lead font-weight-normal">
-        Dask natively scales Python
-      </p>
-		  <p class="lead ">
-        Dask provides advanced parallelism for analytics,
-        enabling performance at scale for the tools you love
-      </p>
-        <a class="btn outline-dask btn-lg" href="https://docs.dask.org/en/latest/">Learn More</a>
-        <a class="btn solid-dask btn-lg" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab" role="button">Try Now &raquo;</a>
-      </div>
-      <div class="product-device box-shadow d-none d-md-block"></div>
-      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-    </div>
-
-
-    <main role="main">
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container marketing p-md-5">
-
-        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="text-align: center;font-size: 1.1em;max-width: 720px;margin-left: auto;margin-right: auto;">
-            Help inform future development and improve the Dask community experience - take the <a href="https://forms.gle/7k9fWx3rwRWL2sPG8">2020 Dask User Survey</a>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+      <nav class="navbar navbar-expand-lg">
+        <div class="navbar-brand">
+          <a href="index.html"><img src="_images/dask_icon_no_pad.svg" style="height: 2rem;"></a>
+        </div>
+        <div class="navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
         </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/why.html">Why Dask?</a></li>
 
-        <!-- Three columns of text below the carousel -->
-        <h2 class="featurette-heading">Integrates with existing projects</h2>
-        <h2 class="featurette-subheading">Built with the broader community</h2>
-        <p>Dask is open source and freely available.  It is developed in coordination with other community projects like Numpy, Pandas, and Scikit-Learn.</p>
-        <div class="row">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Documentation
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://docs.dask.org/en/latest/">Overview</a>
+                <a class="dropdown-item" href="https://docs.dask.org/en/latest/array.html">Arrays</a>
+                <a class="dropdown-item" href="https://docs.dask.org/en/latest/dataframe.html">Dataframes</a>
+                <a class="dropdown-item" href="https://ml.dask.org/">Machine Learning</a>
+                <a class="dropdown-item" href="https://docs.dask.org/en/latest/delayed.html">Custom Applications</a>
+                <a class="dropdown-item" href="https://docs.dask.org/en/latest/futures.html">Real Time</a>
+              </div>
+            </li>
 
-          <div class="col-lg-4">
-            <h2 class="mt-3">Numpy</h2>
-            <img src="_images/dask-array-black-text.svg" class="top-image">
-            <p>Dask arrays scale Numpy workflows, enabling multi-dimensional data analysis in earth science, satellite imagery, genomics, biomedical applications, and machine learning algorithms.</p>
-            <p>
-              <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/array.html" role="button">Learn More &raquo;</a>
-              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/array.ipynb" role="button">Try Now &raquo;</a>
-            </p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <h2 class="mt-3">Pandas</h2>
-            <img src="_images/dask-dataframe.svg" class="top-image">
-            <p>Dask dataframes scale Pandas workflows, enabling applications in time series, business intelligence, and general data munging on big data.</p>
-            <p>
-              <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/dataframe.html" role="button">Learn More &raquo;</a>
-              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/dataframe.ipynb" role="button">Try Now &raquo;</a>
-            </p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Rosenbrock_function.svg/300px-Rosenbrock_function.svg.png" class="top-image"> -->
-            <h2 class="mt-3">Scikit-Learn</h2>
-            <img src="_images/sklearn-classification.png" class="top-image">
-            <p>Dask-ML scales machine learning APIs like Scikit-Learn and XGBoost to enable scalable training and prediction on large models and large datasets.</p>
-            <p>
-              <a class="btn btn-outline-secondary" href="https://ml.dask.org/" role="button">Learn More &raquo;</a>
-              <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/machine-learning.ipynb" role="button">Try Now &raquo;</a>
-            </p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+            <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/install.html">Install</a></li>
+            <li class="navbar-item"><a class="nav-link" href="https://docs.dask.org/en/latest/setup.html">Deploy</a></li>
+            <li class="navbar-item"><a class="nav-link" href="https://github.com/dask/dask-tutorial">Tutorial</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Community
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://docs.dask.org/en/latest/support.html">Ask for Help</a>
+                <a class="dropdown-item" href="https://github.com/dask">Github</a>
+                <a class="dropdown-item" href="https://stackoverflow.com/questions/tagged/dask">Stack Overflow</a>
+                <a class="dropdown-item" href="https://twitter.com/dask_dev">Twitter</a>
+                <a class="dropdown-item" href="https://blog.dask.org/"> Developer Blog </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hero position-relative overflow-hidden p-3 text-center text-light">
+        <div class="col-md-5 p-lg-1 mx-auto my-3">
+          <img src="_images/dask_horizontal_white_no_pad.svg" style="max-width: 100rem;">
+          <p class="lead font-weight-normal">
+          Dask natively scales Python
+          </p>
+          <p class="lead ">
+          Dask provides advanced parallelism for analytics,
+          enabling performance at scale for the tools you love
+          </p>
+          <a class="btn outline-dask btn-lg" href="https://docs.dask.org/en/latest/">Learn More</a>
+          <a class="btn solid-dask btn-lg" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab" role="button">Try Now &raquo;</a>
+        </div>
+        <a class="github-button" href="https://github.com/dask/dask" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Star dask/dask on GitHub">Star</a>
+      </div>
 
 
-        <!-- START THE FEATURETTES -->
+      <main role="main">
 
-        <hr class="featurette-divider">
+        <!-- Marketing messaging and featurettes
+          ================================================== -->
+          <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Familiar for Python users</h2>
-            <h2 class="featurette-subheading">and easy to get started</h2>
-            <p class="lead">Dask uses existing Python APIs and data structures to make it easy to switch between Numpy, Pandas, Scikit-learn to their Dask-powered equivalents.</>
-            <p class="lead">You don't have to completely rewrite your code or retrain to scale up.</p>
-            <a class="btn btn-secondary" href="https://docs.dask.org/en/latest/api.html" role="button">Learn About Dask APIs &raquo;</a>
-          </div>
+          <div class="container marketing p-md-5">
 
-          <div class="col-md-5 code-block">
-            <pre><code class="language-python"># Arrays implement the Numpy API
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" style="text-align: center;font-size: 1.1em;max-width: 720px;margin-left: auto;margin-right: auto;">
+              Help inform future development and improve the Dask community experience - take the <a href="https://forms.gle/7k9fWx3rwRWL2sPG8">2020 Dask User Survey</a>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <!-- Three columns of text below the carousel -->
+            <h2 class="featurette-heading">Integrates with existing projects</h2>
+            <h2 class="featurette-subheading">Built with the broader community</h2>
+            <p>Dask is open source and freely available.  It is developed in coordination with other community projects like Numpy, Pandas, and Scikit-Learn.</p>
+            <div class="row">
+
+              <div class="col-lg-4">
+                <h2 class="mt-3">Numpy</h2>
+                <img src="_images/dask-array-black-text.svg" class="top-image">
+                <p>Dask arrays scale Numpy workflows, enabling multi-dimensional data analysis in earth science, satellite imagery, genomics, biomedical applications, and machine learning algorithms.</p>
+                <p>
+                <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/array.html" role="button">Learn More &raquo;</a>
+                <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/array.ipynb" role="button">Try Now &raquo;</a>
+                </p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <h2 class="mt-3">Pandas</h2>
+                <img src="_images/dask-dataframe.svg" class="top-image">
+                <p>Dask dataframes scale Pandas workflows, enabling applications in time series, business intelligence, and general data munging on big data.</p>
+                <p>
+                <a class="btn btn-outline-secondary" href="https://docs.dask.org/en/latest/dataframe.html" role="button">Learn More &raquo;</a>
+                <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/dataframe.ipynb" role="button">Try Now &raquo;</a>
+                </p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Rosenbrock_function.svg/300px-Rosenbrock_function.svg.png" class="top-image"> -->
+                <h2 class="mt-3">Scikit-Learn</h2>
+                <img src="_images/sklearn-classification.png" class="top-image">
+                <p>Dask-ML scales machine learning APIs like Scikit-Learn and XGBoost to enable scalable training and prediction on large models and large datasets.</p>
+                <p>
+                <a class="btn btn-outline-secondary" href="https://ml.dask.org/" role="button">Learn More &raquo;</a>
+                <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab/tree/machine-learning.ipynb" role="button">Try Now &raquo;</a>
+                </p>
+              </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+              <div class="col-md-7">
+                <h2 class="featurette-heading">Familiar for Python users</h2>
+                <h2 class="featurette-subheading">and easy to get started</h2>
+                <p class="lead">Dask uses existing Python APIs and data structures to make it easy to switch between Numpy, Pandas, Scikit-learn to their Dask-powered equivalents.</>
+                <p class="lead">You don't have to completely rewrite your code or retrain to scale up.</p>
+                <a class="btn btn-secondary" href="https://docs.dask.org/en/latest/api.html" role="button">Learn About Dask APIs &raquo;</a>
+              </div>
+
+              <div class="col-md-5 code-block">
+                <pre><code class="language-python"># Arrays implement the Numpy API
 import dask.array as da
 x = da.random.random(size=(10000, 10000),
                      chunks=(1000, 1000))
 x + x.T - x.mean(axis=0)</code></pre>
 
-            <pre><code class="language-python"># Dataframes implement the Pandas API
+                <pre><code class="language-python"># Dataframes implement the Pandas API
 import dask.dataframe as dd
 df = dd.read_csv('s3://.../2018-*-*.csv')
 df.groupby(df.account_id).balance.sum()</code></pre>
 
-            <pre><code class="language-python"># Dask-ML implements the Scikit-Learn API
+                <pre><code class="language-python"># Dask-ML implements the Scikit-Learn API
 from dask_ml.linear_model \
   import LogisticRegression
 lr = LogisticRegression()
 lr.fit(train, test)</code></pre>
-          </div>
-        </div>
+              </div>
+            </div>
 
-        <hr class="featurette-divider"></hr>
+            <hr class="featurette-divider"></hr>
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-1">
-            <h2 class="featurette-heading">Scale up to clusters</h2>
-            <h2 class="featurette-subheading">or just use it on your laptop</h2>
-            <p class="lead">Dask's schedulers scale to thousand-node clusters and its algorithms have been tested on some of the largest supercomputers in the world.</p>
+            <div class="row featurette">
+              <div class="col-md-7 order-md-1">
+                <h2 class="featurette-heading">Scale up to clusters</h2>
+                <h2 class="featurette-subheading">or just use it on your laptop</h2>
+                <p class="lead">Dask's schedulers scale to thousand-node clusters and its algorithms have been tested on some of the largest supercomputers in the world.</p>
 
-            <p class="lead">But you don't need a massive cluster to get started. Dask ships with schedulers designed for use on personal machines. Many people use Dask today to scale computations on their laptop, using multiple cores for computation and their disk for excess storage.</p>
-            <a class="btn btn-secondary" href="https://docs.dask.org/en/latest/scheduling.html" role="button">Learn About Dask Schedulers &raquo;</a>
-          </div>
-          <div class="col-md-5 order-md-2" style="padding: 6rem 0rem;">
-            <img src="https://github.com/dask/dask-org/raw/master/images/grid_search_schedule.gif"
-                 width="100%">
-          </div>
-        </div>
+                <p class="lead">But you don't need a massive cluster to get started. Dask ships with schedulers designed for use on personal machines. Many people use Dask today to scale computations on their laptop, using multiple cores for computation and their disk for excess storage.</p>
+                <a class="btn btn-secondary" href="https://docs.dask.org/en/latest/scheduling.html" role="button">Learn About Dask Schedulers &raquo;</a>
+              </div>
+              <div class="col-md-5 order-md-2" style="padding: 6rem 0rem;">
+                <img src="https://github.com/dask/dask-org/raw/master/images/grid_search_schedule.gif"
+                     width="100%">
+              </div>
+            </div>
 
-        <hr class="featurette-divider"></hr>
+            <hr class="featurette-divider"></hr>
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Customizable</h2>
-            <h2 class="featurette-subheading">Enabling you to parallelize internal systems</h2>
-            <p class="lead">Not all computations fit into a big dataframe.</p>
-            <p class="lead">Dask exposes lower-level APIs letting you build custom systems for in-house applications. This helps open source leaders parallelize their own packages and helps business leaders scale custom business logic.</p>
-          </div>
+            <div class="row featurette">
+              <div class="col-md-7">
+                <h2 class="featurette-heading">Customizable</h2>
+                <h2 class="featurette-subheading">Enabling you to parallelize internal systems</h2>
+                <p class="lead">Not all computations fit into a big dataframe.</p>
+                <p class="lead">Dask exposes lower-level APIs letting you build custom systems for in-house applications. This helps open source leaders parallelize their own packages and helps business leaders scale custom business logic.</p>
+              </div>
 
-          <div class="col-md-5 p-lg-1 mx-auto my-5">
-            <img src="https://github.com/dask/dask-org/raw/master/images/credit-model.svg.png"
-                 width="100%">
-          </div>
-        </div>
+              <div class="col-md-5 p-lg-1 mx-auto my-5">
+                <img src="https://github.com/dask/dask-org/raw/master/images/credit-model.svg.png"
+                     width="100%">
+              </div>
+            </div>
 
-        <div class="text-center">
-          <a class="btn btn-outline-secondary btn-lg" href="https://docs.dask.org/en/latest/" role="button">Learn More &raquo;</a>
-          <a class="btn btn-secondary btn-lg" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab" role="button">Try Now &raquo;</a>
-        </div>
+            <div class="text-center">
+              <a class="btn btn-outline-secondary btn-lg" href="https://docs.dask.org/en/latest/" role="button">Learn More &raquo;</a>
+              <a class="btn btn-secondary btn-lg" href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab" role="button">Try Now &raquo;</a>
+            </div>
 
-        <hr class="featurette-divider"></hr>
+            <hr class="featurette-divider"></hr>
 
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="featurette-heading">Powered by Dask</h2>
-            <p class="lead">These software projects are built on Dask, or use Dask to power components of their infrastructure.</>
-              <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="featurette-heading">Powered by Dask</h2>
+                <p class="lead">These software projects are built on Dask, or use Dask to power components of their infrastructure.</>
+                <div class="container">
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
                       <a class="flex-item-left" href="https://scikit-learn.org/stable/">
                         <img src="_images/scikit-learn-logo.png" alt="scikit-learn logo">
                       </a>
-                    <div>
-                      <h4>Scikit-learn</h4>
-                      <p>Machine learning in Python</p>
+                      <div>
+                        <h4>Scikit-learn</h4>
+                        <p>Machine learning in Python</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://scikit-image.org/">
+                        <img src="_images/scikit-image-logo.png" alt="scikit-image logo">
+                      </a>
+                      <div>
+                        <h4>Scikit-image</h4>
+                        <p>A collection of algorithms for image processing in Python</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://scikit-image.org/">
-                      <img src="_images/scikit-image-logo.png" alt="scikit-image logo">
-                    </a>
-                    <div>
-                      <h4>Scikit-image</h4>
-                      <p>A collection of algorithms for image processing in Python</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://epistasislab.github.io/tpot/">
-                      <img src="_images/tpot-logo.jpg" alt="tpot logo">
-                    </a>
-                    <div>
-                      <h4>TPOT</h4>
-                      <p>A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming</p>
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://epistasislab.github.io/tpot/">
+                        <img src="_images/tpot-logo.jpg" alt="tpot logo">
+                      </a>
+                      <div>
+                        <h4>TPOT</h4>
+                        <p>A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://xgboost.ai/">
+                        <img src="_images/xgboost-logo.png" alt="XGBoost logo">
+                      </a>
+                      <div>
+                        <h4>XGBoost</h4>
+                        <p>Gradient boosted trees for machine learning </p>
+                        <p>XGBoost can use Dask to bootstrap itself for distributed training</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://xgboost.ai/">
-                      <img src="_images/xgboost-logo.png" alt="XGBoost logo">
-                    </a>
-                    <div>
-                      <h4>XGBoost</h4>
-                      <p>Gradient boosted trees for machine learning </p>
-                      <p>XGBoost can use Dask to bootstrap itself for distributed training</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
                       <a class="flex-item-left" href="http://xarray.pydata.org/en/stable/">
                         <img src="_images/xarray-logo.png" alt="xarray logo">
                       </a>
-                    <div>
-                      <h4>XArray</h4>
-                      <p>Brings the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures</p>
+                      <div>
+                        <h4>XArray</h4>
+                        <p>Brings the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the core pandas data structures</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://scitools.org.uk/iris/docs/latest/">
+                        <img src="_images/iris-logo.png" alt="iris logo">
+                      </a>
+                      <div>
+                        <h4>Iris</h4>
+                        <p>A Python library for analysing and visualising Earth science data</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://scitools.org.uk/iris/docs/latest/">
-                      <img src="_images/iris-logo.png" alt="iris logo">
-                    </a>
-                    <div>
-                      <h4>Iris</h4>
-                      <p>A Python library for analysing and visualising Earth science data</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
                       <a class="flex-item-left" href="https://pangeo-data.github.io">
                         <img src="_images/pangeo_card_green.svg" alt="pangeo logo">
                       </a>
-                    <div>
-                      <h4>Pangeo</h4>
-                      <p>A community effort for big data geoscience in the cloud</p>
+                      <div>
+                        <h4>Pangeo</h4>
+                        <p>A community effort for big data geoscience in the cloud</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
+                    <div class="col-md-6 flex-item">
                       <a class="flex-item-left" href="https://rapids.ai">
                         <img src="_images/rapids-logo.png" alt="rapids logo">
                       </a>
-                    <div>
-                      <h4>RAPIDS</h4>
-                      <p>GPU Accelerated libraries for data science</p>
+                      <div>
+                        <h4>RAPIDS</h4>
+                        <p>GPU Accelerated libraries for data science</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="http://datashader.org">
-                      <img src="_images/datashader_logo.png" alt="datashader logo">
-                    </a>
-                    <div>
-                      <h4>Datashader</h4>
-                      <p>Visualization packages for large data</p>
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="http://datashader.org">
+                        <img src="_images/datashader_logo.png" alt="datashader logo">
+                      </a>
+                      <div>
+                        <h4>Datashader</h4>
+                        <p>Visualization packages for large data</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://intake.readthedocs.io/en/latest/">
+                        <img src="_images/intake-logo.svg" alt="intake logo">
+                      </a>
+                      <div>
+                        <h4>Intake</h4>
+                        <p>A lightweight package for finding, investigating, loading and disseminating data</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://intake.readthedocs.io/en/latest/">
-                      <img src="_images/intake-logo.svg" alt="intake logo">
-                    </a>
-                    <div>
-                      <h4>Intake</h4>
-                      <p>A lightweight package for finding, investigating, loading and disseminating data</p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://docs.prefect.io/">
-                      <img src="_images/prefect-logo.svg" alt="prefect logo">
-                    </a>
-                    <div>
-                      <h4>Prefect</h4>
-                      <p>A workflow management system, designed for modern infrastructure</p>
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://docs.prefect.io/">
+                        <img src="_images/prefect-logo.svg" alt="prefect logo">
+                      </a>
+                      <div>
+                        <h4>Prefect</h4>
+                        <p>A workflow management system, designed for modern infrastructure</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
+                    <div class="col-md-6 flex-item">
                       <a class="flex-item-left" href="https://www.mdanalysis.org/">
                         <img src="_images/mdanalysis-logo.png" alt="mdanalysis logo">
                       </a>
-                    <div>
-                      <h4>MDAnalysis</h4>
-                      <p>A Python toolkit to analyze molecular dynamics trajectories generated by a wide range of popular simulation packages</p>
+                      <div>
+                        <h4>MDAnalysis</h4>
+                        <p>A Python toolkit to analyze molecular dynamics trajectories generated by a wide range of popular simulation packages</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://github.com/TDAmeritrade/stumpy">
-                      <img src="_images/stumpy_logo_small.png" alt="stumpy logo">
-                    </a>
-                    <div>
-                      <h4>Stumpy</h4>
-                      <p>A Python library that can be used for a variety of time series data mining tasks</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://www.featuretools.com/">
-                      <img src="_images/featuretools-logo.png" alt="featuretools logo">
-                    </a>
-                    <div>
-                      <h4>Featuretools</h4>
-                      <p>A Python framework for automated feature engineering</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="http://cesium-ml.org">
-                      <img src="_images/cesium-logo.png" alt="cesium logo">
-                    </a>
-                    <div>
-                      <h4>Cesium-ML</h4>
-                      <p>Open-Source machine learning for time series analysis</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <a class="flex-item-left" href="https://skyportal.io">
-                      <img src="_images/skyportal_logo.png" alt="skyportal logo">
-                    </a>
-                    <div>
-                      <h4>SkyPortal</h4>
-                      <p>An astronomical data platform</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://satpy.readthedocs.io/">
-                        <h4>SatPy</h4>
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://github.com/TDAmeritrade/stumpy">
+                        <img src="_images/stumpy_logo_small.png" alt="stumpy logo">
                       </a>
-                      <p>Library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats</p>
+                      <div>
+                        <h4>Stumpy</h4>
+                        <p>A Python library that can be used for a variety of time series data mining tasks</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://streamz.readthedocs.io/en/latest/">
-                        <h4>Streamz</h4>
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://www.featuretools.com/">
+                        <img src="_images/featuretools-logo.png" alt="featuretools logo">
                       </a>
-                      <p>A package to help build pipelines to manage continuous streams of data</p>
+                      <div>
+                        <h4>Featuretools</h4>
+                        <p>A Python framework for automated feature engineering</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="row top-padding-small">
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://scikit-allel.readthedocs.io/en/stable/">
-                        <h4>Scikit-allel</h4>
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="http://cesium-ml.org">
+                        <img src="_images/cesium-logo.png" alt="cesium logo">
                       </a>
-                      <p>Provides utilities for exploratory analysis of large scale genetic variation data</p>
+                      <div>
+                        <h4>Cesium-ML</h4>
+                        <p>Open-Source machine learning for time series analysis</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 flex-item">
+                      <a class="flex-item-left" href="https://skyportal.io">
+                        <img src="_images/skyportal_logo.png" alt="skyportal logo">
+                      </a>
+                      <div>
+                        <h4>SkyPortal</h4>
+                        <p>An astronomical data platform</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6 flex-item">
-                    <div class="flex-item-left"></div>
-                    <div>
-                      <a class="link-unstyled" href="https://tsfresh.readthedocs.io/en/latest/">
-                        <h4>tsfresh</h4>
-                      </a>
-                      <p>Automatic extraction of relevant features from time series</p>
-                    </div>
-                  </div>
-                </div>
 
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
+                      <div class="flex-item-left"></div>
+                      <div>
+                        <a class="link-unstyled" href="https://satpy.readthedocs.io/">
+                          <h4>SatPy</h4>
+                        </a>
+                        <p>Library for reading and manipulating meteorological remote sensing data and writing it to various image and data file formats</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 flex-item">
+                      <div class="flex-item-left"></div>
+                      <div>
+                        <a class="link-unstyled" href="https://streamz.readthedocs.io/en/latest/">
+                          <h4>Streamz</h4>
+                        </a>
+                        <p>A package to help build pipelines to manage continuous streams of data</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row top-padding-small">
+                    <div class="col-md-6 flex-item">
+                      <div class="flex-item-left"></div>
+                      <div>
+                        <a class="link-unstyled" href="https://scikit-allel.readthedocs.io/en/stable/">
+                          <h4>Scikit-allel</h4>
+                        </a>
+                        <p>Provides utilities for exploratory analysis of large scale genetic variation data</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 flex-item">
+                      <div class="flex-item-left"></div>
+                      <div>
+                        <a class="link-unstyled" href="https://tsfresh.readthedocs.io/en/latest/">
+                          <h4>tsfresh</h4>
+                        </a>
+                        <p>Automatic extraction of relevant features from time series</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
+
+            <hr class="featurette-divider"></hr>
+
           </div>
 
-        <hr class="featurette-divider"></hr>
+          <section id="supporters">
 
-      </div>
+            <div class="container supporters">
+              <h2>Supported By</h2>
+              <p>We thank these institutions for generously supporting the project<p>
+              <div class="row">
+                <div class="col supporter">
+                  <a href="https://anaconda.com"><img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png"></a>
+                </div>
+                <div class="col supporter">
+                  <a href="https://www.darpa.mil"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/DARPA_Logo.jpg/320px-DARPA_Logo.jpg"></a>
+                </div>
+                <div class="col supporter">
+                  <a href="https://www.moore.org"><img src="https://www.moore.org/content/images/logo-light.png"></a>
+                </div>
+                <div class="col supporter">
+                  <a href="https://www.nsf.gov"><img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png"></a>
+                </div>
+                <div class="col supporter">
+                  <a href="https://www.janelia.org"><img src="_images/HHMI_Janelia_Color.png"></a>
+                </div>
+                <div class="col supporter">
+                  <a href="https://quansight.com"><img
+                     src="_images/quansight.svg"></a>
+                </div>
+                <div class="col supporter">
+                  <a href="https://www.nvidia.com"><img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg"></a>
+                </div>
+              </div>
+            </div>
+          </section>
 
-      <section id="supporters">
+          <hr class="featurette-divider"></hr>
+          <!-- /END THE FEATURETTES -->
 
-        <div class="container supporters">
-          <h2>Supported By</h2>
-          <p>We thank these institutions for generously supporting the project<p>
-          <div class="row">
-            <div class="col supporter">
-              <a href="https://anaconda.com"><img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png"></a>
-            </div>
-            <div class="col supporter">
-              <a href="https://www.darpa.mil"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/DARPA_Logo.jpg/320px-DARPA_Logo.jpg"></a>
-            </div>
-            <div class="col supporter">
-              <a href="https://www.moore.org"><img src="https://www.moore.org/content/images/logo-light.png"></a>
-            </div>
-            <div class="col supporter">
-              <a href="https://www.nsf.gov"><img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png"></a>
-            </div>
-            <div class="col supporter">
-              <a href="https://www.janelia.org"><img src="_images/HHMI_Janelia_Color.png"></a>
-            </div>
-            <div class="col supporter">
-              <a href="https://quansight.com"><img
-                src="_images/quansight.svg"></a>
-            </div>
-            <div class="col supporter">
-              <a href="https://www.nvidia.com"><img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg"></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="featurette-divider"></hr>
-        <!-- /END THE FEATURETTES -->
-
-      <!-- FOOTER -->
-      <footer class="container">
-        <div class="row footer-row">
-          <p class="footer-text">
+          <!-- FOOTER -->
+          <footer class="container">
+            <div class="row footer-row">
+              <p class="footer-text">
               Dask is a fiscally sponsored project of NumFOCUS, a nonprofit dedicated
-            to supporting the open source scientific computing community. If you like
-            Dask and want to support our mission, please consider making a
-            <a href="https://numfocus.org/donate-to-dask">donation</a> to support our efforts.
-          </p>
-          <a class="footer-link" href="https://numfocus.org/">
-            <img class="footer-img" alt="" src="_images/SponsoredProject.png">
-          </a>
-        </div>
-        <div class="row footer-row">
-          <p>&copy; 2019 Dask core developers. New-BSD Licensed.</p>
-        </div>
-      </footer>
-    </main>
+              to supporting the open source scientific computing community. If you like
+              Dask and want to support our mission, please consider making a
+              <a href="https://numfocus.org/donate-to-dask">donation</a> to support our efforts.
+              </p>
+              <a class="footer-link" href="https://numfocus.org/">
+                <img class="footer-img" alt="" src="_images/SponsoredProject.png">
+              </a>
+            </div>
+            <div class="row footer-row">
+              <p>&copy; 2019 Dask core developers. New-BSD Licensed.</p>
+            </div>
+          </footer>
+      </main>
 
-    <!-- Bootstrap core JavaScript
-      ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-              integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-              crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-      <!-- Code highlighting -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-python.min.js"></script>
+        <!-- Code highlighting -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-python.min.js"></script>
 
-      <!-- Google Analytics -->
-      <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new
-Date;
+        <!-- Google Analytics -->
+        <script>
+          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new
+  Date;
 ga('create', 'UA-18218894-5', 'auto');
 ga('set', 'anonymizeIp', true);
 ga('send', 'pageview');
-      </script>
-      <script async
-              src='https://www.google-analytics.com/analytics.js'></script>
-      <!-- End Google Analytics -->
+        </script>
+        <script async
+                src='https://www.google-analytics.com/analytics.js'></script>
+        <!-- End Google Analytics -->
+
+        <!-- Github star button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
