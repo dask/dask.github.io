@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dask | Scale the Python tools you love</title>
+    <meta
+        content="Dask is a flexible open-source Python library for parallel computing maintained by OSS contributors across dozens of companies including Anaconda, Coiled, SaturnCloud, and nvidia."
+        name="description" />
+    <meta content="Dask | Scale the Python tools you love" property="og:title" />
+    <meta
+        content="Dask is a flexible open-source Python library for parallel computing maintained by OSS contributors across dozens of companies including Anaconda, Coiled, SaturnCloud, and nvidia."
+        property="og:description" />
+    <meta content="{{ pathto("_static/images/opengraph-home.png", 1) }}" property="og:image" />
+    <meta content="Dask | Scale the Python tools you love" property="twitter:title" />
+    <meta
+        content="Dask is a flexible open-source Python library for parallel computing maintained by OSS contributors across dozens of companies including Anaconda, Coiled, SaturnCloud, and nvidia."
+        property="twitter:description" />
+    <meta content="{{ pathto("_static/images/opengraph-home.png", 1) }}" property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="{{ pathto("_static/css/dask.css", 1) }}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="{{ pathto("_static/images/dask-favicon.png", 1) }}" rel="shortcut icon" type="image/x-icon" />
+    <link href="{{ pathto("_static/images/dask-favicon.png", 1) }}" rel="apple-touch-icon" />
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-18218894-5"></script>
+    <script
+        type="text/javascript">window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-18218894-5', { 'anonymize_ip': false });</script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P4GQM59');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+
+    <style>
+        .dark-class.hljs,
+        .dark-class .hljs-title.function_ {
+            color: white;
+        }
+
+        .dark-class .hljs-meta {
+            color: #9b9b9b;
+        }
+
+        .dark-class .hljs-params {
+            color: #dcdcdc;
+        }
+
+        .dark-class .hljs-string {
+            color: #61BA92;
+        }
+
+        .dark-class .hljs-keyword {
+            color: #569cd6;
+        }
+
+        .hljs {
+            background: none;
+            color: black;
+        }
+
+        .hljs-comment,
+        .hljs-quote,
+        .hljs-variable {
+            color: #EF1161;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-built_in,
+        .hljs-name,
+        .hljs-tag {
+            color: #1F5AFF;
+        }
+
+        .hljs-string,
+        .hljs-title,
+        .hljs-section,
+        .hljs-attribute,
+        .hljs-literal,
+        .hljs-template-tag,
+        .hljs-template-variable,
+        .hljs-type,
+        .hljs-addition {
+            color: #0A775D;
+        }
+
+        .hljs-deletion,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo,
+        .hljs-meta {
+            color: #2b91af;
+        }
+
+        .hljs-doctag {
+            color: #808080;
+        }
+
+        .hljs-attr {
+            color: #f00;
+        }
+
+        .hljs-symbol,
+        .hljs-bullet,
+        .hljs-link {
+            color: #00b0e8;
+        }
+
+
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .hljs-strong {
+            font-weight: bold;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .show {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div role="banner" class="navbar">
+        <div class="nav-container"><a href="https://www.dask.org/index.html" aria-current="page"
+                class="brand"><img src="{{ pathto("_static/images/dask-header-logo.svg", 1) }}"
+                    loading="lazy" alt="Dask logo" class="container-logo-img" /></a>
+            <nav role="navigation" class="nav-menu"><a href="https://www.dask.org/get-started.html"
+                    class="mobile-nav-link"><img src="{{ pathto("_static/images/mobile-get-started.svg",
+                        1) }}" loading="lazy" alt="get started icon" class="menu-icons" />
+                    <div class="nav-link large">Get Started</div>
+                </a>
+                <a href="https://blog.dask.org/"
+                    class="nav-link hide-mobile plausible-event-name--top-nav plausible-event-position--blog">Blog</a><a
+                    href="https://blog.dask.org/" class="mobile-nav-link"><img src="{{ pathto("_static/images/mobile-blog.svg", 1) }}" loading="lazy" alt="blog icon" class="menu-icons" />
+                    <div class="nav-link large">Blog</div>
+                </a>
+                <div class="nav-button-blcok"><a href="https://docs.dask.org/en/stable/" target="_blank"
+                        class="nav-button plausible-event-name--top-nav plausible-event-position--docs">Docs</a>
+                </div>
+            </nav>
+            <div class="menu-button">
+                <svg class="hamburger-icon" width="24" height="18" viewBox="0 0 24 18" fill="currentColor">
+                    <rect width="24" height="2" rx="1"/>
+                    <rect y="8" width="24" height="2" rx="1"/>
+                    <rect y="16" width="24" height="2" rx="1"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="section-responsive bg-black no-pad-bot">
+        <div class="container">
+            <div class="homehero-columns">
+                <div id="hero-text" class="container-text home-hero">
+                    <div id="hero-text-inner" class="homehero-text">
+                        <h1 class="heading-large-box hero-h">Parallel Python</h1>
+                        <h2 class="heading-large-box hero-h">Fast and Easy</h2>
+                        <p class="text-medium hero-p">Easy Parallel Python that does what you need</p>
+                        <div class="_1-unit"><a href="https://docs.dask.org/en/stable/" target="_blank"
+                                class="button plausible-event-name--hero-get-started">Get started</a></div>
+                    </div>
+                </div>
+                <div id="hero-lottie" class="lottie-container">
+                    <div class="herohome-lottie" id="lottie-hero"></div>
+                </div>
+            </div>
+            <div class="home-tabs-wr">
+                <div class="home-tabs-headline">
+                    <h2>What you can do with Dask</h2>
+                </div>
+                <div class="home-tabs tabs">
+                    <div class="home-tabs-menu"><a data-tab="tab-1"
+                            class="home-tab-link tab-link plausible-event-name--hero-tab-pandas is-active">
+                            <div>Big Pandas</div>
+                        </a><a data-tab="tab-2"
+                            class="home-tab-link tab-link plausible-event-name--hero-tab-futures">
+                            <div>Parallel For Loops</div>
+                        </a><a data-tab="tab-3"
+                            class="home-tab-link tab-link plausible-event-name--hero-tab-array">
+                            <div>Big Arrays</div>
+                        </a><a data-tab="tab-5"
+                            class="home-tab-link tab-link plausible-event-name--hero-tab-ml">
+                            <div>Machine Learning</div>
+                        </a></div>
+                    <div class="home-tabs-content">
+                        <div data-tab="tab-1" class="tab-pane is-tab-active">
+                            <div class="grid home-tab">
+                                <div class="home-tab-content">
+                                    <div id="tab-text-pandas"
+                                        class="home-tabs-text">
+                                        <h2 class="heading-medium">Big Pandas</h2>
+                                        <div class="rich-text-tabs">
+                                            <p>Dask DataFrames use pandas under the hood, so your current code likely
+                                                just works. It’s faster than Spark and easier too.</p>
+                                        </div>
+                                        <div class="buttons-wr"><a href="https://docs.dask.org/en/stable/dataframe.html"
+                                                target="_blank"
+                                                class="button plausible-event-name--hero-tab-pandas plausible-event-location--button">Documentation</a><a
+                                                href="https://docs.coiled.io/blog/tpch.html?utm_source=dask.org&amp;utm_medium=homepage"
+                                                target="_blank"
+                                                class="link white no-pad plausible-event-name--hero-tab-pandas plausible-event-position--link">Performance
+                                                Benchmarks</a></div>
+                                    </div>
+                                    <div class="home-tabs-logo-wr"><img loading="lazy" src="{{ pathto("_static/images/Parquet_logo.svg", 1) }}" alt="Parquet logo"
+                                            class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/Apache-arrow-logo.svg", 1) }}" alt="Apache Arrow logo"
+                                            class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/Pandas_logo.svg", 1) }}" alt="Pandas logo"
+                                            class="home-tabs-logo-img" /></div>
+                                </div>
+                                <div class="tab-code-wr">
+                                    <div class="tab-code-top">
+                                        <div class="tap-code-top-dot"></div>
+                                        <div class="tap-code-top-dot yellow"></div>
+                                        <div class="tap-code-top-dot green"></div>
+                                    </div>
+                                    <div class="code-embed dark-class">
+                                        <pre><code class="dark-class">import dask.dataframe as dd
+
+df = dd.read_parquet("s3://data/uber/")
+
+# How much did NYC pay Uber?
+df.base_passenger_fare.sum().compute()
+
+# And how much did drivers make?
+df.driver_pay.sum().compute()
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-tab="tab-2" class="tab-pane">
+                            <div class="grid home-tab">
+                                <div class="home-tab-content">
+                                    <div id="tab-text-futures"
+                                        class="home-tabs-text">
+                                        <h2 class="heading-medium">Parallel For Loops</h2>
+                                        <div class="rich-text-tabs">
+                                            <p>Parallelize your Python code, no matter how complex. Dask is flexible and
+                                                supports arbitrary dependencies and fine-grained task scheduling.</p>
+                                        </div>
+                                        <div class="buttons-wr"><a href="https://docs.dask.org/en/stable/futures.html"
+                                                target="_blank"
+                                                class="button plausible-event-name--hero-tab-futures plausible-event-position--button">Documentation</a><a
+                                                href="https://docs.coiled.io/user_guide/arxiv-matplotlib.html?utm_source=dask.org&amp;utm_medium=homepage"
+                                                target="_blank"
+                                                class="link white no-pad plausible-event-name--hero-tab-futures plausible-event-position--link">Process
+                                                5,000 files in parallel</a></div>
+                                    </div>
+                                </div>
+                                <div class="tab-code-wr">
+                                    <div class="tab-code-top">
+                                        <div class="tap-code-top-dot"></div>
+                                        <div class="tap-code-top-dot yellow"></div>
+                                        <div class="tap-code-top-dot green"></div>
+                                    </div>
+                                    <div class="code-embed dark-class">
+                                        <pre><code class="dark-class">from dask.distributed import Client
+
+client = Client()
+
+# Define your own code
+def f(x):
+    return x + 1
+
+# Run your code in parallel
+futures = client.map(f, range(100))
+results = client.gather(futures)
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-tab="tab-3" class="tab-pane">
+                            <div class="grid home-tab">
+                                <div class="home-tab-content">
+                                    <div id="tab-text-arrays"
+                                        class="home-tabs-text">
+                                        <h2 class="heading-medium">Big Arrays</h2>
+                                        <div class="rich-text-tabs">
+                                            <p>Use Dask and NumPy/Xarray to churn through terabytes of multi-dimensional
+                                                array data in formats like HDF, NetCDF, TIFF, or Zarr.  </p>
+                                        </div>
+                                        <div class="buttons-wr"><a href="https://docs.dask.org/en/stable/array.html"
+                                                target="_blank"
+                                                class="button plausible-event-name--hero-tab-array plausible-event-position--button">Documentation</a><a
+                                                href="https://docs.coiled.io/blog/coiled-xarray.html?utm_source=dask.org&amp;utm_medium=homepage"
+                                                target="_blank"
+                                                class="link white no-pad plausible-event-name--hero-tab-array plausible-event-position--link">Aggregate
+                                                250 TB of Water Model Data</a></div>
+                                    </div>
+                                    <div class="home-tabs-logo-wr"><img loading="lazy" src="{{ pathto("_static/images/NumPy-logo.svg", 1) }}" alt="NumPy logo"
+                                            class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/Xarray-Logo.svg", 1) }}" alt="Xarray logo"
+                                            class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/zarr-logo.svg", 1) }}" alt="Zarr logo"
+                                            class="home-tabs-logo-img" /></div>
+                                </div>
+                                <div class="tab-code-wr">
+                                    <div class="tab-code-top">
+                                        <div class="tap-code-top-dot"></div>
+                                        <div class="tap-code-top-dot yellow"></div>
+                                        <div class="tap-code-top-dot green"></div>
+                                    </div>
+                                    <div class="code-embed dark-class">
+                                        <pre><code class="dark-class">import xarray as xr
+
+# Open image/array files natively
+ds = xr.open_mfdataset("data/*.nc")
+
+# Process across dimensions
+ds.mean(dims=["lat", "lon"]).compute()  
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-tab="tab-5" class="tab-pane">
+                            <div class="grid home-tab">
+                                <div class="home-tab-content">
+                                    <div id="tab-text-ml"
+                                        class="home-tabs-text">
+                                        <h2 class="heading-medium">Machine Learning</h2>
+                                        <div class="rich-text-tabs">
+                                            <p>Use Dask with common machine learning libraries to train or predict on
+                                                large datasets, increasing model accuracy by using <em>all</em> of your
+                                                data.</p>
+                                        </div>
+                                        <div class="buttons-wr"><a href="https://docs.dask.org/en/stable/ml.html"
+                                                target="_blank"
+                                                class="button plausible-event-name--hero-tab-ml plausible-event-position--button">Documentation</a><a
+                                                href="https://docs.coiled.io/user_guide/xgboost.html?utm_source=dask.org&amp;utm_medium=homepage"
+                                                target="_blank"
+                                                class="link white no-pad plausible-event-name--hero-tab-ml plausible-event-position--link">Example:
+                                                XGBoost Model Training</a></div>
+                                    </div>
+                                    <div class="home-tabs-logo-wr"><img loading="lazy" src="{{ pathto("_static/images/xGBoost-logo.svg", 1) }}" alt="xGBoost logo"
+                                            class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/PyTorch_logo_black.svg", 1) }}" alt="PyTorch_logo"
+                                            class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/optuna-logo.svg", 1) }}" alt="optuna logo"
+                                            class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/scikit-learn-logo.svg", 1) }}" alt="scikit learn logo"
+                                            class="home-tabs-logo-img" /></div>
+                                </div>
+                                <div class="tab-code-wr">
+                                    <div class="tab-code-top">
+                                        <div class="tap-code-top-dot"></div>
+                                        <div class="tap-code-top-dot yellow"></div>
+                                        <div class="tap-code-top-dot green"></div>
+                                    </div>
+                                    <div class="code-embed dark-class">
+                                        <pre><code class="dark-class">import xgboost as xgb
+import dask.dataframe as dd
+
+df = dd.read_parquet("s3://my-data/")
+dtrain = xgb.dask.DaskDMatrix(df)
+
+model = xgb.dask.train(
+    dtrain,
+    {"tree_method": "hist", ...},
+    ...
+)
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-responsive bg-white">
+        <div class="headline-full-white">
+            <h2>Performance at Scale</h2>
+        </div>
+        <div class="grid direction-reverse">
+            <div class="performance-text-content">
+                <h2 class="heading-small">Fast on Machines</h2>
+                <div class="rich-text-tabs">
+                    <p>Dask is lightweight, and runs your raw code on your machines without getting in the way.  No
+                        virtualization or compilers.</p>
+                    <p>As the Python stack matures your code matures. Today <a
+                            href="https://docs.coiled.io/blog/spark-vs-dask.html?utm_source=dask.org&amp;utm_medium=homepage">Dask
+                            is 50% faster than Spark</a> on standard benchmarks.</p>
+                </div>
+            </div>
+            <div class="performance-img-wr white">
+                <div class="performance-img-wr bg-grey">
+                    <div class="performance-img1" id="lottie-gauge"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid gap-mob">
+                <div class="performance-img-wr">
+                    <div class="performance-code-wr">
+                        <div class="performance-code-top">
+                            <div class="tap-code-top-dot"></div>
+                            <div class="tap-code-top-dot yellow"></div>
+                            <div class="tap-code-top-dot green"></div>
+                        </div>
+                        <div class="code-embed">
+                            <pre><code id="typed-pandas-dask-element">
+        <!-- stays empty -->
+</code></pre>
+                        </div>
+                        <div class="code-embed-hidden">
+                            <div id="typed-pandas-dask-strings">
+                                <!-- copy paste highlighted code here -->
+                                <code class="hljs language-python">
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd     
+
+df = pd.read_parquet(<span class="hljs-string">"s3://mybucket/myfile.parquet/"</span>)
+
+df = df[df.value >= 0]
+df.groupby(<span class="hljs-string">"account"</span>)[<span class="hljs-string">"value"</span>].sum()
+</code>
+
+                                <code class="hljs language-python">
+<span class="hljs-keyword">import</span> dask.dataframe <span class="hljs-keyword">as</span> dd
+
+df = dd.read_parquet(<span class="hljs-string">"s3://mybucket/myfile.*.parquet/"</span>)
+
+df = df[df.value >= 0]
+df.groupby(<span class="hljs-string">"account"</span>)[<span class="hljs-string">"value"</span>].sum().compute()
+</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="perf-section" class="performance-text-content middle">
+                    <h2 class="heading-small">Made for Humans</h2>
+                    <div class="rich-text-tabs">
+                        <p><strong>Computers are cheap.  Humans are expensive.</strong></p>
+                        <p>Fortunately, humans already know how to use Dask.</p>
+                        <p>It’s just Python. It’s just pandas. It’s just NumPy.</p>
+                        <p>Dask’s dashboard guides you towards efficiency, quickly teaching you to become a distributed
+                            computing expert.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div id="perf-text" class="performance-text-content full">
+                <h2 class="heading-small">Cheap and Efficient</h2>
+                <div class="rich-text-tabs">
+                    <p><strong>Fast humans + Fast machines = Cheap Computing</strong></p>
+                </div>
+                <div class="ticker-grid">
+                    <div id="ticker-rows" class="rows-container">
+                        <div class="animation-label">Rows of Data Computed</div>
+                        <div class="rows">1000000000000</div>
+                    </div>
+                    <div id="ticker-cost" class="rows-container dark">
+                        <div class="animation-label">Cost</div>
+                        <div class="div-block-2">
+                            <div class="dollar-label">$</div>
+                            <div class="rows-dark">0.00</div>
+                        </div>
+                    </div>
+                    <div id="ticker-caption" class="rich-text-tabs">
+                        <p>Dask users often process cloud data at <a
+                                href="https://docs.coiled.io/blog/ten-cents.html?utm_source=dask.org&amp;utm_medium=homepage"
+                                target="_blank">$0.10 per TiB</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="section-responsive bg-black no-pad-bot">
+            <div class="container">
+                <h2 class="heading-xlarge-box centered">Where you can run Dask</h2>
+                <div class="run-dask-tabs-wr">
+                    <div class="grid home-tab">
+                        <div class="home-tab-content run-dask">
+                            <div id="run-dask-oss"
+                                class="home-tabs-text">
+                                <h2 class="heading-medium">Open Source Deployment</h2>
+                                <div class="rich-text-tabs">
+                                    <p>Run Dask on your laptop (it's trivial) or deploy it on any resource
+                                        manager like Kubernetes, an HPC job schedulers, cloud SaaS services,
+                                        or even legacy Hadoop/Spark clusters.</p>
+                                </div>
+                                <div class="buttons-wr"><a
+                                        href="https://docs.dask.org/en/stable/deploying.html"
+                                        target="_blank"
+                                        class="button plausible-event-name--os-deploy plausible-event-position--button">Documentation</a><a
+                                        href="https://www.youtube.com/watch?v=faFncNrXmIY" target="_blank"
+                                        class="link white no-pad plausible-event-name--os-deploy plausible-event-position--link">Dask
+                                        deployment video</a></div>
+                            </div>
+                            <div class="home-tabs-logo-wr"><img loading="lazy" src="{{ pathto("_static/images/Kubernetes_logo.svg", 1) }}" alt="Kubernetes logo"
+                                    class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/Yarn-logo-kitten.svg", 1) }}" alt="Yarn logo"
+                                    class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/Slurm_logo.svg", 1) }}" alt="Slurm logo"
+                                    class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/lsf-logo.svg", 1) }}" alt="LSF logo"
+                                    class="home-tabs-logo-img" /><img loading="lazy" src="{{ pathto("_static/images/openPBS-logo.svg", 1) }}" alt="OpenOBS logo"
+                                    class="home-tabs-logo-img" /></div>
+                        </div>
+                        <div class="tab-code-wr run-dask">
+                            <div class="tab-code-top">
+                                <div class="tap-code-top-dot"></div>
+                                <div class="tap-code-top-dot yellow"></div>
+                                <div class="tap-code-top-dot green"></div>
+                            </div>
+                            <div class="code-embed dark-class">
+                                <pre><code class="language-python dark-class">from dask.distributed import LocalCluster
+
+cluster = LocalCluster(
+    processes=False,
+)
+client = cluster.get_client()
+
+# Use Dask locally
+import dask.dataframe as dd
+df = dd.read_parquet("/path/to/data.parquet")
+df.value.mean().compute()</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Why" class="section-responsive bg-largegridbox overflow-visible">
+        <div class="container">
+            <div class="grid quotes">
+                <div class="quote-text">
+                    <h2>What users say about Dask</h2>
+                    <div class="quote-text-width">
+                        <div class="text-large text-weight-bold">People use Dask and like it! You won’t be alone!</div>
+                    </div>
+                    <div class="quote-content">
+                        <div class="text-regular">It’s easy</div>
+                        <div class="quote-content-div"></div>
+                        <div class="text-regular">It’s massive</div>
+                        <div class="quote-content-div"></div>
+                        <div class="text-regular">It solved my problem</div>
+                    </div>
+                </div>
+                <div class="text-quotes-wr">
+                    <div class="text-quotes-col">
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/Pandas_logo.svg", 1)
+                                }}" loading="lazy" alt="" class="quote-logo" />
+                            <div class="text-medium">"Dask has been a trailblazer in making distributed and
+                                out-of-memory computing in Python easy and accessible for everyone."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/Wes McKinney.webp", 1) }}" loading="lazy"
+                                    sizes="(max-width: 479px) 7vw, (max-width: 991px) 3vw, 2vw" srcset="{{ pathto("_static/images/testimonials/Wes McKinney-p-500.webp", 1) }} 500w, {{ pathto("_static/images/testimonials/Wes McKinney.webp", 1) }} 657w"
+                                    alt="Wes McKinney" class="quote-author-img" />
+                                <div class="text-regular">Wes McKinney, Pandas</div>
+                            </div>
+                        </div>
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/Capital_One-logo.svg",
+                                1) }}" loading="lazy" alt="Capital One logo" class="quote-logo" />
+                            <div class="text-medium">"At Capital One, early implementations of Dask have reduced model
+                                training times by 91% within a few months of development effort."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/Ryan McEntee.webp", 1) }}" loading="lazy" alt="Ryan McEntee" class="quote-author-img" />
+                                <div class="text-regular">Ryan McEntee, Capital One</div>
+                            </div>
+                        </div>
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/pangeo-logo.svg", 1)
+                                }}" loading="lazy" alt="Pangeo logo" class="quote-logo" />
+                            <div class="text-medium">"My climate science research has been made possible by Dask. Dask
+                                integrates seamlessly with Xarray, making it easy to run large-scale computations on
+                                multi-dimensional datasets. I can focus on my research instead of thinking about
+                                parallelism."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/Paige Martin.webp", 1) }}" loading="lazy" alt="Paige Martin" class="quote-author-img" />
+                                <div class="text-regular">Paige Martin, Pangeo</div>
+                            </div>
+                        </div>
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/simeio-logo.svg", 1)
+                                }}" loading="lazy" alt="Simeio logo" class="quote-logo" />
+                            <div class="text-medium">"Dask shines when dealing with generic data structures which don't
+                                conform to table-like structures. PySpark has RDDs, but who wants to code in Python and
+                                debug verbose Java logs?"</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/placeholder.svg", 1) }}"
+                                    loading="lazy" alt="" class="quote-author-img hide" />
+                                <div class="text-regular">Ajith Aravind, Simeio</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-quotes-col">
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/earthmover-logo.svg",
+                                1) }}" loading="lazy" alt="earthmover logo" class="quote-logo" />
+                            <div class="text-medium">"Dask has transformed how the world interacts with weather,
+                                climate, and geospatial data by making it super easy to scale up data processing
+                                pipelines on HPC or cloud. Things that seemed impossible five years ago are now routine
+                                thanks to Dask."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/Ryan Abernathy.webp", 1) }}" loading="lazy" alt="Ryan Abernathy"
+                                    class="quote-author-img" />
+                                <div class="text-regular">Ryan Abernathy, Earthmover</div>
+                            </div>
+                        </div>
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/Fanatics-logo.svg", 1)
+                                }}" loading="lazy" alt="Fanatics logo" class="quote-logo" />
+                            <div class="text-medium">"With Dask, I can easily adapt code that runs on a single machine
+                                and scale it across an entire cluster. Very few other tools let you get going that
+                                quickly—across any language."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/Jacqueline Nolis.webp", 1) }}" loading="lazy" alt="Jacqueline Nolis"
+                                    class="quote-author-img" />
+                                <div class="text-regular">Jacqueline Nolis, Fanatics Inc.</div>
+                            </div>
+                        </div>
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/GrubHub-logo.svg", 1)
+                                }}" loading="lazy" alt="GrubHub logo" class="quote-logo" />
+                            <div class="text-medium">"Dask also makes it easy to deploy distributed work locally using
+                                multiple Python processes in a way that is nearly identical to how full production load
+                                is distributed."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/Hugues Demers.webp", 1) }}" loading="lazy" alt="Hugues Demers" class="quote-author-img" />
+                                <div class="text-regular">Hugues Demers, Grubhub</div>
+                            </div>
+                        </div>
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/Wayfair-logo.svg", 1)
+                                }}" loading="lazy" alt="Wayfair logo" class="quote-logo" />
+                            <div class="text-medium">"To further accelerate our users' ability to scale easily on the
+                                cloud, we expanded this by setting up pre-configured Horovod and Dask clusters."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/Meenakshi Sharma.webp", 1) }}" loading="lazy" alt="Meenakshi Sharma"
+                                    class="quote-author-img" />
+                                <div class="text-regular">Meenakshi Sharma, Wayfair</div>
+                            </div>
+                        </div>
+                        <div class="text-quote"><img src="{{ pathto("_static/images/testimonials/rebuy_logo.svg", 1)
+                                }}" loading="lazy" alt="Rebuy logo" class="quote-logo" />
+                            <div class="text-medium">"I used to work in Spark all the time. The sooner you move to Dask,
+                                the sooner you'll be grateful you did."</div>
+                            <div class="quote-name-wr"><img src="{{ pathto("_static/images/testimonials/John Renken.webp", 1) }}" loading="lazy" alt="John Renken" class="quote-author-img" />
+                                <div class="text-regular">John Renken, Rebuy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-responsive bg-grey padding-bottom-1unit">
+        <div class="home-logos">
+            <h2 class="heading-medium">Organizations That Use Dask</h2>
+        </div>
+        <div class="logo-list">
+            <div role="list" class="grid _6-col">
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/capital-one.png", 1) }}"
+                            loading="lazy" alt="Capital One"
+                            sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw" srcset="{{ pathto("_static/images/capital-one-p-500.png", 1) }} 500w, {{ pathto("_static/images/capital-one.png", 1) }} 640w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/deshaw-co.png", 1) }}"
+                            loading="lazy" alt="DE Shaw &amp; Co"
+                            sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw" srcset="{{ pathto("_static/images/deshaw-co-p-500.png", 1) }} 500w, {{ pathto("_static/images/deshaw-co-p-800.png", 1) }} 800w, {{ pathto("_static/images/deshaw-co-p-1080.png", 1) }} 1080w, {{ pathto("_static/images/deshaw-co.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/grubhub.png", 1) }}"
+                            loading="lazy" alt="Grubhub" sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw"
+                            srcset="{{ pathto("_static/images/grubhub-p-500.png", 1) }} 500w, {{ pathto("_static/images/grubhub-p-800.png", 1) }} 800w, {{ pathto("_static/images/grubhub-p-1080.png", 1) }} 1080w, {{ pathto("_static/images/grubhub.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/microsoft.png", 1) }}"
+                            loading="lazy" alt="Microsoft"
+                            sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw" srcset="{{ pathto("_static/images/microsoft-p-500.png", 1) }} 500w, {{ pathto("_static/images/microsoft-p-800.png", 1) }} 800w, {{ pathto("_static/images/microsoft.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/nasa.png", 1) }}"
+                            loading="lazy" alt="NASA" sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw"
+                            srcset="{{ pathto("_static/images/nasa-p-500.png", 1) }} 500w, {{ pathto("_static/images/nasa-p-800.png", 1) }} 800w, {{ pathto("_static/images/nasa-p-1080.png", 1) }} 1080w, {{ pathto("_static/images/nasa.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/nvidia.png", 1) }}"
+                            loading="lazy" alt="NVIDIA" sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw"
+                            srcset="{{ pathto("_static/images/nvidia-p-500.png", 1) }} 500w, {{ pathto("_static/images/nvidia-p-800.png", 1) }} 800w, {{ pathto("_static/images/nvidia-p-1080.png", 1) }} 1080w, {{ pathto("_static/images/nvidia.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/shell.png", 1) }}"
+                            loading="lazy" alt="Shell" sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw"
+                            srcset="{{ pathto("_static/images/shell-p-500.png", 1) }} 500w, {{ pathto("_static/images/shell-p-800.png", 1) }} 800w, {{ pathto("_static/images/shell-p-1080.png", 1) }} 1080w, {{ pathto("_static/images/shell.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/companies/two-sigma-logo.svg",
+                            1) }}" loading="lazy" alt="Two Sigma" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/us-air-force.png", 1) }}"
+                            loading="lazy" alt="US Air Force"
+                            sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw" srcset="{{ pathto("_static/images/us-air-force-p-500.png", 1) }} 500w, {{ pathto("_static/images/us-air-force-p-800.png", 1) }} 800w, {{ pathto("_static/images/us-air-force-p-1080.png", 1) }} 1080w, {{ pathto("_static/images/us-air-force.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/companies/defense-department.webp", 1) }}" loading="lazy" alt="US government"
+                            sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw" srcset="{{ pathto("_static/images/companies/defense-department-p-500.webp", 1) }} 500w, {{ pathto("_static/images/companies/defense-department-p-800.webp", 1) }} 800w, {{ pathto("_static/images/companies/defense-department.webp", 1) }} 867w"
+                            class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/walmart.png", 1) }}"
+                            loading="lazy" alt="Walmart" sizes="(max-width: 479px) 36vw, (max-width: 991px) 22vw, 14vw"
+                            srcset="{{ pathto("_static/images/walmart-p-500.png", 1) }} 500w, {{ pathto("_static/images/walmart-p-800.png", 1) }} 800w, {{ pathto("_static/images/walmart.png", 1) }} 1280w" class="container-logo-img" /></div>
+                </div>
+                <div role="listitem"
+                    class="logo-grid-item">
+                    <div class="logo-grid-container"><img src="{{ pathto("_static/images/companies/arm-logo.svg", 1)
+                            }}" loading="lazy" alt="arm" class="container-logo-img" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="Advantages" class="section-responsive bg-largegridbox">
+        <div class="container center">
+            <h2 class="heading-large-box with-white-bg">Use Cases</h2>
+            <div class="mar-top-xsmall">
+                <div class="text-regular">Anything you can do with Python, you can scale with Dask</div>
+            </div>
+            <div class="grid _4-col use-cases"><a
+                    href="https://docs.coiled.io/user_guide/uber-lyft.html?utm_source=dask.org&amp;utm_medium=homepage"
+                    target="_blank"
+                    class="card use-cases plausible-event-name--use-case plausible-event-position--1">
+                    <div class="logo-card-img-with-text"><img alt="Pandas logo" src="{{ pathto("_static/images/use-cases/Pandas-logo.webp", 1) }}" loading="lazy" width="233"
+                            class="container-logo-img" /></div>
+                    <div class="bg-line-black logo-card"></div>
+                    <div class="use-case-card-info">
+                        <h3>NYC Uber/Lyft</h3>
+                        <div class="text-small text-weight-semibold">Tools</div>
+                        <div class="use-case-tools-wr">
+                            <div class="text-small use-case-tools">DataFrames</div>
+                            <div class="text-small use-case-tools">Parquet</div>
+                        </div>
+                        <div class="text-small text-weight-semibold">Data</div>
+                        <div class="text-small">50 GB of Parquet data</div>
+                    </div>
+                </a><a
+                    href="https://docs.coiled.io/blog/easy-scalable-production-etl.html?utm_source=dask.org&amp;utm_medium=homepage"
+                    target="_blank"
+                    class="card use-cases plausible-event-name--use-case plausible-event-position--2">
+                    <div class="logo-card-img-with-text"><img alt="Prefect logo" src="{{ pathto("_static/images/use-cases/prefect-logo.webp", 1) }}" loading="lazy" width="233"
+                            class="container-logo-img" /></div>
+                    <div class="bg-line-black logo-card"></div>
+                    <div class="use-case-card-info">
+                        <h3>Scalable ETL Pipeline</h3>
+                        <div class="text-small text-weight-semibold">Tools</div>
+                        <div class="use-case-tools-wr">
+                            <div class="text-small use-case-tools">Deltalake</div>
+                            <div class="text-small use-case-tools">Streamlit</div>
+                            <div class="text-small use-case-tools">Prefect</div>
+                        </div>
+                        <div class="text-small text-weight-semibold">Data</div>
+                        <div class="text-small">2 TB of TPC-H JSON records</div>
+                    </div>
+                </a><a href="https://docs.coiled.io/blog/coiled-xarray.html?utm_source=dask.org&amp;utm_medium=homepage"
+                    target="_blank"
+                    class="card use-cases plausible-event-name--use-case plausible-event-position--3">
+                    <div class="logo-card-img-with-text"><img alt="Xarray logo" src="{{ pathto("_static/images/use-cases/Xarray-logo.webp", 1) }}" loading="lazy" width="233"
+                            class="container-logo-img" /></div>
+                    <div class="bg-line-black logo-card"></div>
+                    <div class="use-case-card-info">
+                        <h3>National Water Model</h3>
+                        <div class="text-small text-weight-semibold">Tools</div>
+                        <div class="use-case-tools-wr">
+                            <div class="text-small use-case-tools">Xarray</div>
+                            <div class="text-small use-case-tools">Zarr</div>
+                            <div class="text-small use-case-tools">Flox</div>
+                        </div>
+                        <div class="text-small text-weight-semibold">Data</div>
+                        <div class="text-small">250 TB of Zarr data</div>
+                    </div>
+                </a><a
+                    href="https://docs.coiled.io/blog/dask-expr-tpch-dask.html?utm_source=dask.org&amp;utm_medium=homepage"
+                    target="_blank"
+                    class="card use-cases plausible-event-name--use-case plausible-event-position--4">
+                    <div class="logo-card-img-with-text"><img alt="TPC logo" src="{{ pathto("_static/images/use-cases/TPC-logo.webp", 1) }}" loading="lazy" width="233"
+                            class="container-logo-img" /></div>
+                    <div class="bg-line-black logo-card"></div>
+                    <div class="use-case-card-info">
+                        <h3>TPC-H Benchmark</h3>
+                        <div class="text-small text-weight-semibold">Tools</div>
+                        <div class="use-case-tools-wr">
+                            <div class="text-small use-case-tools">Spark</div>
+                            <div class="text-small use-case-tools">DuckDB</div>
+                            <div class="text-small use-case-tools">Polars</div>
+                        </div>
+                        <div class="text-small text-weight-semibold">Data</div>
+                        <div class="text-small">Standard SQL benchmark results</div>
+                    </div>
+                </a><a
+                    href="https://docs.coiled.io/blog/processing-terabyte-scale-nasa-cloud-datasets-with-coiled.html?utm_source=dask.org&amp;utm_medium=homepage"
+                    target="_blank"
+                    class="card use-cases plausible-event-name--use-case plausible-event-position--5">
+                    <div class="logo-card-img-with-text"><img alt="NASA logo" src="{{ pathto("_static/images/use-cases/nasa-logo.webp", 1) }}" loading="lazy" width="233"
+                            class="container-logo-img" /></div>
+                    <div class="bg-line-black logo-card"></div>
+                    <div class="use-case-card-info">
+                        <h3>NASA Satellite Imagery</h3>
+                        <div class="text-small text-weight-semibold">Tools</div>
+                        <div class="use-case-tools-wr">
+                            <div class="text-small use-case-tools">Geotiff</div>
+                            <div class="text-small use-case-tools">Xarray</div>
+                            <div class="text-small use-case-tools">Coiled</div>
+                        </div>
+                        <div class="text-small text-weight-semibold">Data</div>
+                        <div class="text-small">1 TB of NetCDF files</div>
+                    </div>
+                </a><a href="https://docs.coiled.io/user_guide/xgboost.html?utm_source=dask.org&amp;utm_medium=homepage"
+                    target="_blank"
+                    class="card use-cases plausible-event-name--use-case plausible-event-position--6">
+                    <div class="logo-card-img-with-text"><img alt="xGBoost logo" src="{{ pathto("_static/images/use-cases/xGBoost-logo.webp", 1) }}" loading="lazy" width="233"
+                            class="container-logo-img" /></div>
+                    <div class="bg-line-black logo-card"></div>
+                    <div class="use-case-card-info">
+                        <h3>XGBoost Model Tuning</h3>
+                        <div class="text-small text-weight-semibold">Tools</div>
+                        <div class="use-case-tools-wr">
+                            <div class="text-small use-case-tools">XGBoost</div>
+                            <div class="text-small use-case-tools">Parquet</div>
+                        </div>
+                        <div class="text-small text-weight-semibold">Data</div>
+                        <div class="text-small">75 GB of Parquet data</div>
+                    </div>
+                </a>
+                <div id="use-cases-cta" class="card use-cases cta">
+                    <h3 class="heading-medium">Want more examples?</h3>
+                    <div class="text-small">Visit the Dask Blog or Dask Youtube Channel</div>
+                    <div class="buttons-wr"><a
+                            href="https://www.youtube.com/playlist?list=PLJ0vO2F_f6OD0cwscL_yeG1aC3ESBquAT"
+                            target="_blank" class="button">Dask Demo Day</a><a
+                            href="https://www.youtube.com/c/dask-dev" target="_blank" class="link no-pad">Dask YouTube
+                            Channel</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-responsive bg-lightgrey">
+        <div class="container no-pad-bot">
+            <div class="get-started-columns">
+                <div id="get-started-text" class="container-text get-strted">
+                    <h2>Super easy to get started</h2>
+                    <div class="get-started-text-wr">
+                        <div class="text-medium text-weight-semibold">You can run Dask right now on your computer. It’s
+                            simple and lightweight.</div>
+                    </div>
+                    <div class="_1-unit"><a href="https://docs.dask.org/en/latest/install.html" target="_blank"
+                            class="button">Install Now</a></div>
+                </div>
+                <div class="getstarted-code-wr">
+                    <div class="performance-code-top">
+                        <div class="tap-code-top-dot"></div>
+                        <div class="tap-code-top-dot yellow"></div>
+                        <div class="tap-code-top-dot green"></div>
+                    </div>
+                    <div class="code-embed getstarted-code">
+                        <pre><code id="typed-install-dask-element">
+        <!-- stays empty -->
+</code></pre>
+                    </div>
+                    <div class="code-embed-hidden getstarted-code">
+                        <div id="typed-install-dask-strings">
+                            <code class="hljs language-python-repl">
+$ conda install dask
+</code>
+                            <code class="hljs language-python-repl">
+$ pip install "dask[complete]"
+</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-responsive bg-navy">
+        <div class="grid reverse">
+            <div id="stay-connected-img"><img src="{{ pathto("_static/images/illustration-home-stay-connected.svg", 1) }}" loading="lazy" alt=""
+                    class="image-contact" /></div>
+            <div id="stay-connected-text" class="align-vertically-centered scale-wr">
+                <h2 class="text-large">Most people use Dask just on their laptops to scale out to 100 GiB datasets. Dask
+                    works great on a single machine.</h2>
+                <div class="buttons-wr"><a href="https://docs.dask.org/en/stable/" target="_blank"
+                        class="link white no-pad">Proceed to documentation</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div id="footer-logo-col" class="f-bg-col logo"><a
+                        href="https://www.dask.org/index.html"
+                        id="footer-logo-link" aria-current="page"
+                        class="brand-logo footer-logo"><img src="{{ pathto("_static/images/dask-header-logo.svg", 1) }}" loading="lazy" alt="Dask logo"
+                            class="container-logo-img" /></a></div>
+                {% for section, links in footer_links.items() %}
+                <div style="grid-area: span 4 / span 1 / span 4 / span 1;">
+                    <div class="f-bg-col nav{{ ' last' if loop.last }}">
+                        <div class="text-medium footer-nav">{{ section }}</div>
+                    </div>
+                    <div class="f-bg-line"></div>
+                    <div class="f-bg-col nav-text">
+                        {%- for label, url in links.items() %}<a
+                            href="{{ url }}" class="text-medium footer-nav reg">{{ label }}</a>
+                        {%- endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+                <div id="footer-social" class="f-bg-col social" style="grid-column: 1; grid-row: 2;"><a
+                        href="https://github.com/dask/dask" id="footer-social-link"
+                        target="_blank" class="social-media-icon"><img src="{{ pathto("_static/images/git-hub.svg", 1) }}" loading="lazy" alt="Github icon"
+                            class="container-logo-img" />
+                        <div class="descriptive-link">go to github page</div>
+                    </a><a href="https://twitter.com/dask_dev" target="_blank"
+                        class="social-media-icon"><img src="{{ pathto("_static/images/twitter.svg", 1) }}"
+                            loading="lazy" alt="Twitter icon" class="container-logo-img" />
+                        <div class="descriptive-link">go to twitter page</div>
+                    </a><a href="https://www.youtube.com/c/Dask-dev" target="_blank"
+                        class="social-media-icon"><img src="{{ pathto("_static/images/youtube.svg", 1) }}"
+                            loading="lazy" alt="YouTube icon" class="container-logo-img" />
+                        <div class="descriptive-link">go to youtube page</div>
+                    </a><a href="https://stackoverflow.com/questions/tagged/dask" target="_blank"
+                        class="social-media-icon"><img src="{{ pathto("_static/images/stack-x.svg", 1) }}"
+                            loading="lazy" alt="Stack Overflow icon" class="container-logo-img" />
+                        <div class="descriptive-link">go to stackoverflow. page</div>
+                    </a><a href="https://dask.discourse.group" target="_blank"
+                        class="social-media-icon"><img src="{{ pathto("_static/images/chat.svg", 1) }}"
+                            loading="lazy" alt="Chat icon
+" class="container-logo-img" />
+                        <div class="descriptive-link">go to dask discourse group page</div>
+                    </a></div>
+                <div id="footer-copyright" class="f-bg-col text" style="grid-column: 1; grid-row: 3;">
+                    <p class="text-tiny white copyright">Copyright © <span class="copyright-year">2022</span> Dask core
+                        developers. New-BSD Licensed.<br /></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ pathto("_static/js/dask-tabs.js", 1) }}"></script>
+    <script src="{{ pathto("_static/js/dask-navbar.js", 1) }}"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4GQM59" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <script>
+        document.querySelector('.copyright-year').textContent = new Date().getFullYear();
+    </script><!-- Counter Animation -->
+    <script src="{{ pathto("_static/js/purecounter_vanilla.js", 1) }}"></script>
+    <script>
+        new PureCounter({
+            // Setting that can't' be overriden on pre-element
+            selector: '.rows',		// HTML query selector for spesific element
+
+            // Settings that can be overridden on per-element basis, by `data-purecounter-*` attributes:
+            start: 0000000000000, 			            // Starting number [unit]
+            end: 1000000000000, 			            // End number [unit]
+            duration: 1, 	                // The time in seconds for the animation to complete [seconds]
+            delay: 10, 			            // The delay between each iteration (the default of 10 will produce 100 fps) [miliseconds]
+            once: true, 		            // Counting at once or recount when the element in view [boolean]
+            repeat: false, 		            // Repeat count for certain time [boolean:false|seconds]
+            decimals: 0, 		            // How many decimal places to show. [unit]
+            legacy: true,                   // If this is true it will use the scroll event listener on browsers
+            filesizing: false, 	            // This will enable/disable File Size format [boolean]
+            currency: false, 	            // This will enable/disable Currency format. Use it for set the symbol too [boolean|char|string]
+            separator: false, 	            // This will enable/disable comma separator for thousands. Use it for set the symbol too [boolean|char|string]
+        });
+
+        new PureCounter({
+            // Setting that can't' be overriden on pre-element
+            selector: '.rows-dark',		// HTML query selector for spesific element
+
+            // Settings that can be overridden on per-element basis, by `data-purecounter-*` attributes:
+            start: 0.03, 			            // Starting number [unit]
+            end: 1.07, 			            // End number [unit]
+            duration: 1, 	                // The time in seconds for the animation to complete [seconds]
+            delay: 10, 			            // The delay between each iteration (the default of 10 will produce 100 fps) [miliseconds]
+            once: true, 		            // Counting at once or recount when the element in view [boolean]
+            repeat: false, 		            // Repeat count for certain time [boolean:false|seconds]
+            decimals: 2, 		            // How many decimal places to show. [unit]
+            legacy: true,                   // If this is true it will use the scroll event listener on browsers
+            filesizing: false, 	            // This will enable/disable File Size format [boolean]
+            currency: true, 	            // This will enable/disable Currency format. Use it for set the symbol too [boolean|char|string]
+            separator: false, 	            // This will enable/disable comma separator for thousands. Use it for set the symbol too [boolean|char|string]
+        });
+    </script>
+
+    <!-- animated code snippets -->
+    <script src="{{ pathto("_static/js/typed.umd.js", 1) }}"></script>
+    <script src="{{ pathto("_static/js/highlight.min.js", 1) }}"></script>
+    <script>
+        function observeViewport(elementSelector, stringsElementSelector, startDelay, loop) {
+            // If the specified element comes into the viewport, this callback will be run
+            const viewportObserver = new IntersectionObserver((entries, observer) => {
+                // If the element is within the viewport
+                if (entries[0].isIntersecting) {
+                    // Run the typed code
+                    var typed = new Typed(elementSelector, {
+                        stringsElement: stringsElementSelector,
+                        startDelay: startDelay,
+                        smartBackspace: false,
+                        loop: loop,
+                        backDelay: 1000,
+                    });
+                    // Instruct the IntersectionObserver to stop watching for changes
+                    // Otherwise, your typed code will be called more than once
+                    observer.unobserve(document.querySelector(elementSelector));
+
+                }
+            });
+
+            // Instruct the IntersectionObserver to observe the element
+            viewportObserver.observe(document.querySelector(elementSelector));
+        }
+
+        observeViewport('#typed-pandas-dask-element', '#typed-pandas-dask-strings', 100, true);
+        observeViewport('#typed-install-dask-element', '#typed-install-dask-strings', 100, false);
+
+    </script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-hero'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '{{ pathto("_static/animations/Dask_Home_2_Updates.json", 1) }}'
+        });
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-gauge'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '{{ pathto("_static/animations/Type-Gauge.json", 1) }}'
+        });
+    </script>
+</body>
+
+</html>

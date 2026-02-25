@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dask-website"
+version = "1.0.0"
+description = "Dask.org website built with Sphinx"
+requires-python = ">=3.9"
+dependencies = ["sphinx>=7.0.0", "myst-parser>=2.0.0"]
+
+[project.optional-dependencies]
+dev = ["sphinx-autobuild"]
+
+[tool.uv]
+dev-dependencies = ["sphinx-autobuild>=2024.0.0"]
