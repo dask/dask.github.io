@@ -29,5 +29,4 @@ closed-survey pages are included. Forms have no submission backend.
 Dask content and implementation are attributed to Dask core developers.
 [LICENSE.txt](LICENSE.txt) contains the BSD license; [licenses](licenses/)
 contains font and renderer notices. Third-party artwork and trademarks retain
-their owners' rights. See [asset origins](licenses/asset-origins.md) for source
-references and animation credits.
+their owners' rights.
