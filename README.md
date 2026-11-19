@@ -11,8 +11,9 @@ and legacy HTML. Astro produces `dist/`; generated output, dependencies and test
 evidence are ignored by Git.
 
 The build uses Node.js 24 and npm with a committed lockfile. Automated checks
-cover formatting, builds, asset integrity, browser interactions, responsive
-layouts, animations and redirects.
+cover formatting, static output, responsive layout, browser interactions,
+animations, redirects and mounted previews. Playwright specs are organized by
+behavior in `tests/`.
 
 GitHub Actions CI checks pull requests. The Pages workflow builds and publishes
 upstream main, with separate build and deployment jobs and main-only manual
@@ -27,6 +28,4 @@ closed-survey pages are included. Forms have no submission backend.
 Dask content and implementation are attributed to Dask core developers.
 [LICENSE.txt](LICENSE.txt) contains the BSD license; [licenses](licenses/)
 contains font and renderer notices. Third-party artwork and trademarks retain
-their owners' rights. Asset source URLs are recorded in `src/data/assets.json`;
-source identities and original animation URLs/hashes are recorded in
-`tests/fixtures/provenance.json`.
+their owners' rights.
