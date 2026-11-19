@@ -20,6 +20,9 @@ for (const width of widths) {
         expect(response.status()).toBe(200);
         const main = page.getByRole('main');
         await expect(main.getByRole('heading', { level: 1 })).toBeVisible();
+        for (const section of route.sections) {
+          await expect(main.locator(section), section).toBeVisible();
+        }
         await page.evaluate(() => document.fonts.ready);
         await expectLoadedImages(page.locator('img'));
         const footer = page.getByRole('contentinfo');

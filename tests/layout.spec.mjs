@@ -124,3 +124,74 @@ test('adoption chart stays inside its section and clear of the labels', async ({
     });
   }
 });
+
+test('Brand Guide specimen labels stay clear of other rendered text', async ({
+  page,
+}) => {
+  // Sample the standard phone, tablet and desktop layouts. The 320px
+  // document/clipping check above is separate: the site's existing typography
+  // layout at 320px crowds the first label.
+  for (const width of [390, 768, 1440]) {
+    await test.step(`${width}px`, async () => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto('./brand-guide');
+      await page.evaluate(() => document.fonts.ready);
+      const specimens = page.locator('.type-specimens');
+      await expect(specimens).toBeVisible();
+      const labels = specimens.locator('.type-label');
+      expect(await labels.count()).toBeGreaterThan(0);
+      for (const label of await labels.all()) await expect(label).toBeVisible();
+
+      const collisions = await specimens.evaluate((section) => {
+        const texts = [];
+        for (const el of section.querySelectorAll(
+          '.type-label, .type-sample',
+        )) {
+          if (
+            !el.checkVisibility({
+              opacityProperty: true,
+              visibilityProperty: true,
+            })
+          )
+            continue;
+          const range = document.createRange();
+          range.selectNodeContents(el);
+          texts.push({
+            label: el.matches('.type-label'),
+            text: el.textContent.trim(),
+            rects: [...range.getClientRects()],
+          });
+        }
+
+        // Compare both dimensions of text fragments, not paragraph or cell
+        // edges. A decorative sample can extend outside its cell without
+        // interfering with a label. Ignore sample-on-sample contacts here.
+        const overlaps = [];
+        for (const [index, a] of texts.entries()) {
+          for (const b of texts.slice(index + 1)) {
+            if (!a.label && !b.label) continue;
+            for (const first of a.rects) {
+              for (const second of b.rects) {
+                const horizontal =
+                  Math.min(first.right, second.right) -
+                  Math.max(first.left, second.left);
+                const vertical =
+                  Math.min(first.bottom, second.bottom) -
+                  Math.max(first.top, second.top);
+                // Tolerate subpixel rounding; no fixed visual reference.
+                if (horizontal > 1 && vertical > 1) {
+                  overlaps.push({
+                    text: [a.text, b.text],
+                    overlap: { width: horizontal, height: vertical },
+                  });
+                }
+              }
+            }
+          }
+        }
+        return overlaps;
+      });
+      expect(collisions).toEqual([]);
+    });
+  }
+});
