@@ -1,0 +1,199 @@
+/* Help owns paper, copy tracks and intrinsic card rhythm. No section heights. */
+.help-content {
+  background-color: #f6f6f6;
+  padding: 5.1875rem calc(5.625vw + 0.15rem) 4.8135rem 5.625vw;
+  display: grid;
+  grid-template-columns: 34.8115rem minmax(0, 1fr);
+  gap: 0.5rem;
+}
+.help-intro,
+.help-answers article {
+  background: #f6f6f6;
+}
+.help-intro {
+  display: flex;
+  flex-direction: column;
+  padding: 5.0004rem 5.4999rem 0 2.5002rem;
+  margin-bottom: 0.3115rem;
+}
+.help-intro h2 {
+  font-size: 2.8746rem;
+  line-height: 3.5001rem;
+  margin-bottom: 2.25rem;
+}
+.help-content p {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  margin: 0 0 1.5003rem;
+}
+.help-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 2.7rem;
+}
+.help-icons img {
+  width: 3.999rem;
+  height: 3.999rem;
+}
+.help-answers {
+  display: grid;
+  gap: 0.2502rem;
+}
+.help-answers article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding: 0 1.8rem;
+  aspect-ratio: 3.001738;
+}
+.help-answers h3,
+.help-answers p {
+  flex-shrink: 0;
+}
+.help-answers article:nth-child(2) {
+  aspect-ratio: 4.552345;
+}
+.help-answers article:nth-child(3) {
+  aspect-ratio: 3.016449;
+}
+.help-answers h3 {
+  font-size: 1.2501rem;
+  line-height: 1.9998rem;
+  margin: 0 0 0.9999rem;
+}
+.help-answers a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-underline-offset: 0.1875rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .help-content {
+    padding: 3.56934rem calc(7.26vw + 0.02646rem) 3.584rem
+      calc(7.26vw + 0.13344rem);
+    grid-template-columns: 16.7998rem minmax(0, 1fr);
+    gap: 0.2656rem;
+  }
+  .help-intro {
+    padding: 2.66688rem 2.93328rem 0 1.92rem;
+    margin-bottom: -0.0625rem;
+  }
+  .help-intro h2 {
+    font-size: 1.89456rem;
+    line-height: 2.2104rem;
+    margin-bottom: 1.2rem;
+  }
+  .help-content p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.96rem;
+  }
+  .help-icons {
+    gap: 0.42096rem;
+    margin-top: 2.544rem;
+  }
+  .help-icons img {
+    width: 2.9472rem;
+    height: 2.9472rem;
+  }
+  .help-answers {
+    gap: 0.21rem;
+  }
+  .help-answers article {
+    padding: 0 0.96rem;
+    aspect-ratio: 1.434399;
+  }
+  .help-answers a {
+    font-size: 0.94752rem;
+    line-height: 0.94752rem;
+  }
+  .help-answers article:nth-child(2) {
+    aspect-ratio: 2.400963;
+  }
+  .help-answers article:nth-child(3) {
+    aspect-ratio: 1.426923;
+  }
+  .help-answers h3 {
+    font-size: 1.05264rem;
+    line-height: 1.44rem;
+    margin-bottom: 0.53328rem;
+  }
+}
+@media (max-width: 767px) {
+  .help-content {
+    display: block;
+    padding: 5.33203rem calc(7.7vw + 0.2766rem) 5.119rem calc(7.7vw + 0.0675rem);
+  }
+  .help-intro {
+    padding: 2.68125rem 0.81242rem 3.977rem;
+    margin: 0 0 0.2021rem;
+  }
+  .help-intro h2 {
+    font-size: 2.07992rem;
+    line-height: 2.34rem;
+    margin-bottom: 1.21875rem;
+  }
+  .help-content p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-bottom: 1.04008rem;
+  }
+  .help-icons {
+    gap: 0.52rem;
+    margin-top: 1.5186rem;
+  }
+  .help-icons img {
+    width: 3.11914rem;
+    height: 3.11914rem;
+  }
+  .help-answers {
+    gap: 0.26008rem;
+  }
+  .help-answers article {
+    padding: 0 0.81242rem;
+    aspect-ratio: 0.799899;
+  }
+  .help-answers article:nth-child(2) {
+    aspect-ratio: 1.350522;
+  }
+  .help-answers article:nth-child(3) {
+    aspect-ratio: 1.007178;
+  }
+  .help-answers h3 {
+    font-size: 1.29992rem;
+    line-height: 2.07992rem;
+    margin-bottom: 0.51992rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .help-content {
+    padding: 4.30233rem calc(7.6vw - 0.092rem) 4.21rem calc(7.6vw + 0.129rem);
+  }
+  .help-intro {
+    padding: 2.34rem 1.56rem 2.904rem;
+    margin-bottom: 0.388rem;
+  }
+  .help-intro h2 {
+    margin-bottom: 1.17rem;
+  }
+  .help-content p {
+    margin-bottom: 1.56rem;
+  }
+  .help-icons {
+    margin-top: 1.4976rem;
+  }
+  .help-answers article {
+    padding: 0 1.56rem;
+    aspect-ratio: 2.492046;
+  }
+  .help-answers article:nth-child(2) {
+    aspect-ratio: 3.322594;
+  }
+  .help-answers article:nth-child(3) {
+    aspect-ratio: 2.536834;
+  }
+  .help-answers h3 {
+    line-height: 1.82rem;
+  }
+}

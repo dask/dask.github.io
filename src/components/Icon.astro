@@ -1,0 +1,38 @@
+---
+const { name = 'ecosystem' } = Astro.props;
+---
+
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 48 48"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.6"
+  aria-hidden="true"
+>
+  {name === 'ecosystem' ? (
+    <>
+      <path d="M19 10C10 14 6 23 7 32M29 10c9 4 13 13 12 22M13 40c7 4 15 4 22 0" />
+      <circle cx="24" cy="6" r="6" fill="var(--icon-bg,white)" />
+      <circle cx="7" cy="38" r="6" fill="var(--icon-bg,white)" />
+      <circle cx="41" cy="38" r="6" fill="var(--icon-bg,white)" />
+      <circle cx="24" cy="27" r="10" stroke-dasharray="1.5 2" />
+      <path d="M24 12v5m-12 17 5-3m14 0 5 3" stroke-dasharray="1.5 2" />
+    </>
+  ) : name === 'stories' ? (
+    <>
+      <path d="M10 3h22l7 8v30H10V3Z M32 3v9h7 M14 12h10 M14 21h11 M14 29h13 M14 36h17" />
+      <path d="M5 9H3v36h30v-2" stroke-dasharray="1.5 2" />
+      <circle cx="38" cy="24" r="8" fill="var(--icon-bg,white)" />
+      <path d="m43 30 5 6" />
+    </>
+  ) : (
+    <>
+      <path d="M10 43V3h33 M4 9H2v36h31" stroke-dasharray="1.5 2" />
+      <path d="M10 43V3h33" />
+      <rect x="16" y="9" width="27" height="16" rx="1" />
+      <path d="M16 32h11m3 0h13M16 39h11m3 0h13" />
+    </>
+  )}
+</svg>

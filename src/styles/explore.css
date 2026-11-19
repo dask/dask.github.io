@@ -1,0 +1,409 @@
+/* Explore owns its intrinsic intro, three native tabs and content/action flow.
+   Labels deliberately overflow the circular tab hitbox, as on the reference. */
+.explore-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  --explore-arrow-gap: 0.45rem;
+  --explore-arrow-inset: 3.24rem;
+  /* The two measured outer/inner bottom gutters remain local to Explore. */
+  padding: 10rem 5.625vw calc(5.625vw + 5.0004rem);
+  text-align: center;
+}
+.explore-intro {
+  width: 88.359375vw;
+  margin: 0.1251rem auto 0;
+  padding: 0.6465rem 0 0.6475rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.explore-intro h2 {
+  font:
+    700 2.8746rem/3.5001rem Inter,
+    sans-serif;
+  width: max-content;
+  max-width: 100%;
+}
+.explore-intro > p {
+  width: 50%;
+  margin: 0.9999rem auto 0.9999rem;
+  font:
+    400 0.9999rem/1.5003rem Inter,
+    sans-serif;
+}
+.explore-tabs {
+  width: 52.6vw;
+  margin: 8.1rem auto 0;
+}
+.explore-tabs .tablist {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+  padding: 0;
+  margin: 0 0 8.046rem;
+  border: 0;
+  gap: 0;
+}
+.explore-tabs [role='tab'] {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 3.9996rem;
+  height: 3.9996rem;
+  margin: 0 2.0502rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: var(--ink);
+  background: white;
+}
+.explore-tabs [role='tab'][aria-selected='true'] {
+  color: var(--ink);
+  background: var(--pink);
+}
+.tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-icon svg {
+  width: 2.625rem;
+  height: 2.625rem;
+}
+.explore-tabs [aria-selected='true'] .tab-icon {
+  color: white;
+  --icon-bg: var(--pink);
+}
+.explore-label {
+  position: absolute;
+  top: 4.59863rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font:
+    700 1.2501rem/1.9998rem Inter,
+    sans-serif;
+}
+.explore-connector {
+  position: absolute;
+  pointer-events: none;
+  left: 5.004rem;
+  top: 1.874rem;
+  width: 13.75rem;
+  height: 0.125rem;
+  background: var(--slate);
+}
+.explore-panel {
+  /* A width-driven pane canvas reserves the original composition independently
+     of the inline action's subpixel overhang. Keep that foreground fully visible:
+     this is not a clipped slider, nor a fixed section/page height. */
+  aspect-ratio: 2;
+  min-block-size: 0;
+  width: 44vw;
+  margin: 0 auto;
+}
+.explore-card {
+  position: relative;
+  text-align: left;
+  background: #f6f6f6;
+  min-block-size: 14.4rem;
+  padding: 3.1248rem 3.9996rem 2rem;
+}
+.explore-card h3 {
+  font:
+    700 1.2501rem/1.9998rem Inter,
+    sans-serif;
+  margin: 0 0 0.9999rem;
+}
+.explore-card p {
+  font:
+    400 0.9999rem/1.5003rem Inter,
+    sans-serif;
+  margin: 0;
+}
+.explore-arrows {
+  position: absolute;
+  top: 3.1248rem;
+  right: var(--explore-arrow-inset);
+  display: flex;
+  gap: var(--explore-arrow-gap);
+}
+.explore-panel:last-child .explore-arrows {
+  right: calc(var(--explore-arrow-inset) + var(--explore-arrow-gap));
+}
+.explore-arrows button {
+  width: 1.8744rem;
+  height: 1.8744rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--yellow);
+  border-radius: 50%;
+  color: var(--ink);
+  background: transparent;
+}
+.explore-arrows svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+.explore-panel > .button {
+  color: #262326;
+  margin-top: 2.25rem;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  padding: 0.7497rem 0.9999rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .explore-section {
+    --explore-arrow-gap: 0.24rem;
+    --explore-arrow-inset: 1.728rem;
+    padding: 6.844375rem 7.26vw 14.26vw;
+  }
+  .explore-intro {
+    width: 85vw;
+    margin-top: 0.06672rem;
+    padding: 0.48144rem 0 0.48094rem;
+  }
+  .explore-intro h2 {
+    font-size: 1.89456rem;
+    line-height: 2.2104rem;
+  }
+  .explore-intro > p {
+    width: 75%;
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin: 0.53328rem auto 0.53328rem;
+  }
+  .explore-tabs {
+    width: 85vw;
+    margin-top: 5.184rem;
+  }
+  .explore-tabs .tablist {
+    width: 74vw;
+    margin: 0 auto 5.232rem;
+  }
+  .explore-tabs [role='tab'] {
+    width: 3.36816rem;
+    height: 3.36816rem;
+    margin: 0 1.09344rem;
+  }
+  .tab-icon svg {
+    width: 2.2104rem;
+    height: 2.2104rem;
+  }
+  .explore-label {
+    top: 3.84375rem;
+    font-size: 1.05264rem;
+    line-height: 1.44rem;
+  }
+  .explore-connector {
+    left: 5.548rem;
+    top: 1.59766rem;
+    width: 15.27778vw;
+    height: 0.105rem;
+  }
+  .explore-panel {
+    aspect-ratio: 85 / 28.4;
+    width: 85vw;
+  }
+  .explore-card {
+    min-block-size: 9.84rem;
+    padding: 1.66656rem 5.28rem 1rem 2.13312rem;
+  }
+  .explore-card h3 {
+    font-size: 1.05264rem;
+    line-height: 1.44rem;
+    margin-bottom: 0.53328rem;
+  }
+  .explore-card p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+  }
+  .explore-arrows {
+    top: 1.66656rem;
+  }
+  .explore-arrows button {
+    width: 1.57872rem;
+    height: 1.57872rem;
+  }
+  .explore-panel > .button {
+    margin-top: 1.2rem;
+    font-size: 0.94752rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.84192rem;
+  }
+}
+@media (max-width: 479px) {
+  .explore-section {
+    --explore-arrow-gap: 0.121875rem;
+    --explore-arrow-inset: 0.8775rem;
+    padding: 7.06875rem 7.5vw 5.11875rem;
+  }
+  .explore-intro {
+    position: relative;
+    left: 0.19615vw;
+    width: 85vw;
+    margin: 0.03388rem auto 0.135525rem;
+    padding: 0.67rem 0 0.67rem;
+  }
+  .explore-intro h2 {
+    width: 100%;
+    font-size: 2.07992rem;
+    line-height: 2.34rem;
+  }
+  .explore-intro > p {
+    width: 97%;
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin: 0.975rem auto 0.270806rem;
+  }
+  .explore-tabs {
+    width: 85vw;
+    margin-top: 3.046875rem;
+  }
+  .explore-tabs .tablist {
+    flex-direction: column;
+    align-items: center;
+    height: 85vw;
+    margin: 0 0 7.3125rem;
+  }
+  .explore-tabs [role='tab'] {
+    width: 4.14375rem;
+    height: 4.14375rem;
+    margin: 0;
+  }
+  .tab-icon svg {
+    width: 2.68066rem;
+    height: 2.68066rem;
+  }
+  .explore-label {
+    top: 3.834rem;
+    font-size: 1.29992rem;
+    line-height: 2.07992rem;
+  }
+  .explore-connector {
+    left: 1.97363rem;
+    top: 6.109375rem;
+    width: 0.12992rem;
+    height: 1.706rem;
+  }
+  .explore-panel {
+    aspect-ratio: 85 / 83.4;
+    width: 100%;
+  }
+  .explore-card {
+    min-block-size: 16.0869rem;
+    padding: 1.4625rem 2.68125rem 1rem 1.083225rem;
+  }
+  .explore-card h3 {
+    font-size: 1.29992rem;
+    line-height: 2.07992rem;
+    margin-bottom: 0.51992rem;
+  }
+  .explore-card p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .explore-arrows {
+    top: 1.4625rem;
+    gap: var(--explore-arrow-gap);
+  }
+  .explore-arrows button {
+    width: 1.94992rem;
+    height: 1.94992rem;
+  }
+  .explore-panel > .button {
+    margin-top: 1.21875rem;
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04008rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .explore-section {
+    --explore-arrow-gap: 0.234rem;
+    --explore-arrow-inset: 1.6848rem;
+    padding: 8.1774rem 7.5vw 17.556vw;
+  }
+  .explore-intro {
+    position: relative;
+    left: -0.24178vw;
+    width: 85vw;
+    margin: 0 auto 0.2602rem;
+    padding: 0;
+  }
+  .explore-intro h2 {
+    font-size: 2.08rem;
+    line-height: 2.34rem;
+  }
+  .explore-intro > p {
+    width: 75%;
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+    margin: 0.52rem auto 0.52rem;
+  }
+  .explore-tabs {
+    width: 85vw;
+    margin-top: 5.7525rem;
+  }
+  .explore-tabs .tablist {
+    margin: 0 0 5.9904rem;
+  }
+  .explore-tabs [role='tab'] {
+    width: 4.211rem;
+    height: 4.211rem;
+    margin: 0 1.0661rem;
+  }
+  .tab-icon svg {
+    width: 2.7305rem;
+    height: 2.7305rem;
+  }
+  .explore-label {
+    top: 4.705rem;
+    font-size: 1.3rem;
+    line-height: 1.82rem;
+  }
+  .explore-connector {
+    left: 5.407rem;
+    top: 2.0076rem;
+    width: 15.27778vw;
+    height: 0.13rem;
+  }
+  .explore-panel {
+    aspect-ratio: 5 / 2;
+    width: 100%;
+  }
+  .explore-card {
+    min-block-size: 11.794rem;
+    padding: 1.625rem 5.148rem 1rem 2.08rem;
+  }
+  .explore-card h3 {
+    font-size: 1.3rem;
+    line-height: 1.82rem;
+    margin-bottom: 0.52rem;
+  }
+  .explore-card p {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+  }
+  .explore-arrows {
+    top: 1.625rem;
+  }
+  .explore-arrows button {
+    width: 1.94992rem;
+    height: 1.94992rem;
+  }
+  .explore-panel > .button {
+    margin-top: 1.17rem;
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04rem;
+  }
+}

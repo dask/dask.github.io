@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+import '../styles/chrome.css';
+import '../styles/copy-papers.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Dialogs from '../components/Dialogs.astro';
+const {
+  title = 'Dask | Parallel Python',
+  description = 'Dask is a flexible library for parallel computing in Python.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/Dask-Logo-Icon-Primary.svg"
+    />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <Dialogs />
+    <script src="../scripts/site.ts"></script>
+  </body>
+</html>

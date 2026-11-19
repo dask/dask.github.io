@@ -1,0 +1,44 @@
+[
+  {
+    "title": "NYC Uber/Lyft",
+    "href": "https://docs.coiled.io/user_guide/uber-lyft.html?utm_source=dask.org&utm_medium=homepage",
+    "tools": ["DataFrames", "Parquet"],
+    "data": "50 GB of Parquet data",
+    "image": "Pandas-logo.webp"
+  },
+  {
+    "title": "Scalable ETL Pipeline",
+    "href": "https://docs.coiled.io/blog/easy-scalable-production-etl.html?utm_source=dask.org&utm_medium=homepage",
+    "tools": ["Deltalake", "Streamlit", "Prefect"],
+    "data": "2 TB of TPC-H JSON records",
+    "image": "prefect-logo.webp"
+  },
+  {
+    "title": "National Water Model",
+    "href": "https://docs.coiled.io/blog/coiled-xarray.html?utm_source=dask.org&utm_medium=homepage",
+    "tools": ["Xarray", "Zarr", "Flox"],
+    "data": "250 TB of Zarr data",
+    "image": "Xarray-logo.webp"
+  },
+  {
+    "title": "TPC-H Benchmark",
+    "href": "https://docs.coiled.io/blog/dask-expr-tpch-dask.html?utm_source=dask.org&utm_medium=homepage",
+    "tools": ["Spark", "DuckDB", "Polars"],
+    "data": "Standard SQL benchmark results",
+    "image": "TPC-logo.webp"
+  },
+  {
+    "title": "NASA Satellite Imagery",
+    "href": "https://docs.coiled.io/blog/processing-terabyte-scale-nasa-cloud-datasets-with-coiled.html?utm_source=dask.org&utm_medium=homepage",
+    "tools": ["Geotiff", "Xarray", "Coiled"],
+    "data": "1 TB of NetCDF files",
+    "image": "nasa-logo.webp"
+  },
+  {
+    "title": "XGBoost Model Tuning",
+    "href": "https://docs.coiled.io/user_guide/xgboost.html?utm_source=dask.org&utm_medium=homepage",
+    "tools": ["XGBoost", "Parquet"],
+    "data": "75 GB of Parquet data",
+    "image": "xGBoost-logo.webp"
+  }
+]

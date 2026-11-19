@@ -1,0 +1,230 @@
+/* Media and divider are separate flex tracks. The title supplies card height. */
+.press-section {
+  padding: 5.0625rem var(--gutter);
+  display: grid;
+  grid-template-columns: calc(25% + 0.03125rem) minmax(0, 1fr);
+  gap: 0;
+}
+.press-aside {
+  padding: 0;
+}
+.press-action {
+  position: sticky;
+  top: 0;
+  width: 19.56543rem;
+  max-width: calc(100% - 0.25rem);
+  min-block-size: 4.805664rem;
+  margin: 0.1251rem 0 0 0.25rem;
+  padding: 0 1.5003rem 0 1.5093rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.press-aside button {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  border: 0;
+  background: none;
+  padding: 0.7497rem 0.9999rem;
+  font-size: 0.9999rem;
+  line-height: 1.49985rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.press-aside button span {
+  border-bottom: 1px solid var(--yellow);
+  font-weight: 600;
+}
+.press-list {
+  /* Trailing reading gutter is distinct from the symmetric section inset. */
+  padding-bottom: 1.35rem;
+  min-width: 0;
+}
+.press-card {
+  display: flex;
+  align-items: center;
+  background: #f5f7f5;
+  padding: 1.9998rem 2.5002rem;
+  margin: 0 0.2502rem 0.9rem 0.1251rem;
+  min-width: 0;
+}
+.press-card img {
+  width: 11.11vw;
+  height: 4.5vw;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.press-divider {
+  width: 0.1251rem;
+  height: 4vw;
+  background: #33363d;
+  margin: 0 2.9997rem;
+  flex: 0 0 auto;
+}
+.press-copy {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.press-card time {
+  display: block;
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  font-weight: 400;
+  color: var(--blue);
+}
+.press-card h2 {
+  width: fit-content;
+  max-width: 100%;
+  font-size: 1.2501rem;
+  line-height: 1.9998rem;
+  font-weight: 700;
+}
+.press-card:hover h2 {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .press-section {
+    padding: 3.465625rem 7.26vw;
+    grid-template-columns: calc(25% + 0.0254rem) minmax(0, 1fr);
+  }
+  .press-list {
+    padding-bottom: 0.48rem;
+  }
+  .press-action {
+    width: 9.80273rem;
+    min-block-size: 6.43164rem;
+    margin: 0.066406rem 0 0 0.1709rem;
+    padding: 0 0.80016rem 0 0.80496rem;
+  }
+  .press-aside button {
+    font-size: 0.94752rem;
+    line-height: 0.94752rem;
+    width: 8.19824rem;
+    padding: 0.39984rem 0.53328rem;
+    text-align: center;
+  }
+  .press-aside button span {
+    display: block;
+  }
+  .press-card {
+    padding: 1.26336rem 2.10528rem;
+    margin: 0 0.13344rem 0.72rem 0.06672rem;
+  }
+  .press-card img {
+    width: 16vw;
+    height: 8vw;
+  }
+  .press-divider {
+    width: 0.10512rem;
+    height: 8vw;
+    margin: 0 1.44rem;
+  }
+  .press-card time {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+  }
+  .press-card h2 {
+    font-size: 1.05264rem;
+    line-height: 1.68432rem;
+  }
+}
+@media (max-width: 767px) {
+  .press-section {
+    display: block;
+    padding: 5.3625rem 7.6vw 5.11875rem;
+  }
+  .press-action {
+    display: contents;
+  }
+  .press-list {
+    padding-bottom: 0;
+  }
+  .press-aside {
+    padding: 1.455rem 0 6.8025rem;
+    text-align: center;
+  }
+  .press-aside button {
+    display: inline-flex;
+    padding: 0.20304rem 0.27081rem;
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    text-decoration: none;
+  }
+  .press-aside button span {
+    border-bottom: 1px solid var(--yellow);
+    line-height: 1.56rem;
+  }
+  .press-card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1.56rem;
+    margin: 0 0.06776rem 1.21875rem;
+  }
+  .press-card img {
+    width: 9.75rem;
+    height: 4.3875rem;
+    object-position: left;
+    max-width: 100%;
+  }
+  .press-divider {
+    width: 100%;
+    height: 0.13rem;
+    margin: 1.70625rem 0;
+  }
+  .press-copy {
+    width: 100%;
+  }
+  .press-card time {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .press-card h2 {
+    font-size: 1.29992rem;
+    line-height: 2.07992rem;
+    overflow-wrap: break-word;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .press-section {
+    padding: 4.16rem 7.26vw 6rem;
+  }
+  .press-aside {
+    padding: 0.777rem 0 4.89rem;
+  }
+  .press-aside button {
+    padding: 0.39rem 0.52rem;
+    font-size: 1.04rem;
+  }
+  .press-card {
+    width: 99.433%;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.56rem;
+    margin: 0 0.13rem 0.936rem;
+  }
+  .press-card img {
+    width: 20vw;
+    height: 10vw;
+    object-position: center;
+  }
+  .press-divider {
+    width: 0.13rem;
+    height: 8vw;
+    margin: 0 1.872rem;
+  }
+  .press-card time {
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+  }
+  .press-card h2 {
+    font-size: 2.778vw;
+    line-height: 4.444vw;
+  }
+  .press-card:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,60 @@
+---
+import { asset } from '../data/site';
+---
+
+<aside class="brand-rail">
+  <nav class="brand-sidebar" aria-label="Brand sections">
+    <a href="#logos" aria-label="Logos">
+      <span class="brand-nav-icon">
+        <img src={asset('Dask-Logo-Icon-White.svg')} alt="" />
+      </span>
+    </a>
+    <a href="#colors" aria-label="Colors">
+      <!-- Independently drawn upright paint brush; coordinates are local to the icon. -->
+      <span class="brand-nav-icon">
+        <svg
+          viewBox="0 0 20 26"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.55"
+          stroke-linecap="round"
+          stroke-linejoin="miter"
+          aria-hidden="true"
+        >
+          <path d="M4 1h12a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3h-3v4a3 3 0 0 1-6 0v-4H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z M1 13.65h18 M6 1v6.5 M11 1v4.3" />
+        </svg>
+      </span>
+    </a>
+    <a href="#typography" aria-label="Typography">
+      <span class="brand-nav-icon">
+        <svg
+          viewBox="0 0 28 28"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.9"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M1 5V1h26v4 M14 1v26 M9 27h10" />
+        </svg>
+      </span>
+    </a>
+    <a href="#tone" aria-label="Tone">
+      <span class="brand-nav-icon">
+        <svg
+          viewBox="0 0 16 25"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="4" y="1" width="8" height="15" rx="4" />
+          <path d="M1 10v2a7 7 0 0 0 14 0v-2 M8 19v5 M4 24h8 M9 5h3 M9 8h3 M9 11h3" />
+        </svg>
+      </span>
+    </a>
+  </nav>
+</aside>

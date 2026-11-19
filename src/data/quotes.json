@@ -1,0 +1,56 @@
+[
+  {
+    "text": "“Dask has been a trailblazer in making distributed and out-of-memory computing in Python easy and accessible for everyone.”",
+    "author": "Wes McKinney, Pandas",
+    "logo": "Pandas_logo-color.svg",
+    "portrait": "Wes-McKinney.webp"
+  },
+  {
+    "text": "“At Capital One, early implementations of Dask have reduced model training times by 91% within a few months of development effort.”",
+    "author": "Ryan McEntee, Capital One",
+    "logo": "Capital_One-logo.svg",
+    "portrait": "Ryan-McEntee.webp"
+  },
+  {
+    "text": "“My climate science research has been made possible by Dask. Dask integrates seamlessly with Xarray, making it easy to run large-scale computations on multi-dimensional datasets. I can focus on my research instead of thinking about parallelism.”",
+    "author": "Paige Martin, Pangeo",
+    "logo": "pangeo-logo.svg",
+    "portrait": "Paige-Martin.webp"
+  },
+  {
+    "text": "“Dask shines when dealing with generic data structures which don’t conform to table-like structures. PySpark has RDDs, but who wants to code in Python and debug verbose Java logs?”",
+    "author": "Ajith Aravind, Simeio",
+    "logo": "simeio-logo.svg",
+    "portrait": null
+  },
+  {
+    "text": "“Dask has transformed how the world interacts with weather, climate, and geospatial data by making it super easy to scale up data processing pipelines on HPC or cloud. Things that seemed impossible five years ago are now routine thanks to Dask.”",
+    "author": "Ryan Abernathy, Earthmover",
+    "logo": "earthmover-logo.svg",
+    "portrait": "Ryan-Abernathy.webp"
+  },
+  {
+    "text": "“With Dask, I can easily adapt code that runs on a single machine and scale it across an entire cluster. Very few other tools let you get going that quickly—across any language.”",
+    "author": "Jacqueline Nolis, Fanatics Inc.",
+    "logo": "Fanatics-logo.svg",
+    "portrait": "Jacqueline-Nolis.webp"
+  },
+  {
+    "text": "“Dask also makes it easy to deploy distributed work locally using multiple Python processes in a way that is nearly identical to how full production load is distributed.”",
+    "author": "Hugues Demers, Grubhub",
+    "logo": "GrubHub-logo.svg",
+    "portrait": "Hugues-Demers.webp"
+  },
+  {
+    "text": "“To further accelerate our users’ ability to scale easily on the cloud, we expanded this by setting up pre-configured Horovod and Dask clusters.”",
+    "author": "Meenakshi Sharma, Wayfair",
+    "logo": "Wayfair-logo.svg",
+    "portrait": "Meenakshi-Sharma.webp"
+  },
+  {
+    "text": "“I used to work in Spark all the time. The sooner you move to Dask, the sooner you’ll be grateful you did.”",
+    "author": "John Renken, Rebuy",
+    "logo": "rebuy_logo.svg",
+    "portrait": "John-Renken.webp"
+  }
+]

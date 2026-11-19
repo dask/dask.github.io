@@ -1,0 +1,151 @@
+/* Dig Deeper: the artwork reserves the upper region's intrinsic extent;
+   resources live in their own full-width, independently painted band. */
+.deeper {
+  font:
+    400 16px/24px Inter,
+    sans-serif;
+  color: #fff;
+  background: #33363d;
+}
+.deeper-upper {
+  padding: 0 5.625vw;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.1251rem;
+  align-items: center;
+}
+.deeper-copy {
+  grid-column: span 3;
+}
+.deeper h2 {
+  margin: 0;
+}
+.deeper p {
+  font-weight: 400;
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  margin: 0.9999rem 0 0;
+}
+.deeper-art img {
+  position: relative;
+  display: block;
+  width: 13.5rem;
+  height: 13.5rem;
+  margin-top: 1.5003rem;
+  left: 5.36vw;
+  /* The SVG owns its viewBox aspect ratio; avoid a second object-fit letterbox. */
+  object-fit: fill;
+}
+.deeper-links {
+  background: #262326;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2vw 5.625vw;
+}
+.deeper-links > div {
+  line-height: 24px;
+}
+.deeper-links a {
+  font-weight: 600;
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--yellow);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .deeper-upper {
+    padding-inline: 7.26vw;
+    gap: 0.10512rem;
+  }
+  .deeper h2 {
+    font-size: 1.684375rem;
+    line-height: 1.894375rem;
+  }
+  .deeper p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-top: 0.53328rem;
+  }
+  .deeper-art img {
+    left: 0;
+    width: 100%;
+    height: 29vw;
+    margin-top: 3.2vw;
+  }
+  .deeper-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 5vw 7.22vw;
+    gap: 1.26336rem;
+  }
+  .deeper-links a {
+    font-size: 0.94752rem;
+    line-height: 0.94752rem;
+  }
+}
+@media (max-width: 767px) {
+  .deeper-upper {
+    padding-inline: 7.33vw;
+    grid-template-columns: 1fr;
+    gap: 0.26008125rem;
+  }
+  .deeper-copy {
+    grid-column: auto;
+    margin: 8vw 0 4vw;
+  }
+  .deeper h2 {
+    font-size: 1.82008rem;
+    line-height: 2.07992rem;
+  }
+  .deeper p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-top: 0.975rem;
+  }
+  .deeper-art img {
+    position: static;
+    margin: 0 auto;
+    width: 29vw;
+    height: 29vw;
+  }
+  .deeper-links {
+    display: flex;
+    flex-direction: column;
+    padding: 9vw 7.33vw;
+    gap: 1.56rem;
+  }
+  .deeper-links a {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .deeper-upper {
+    gap: 0.13rem;
+  }
+  .deeper h2 {
+    font-size: 1.82rem;
+    line-height: 2.08rem;
+  }
+  .deeper p {
+    font-size: 1.04rem;
+    margin-top: 0.52rem;
+  }
+  .deeper-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 6vw 7.22vw;
+    gap: 1.56rem;
+  }
+  .deeper-links a {
+    font-size: 1.04rem;
+  }
+}
+@media (min-width: 992px) {
+  .deeper {
+    background-image: url('/assets/grid-half-get-st.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+}

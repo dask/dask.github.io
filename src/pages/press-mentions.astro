@@ -1,0 +1,33 @@
+---
+import Site from '../layouts/Site.astro';
+import '../styles/press-mentions.css';
+import Hero from '../components/Hero.astro';
+import press from '../data/press.json';
+---
+
+<Site title="Dask | Press Mentions">
+  <Hero title="Press Mentions" />
+  <section class="press-section light-grid">
+    <aside class="press-aside">
+      <div class="press-action">
+        <button data-dialog="press">
+          <span>Add a press mention</span>
+        </button>
+      </div>
+    </aside>
+    <div class="press-list">
+      {press.map((item) => (
+        <a href={item.href} class="press-card">
+          <img src={'/assets/' + item.image} alt="" />
+          <div class="press-divider" aria-hidden="true"></div>
+          <div class="press-copy">
+            <time datetime={new Date(item.date).toISOString().slice(0, 10)}>
+              {item.date}
+            </time>
+            <h2>{item.title}</h2>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Site>

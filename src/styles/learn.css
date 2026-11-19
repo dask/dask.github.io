@@ -1,0 +1,342 @@
+/* Learn: paper frames, actual copy flow and original artwork boxes. */
+.learn-section {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 5.125rem 5.1582rem 5.03027rem calc(5.625vw + 20.25rem);
+}
+.learn-content {
+  display: contents;
+}
+.learn-intro {
+  position: relative;
+  isolation: isolate;
+  margin-right: 0.1543rem;
+  padding: 2.25rem 0 1.02344rem 3.2499rem;
+  display: flow-root;
+}
+.learn-intro::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #f6f6f6;
+  z-index: -1;
+}
+.learn-intro h2 {
+  font-size: 2.8746rem;
+  line-height: 3.5001rem;
+  margin: 0;
+}
+.learn-intro p {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  font-weight: 400;
+  margin: 0 0 1.5003rem;
+}
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.47559rem 0.4707rem;
+  margin-top: 5.33496rem;
+}
+.learn-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(min-content, 1fr) auto;
+  row-gap: 0.5004rem;
+  min-height: 0;
+  aspect-ratio: 1;
+  padding: 2.5002rem 1.5003rem;
+  padding-left: 2.5002rem;
+  background: #f6f6f6;
+  min-width: 0;
+}
+.learn-card::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  background: var(--slate);
+  left: 2.375rem;
+  top: -0.25rem;
+  width: calc(100% - 4.964rem);
+  height: 0.125rem;
+}
+.learn-card h3 {
+  font-size: 1.2501rem;
+  line-height: 1.9998rem;
+  margin: 0 0 0.9999rem;
+}
+.learn-card p {
+  font-size: 1.125rem;
+  line-height: 1.5003rem;
+  font-weight: 400;
+  margin: 0;
+}
+.learn-card .text-link {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  font-weight: 600;
+}
+.learn-artwork {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.learn-artwork img {
+  position: absolute;
+  object-fit: fill;
+  max-width: none;
+}
+.learn-art-top {
+  left: 0.125rem;
+  top: 5.16113rem;
+  width: 7.59766rem;
+  height: 5rem;
+}
+.learn-art {
+  left: -1.54785rem;
+  top: 10.03613rem;
+  width: 21.56348rem;
+  height: 34.9668rem;
+}
+.learn-art-bottom {
+  left: 4.33789rem;
+  top: 47.91797rem;
+  width: 15.62598rem;
+  height: 11.87988rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .learn-section {
+    padding: 3.50293rem 3.71484rem 3.59277rem calc(7.26vw + 13.8687rem);
+  }
+  .learn-intro {
+    margin-right: 0.00684rem;
+    padding: 0.96rem 0.10419rem 0 0.80016rem;
+  }
+  .learn-intro::before {
+    bottom: 0.12988rem;
+  }
+  .learn-intro h2 {
+    font-size: 1.89456rem;
+    line-height: 2.2104rem;
+  }
+  .learn-intro p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.96rem;
+  }
+  .learn-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.441406rem 0.401367rem;
+    margin-left: 0.03809rem;
+    margin-top: 3.4795rem;
+  }
+  .learn-card {
+    row-gap: 0.53328rem;
+    aspect-ratio: 1.00727737;
+    padding: 1.33344rem 0.80016rem 1.92rem 1.33344rem;
+  }
+  .learn-card::before {
+    left: 1.2666rem;
+    top: -0.1709rem;
+    width: calc(100% - 2.47363rem);
+    height: 0.10449rem;
+  }
+  .learn-card h3 {
+    font-size: 1.05264rem;
+    line-height: 1.44rem;
+    margin-bottom: 0.53328rem;
+  }
+  .learn-card p {
+    font-size: 0.94752rem;
+    line-height: 1.59984rem;
+    font-weight: 400;
+  }
+  .learn-card .text-link {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+  }
+  .learn-art-top {
+    left: 0.01758rem;
+    top: 3.52246rem;
+    width: 5.26465rem;
+    height: 3.46484rem;
+  }
+  .learn-artwork .learn-art {
+    object-fit: cover;
+    object-position: right center;
+    left: -0.6543rem;
+    top: 6.9209rem;
+    width: 16.33105rem;
+    height: 37.15137rem;
+  }
+  .learn-art-bottom {
+    left: 3.47266rem;
+    top: 48.9678rem;
+    width: 6.75488rem;
+    height: 5.13574rem;
+  }
+}
+@media (max-width: 767px) {
+  .learn-section {
+    display: flex;
+    flex-direction: column;
+    padding: 5.39551rem 8.3vw 5.3625rem 7.7vw;
+  }
+  .learn-intro {
+    margin: 0;
+    padding: 2.1621rem 0.10419rem 2.40525rem 0.40633rem;
+  }
+  .learn-intro h2 {
+    font-size: 2.07992rem;
+    line-height: 2.34rem;
+  }
+  .learn-intro p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-bottom: 1.04008rem;
+  }
+  .learn-grid {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 5.36425rem 0.08594rem 0;
+    gap: 1.4785rem;
+  }
+  .learn-card {
+    row-gap: 0.51992rem;
+    aspect-ratio: 1.35219512195;
+    padding: 1.21875rem 0.40633rem 1.70625rem 0.67714rem;
+  }
+  .learn-card::before {
+    left: 0.64355rem;
+    top: -0.16309rem;
+    width: calc(100% - 1.28711rem);
+    height: 0.12988rem;
+  }
+  .learn-card h3 {
+    font-size: 1.29992rem;
+    line-height: 2.07992rem;
+    margin-bottom: 0.51992rem;
+  }
+  .learn-card p {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    font-weight: 400;
+  }
+  .learn-card .text-link {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .learn-artwork {
+    position: relative;
+    inset: auto;
+    left: -1.9492rem;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 22.4238rem;
+    height: 25.35rem;
+    min-height: 25.35rem;
+    margin-top: 5.439525rem;
+  }
+  .learn-artwork .learn-art {
+    object-fit: contain;
+    object-position: right center;
+    position: static;
+    display: block;
+    margin: -0.03388rem 0 0 -0.4875rem;
+    width: 12.6748rem;
+    height: 20.475rem;
+  }
+  .learn-artwork .learn-art-top {
+    order: -1;
+    position: static;
+    width: auto;
+    height: 4.9725rem;
+    margin-top: 0.043875rem;
+  }
+  .learn-art-bottom {
+    left: 12.5332rem;
+    top: 19.207875rem;
+    width: 8.01465rem;
+    height: 6.09375rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .learn-section {
+    display: grid;
+    padding: 4.2755rem 7.54vw 4.0716rem;
+  }
+  .learn-intro {
+    margin: 0 0.1423rem 0 0.29636rem;
+    padding: 0.936rem 0.12981rem 0 0.78rem;
+  }
+  .learn-intro::before {
+    bottom: 0.234rem;
+  }
+  .learn-intro p {
+    margin-bottom: 1.56rem;
+  }
+  .learn-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.3588rem 0.5195rem;
+    margin: 3.917rem 0.0931rem 0 0.19588rem;
+  }
+  .learn-card {
+    row-gap: 0.52rem;
+    aspect-ratio: 1.244058;
+    padding: 1.3rem 0.78rem 3.276rem 1.3rem;
+  }
+  .learn-card::before {
+    left: 1.235rem;
+    top: -0.19345rem;
+    width: calc(100% - 2.4128rem);
+    height: 0.12992rem;
+  }
+  .learn-card:last-child {
+    grid-column: 2;
+  }
+  .learn-card h3 {
+    line-height: 1.82rem;
+  }
+  .learn-content,
+  .learn-artwork {
+    grid-area: 1 / 1;
+  }
+  .learn-content {
+    display: block;
+  }
+  /* The artwork is an in-flow overlapping media track, not an absolute
+     decoration outside the section. Its intrinsic images reserve the tail. */
+  .learn-artwork {
+    position: relative;
+    inset: auto;
+    left: auto;
+    margin: 0 0 0 -7.54vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    padding-top: calc(48.114rem - 4.2755rem);
+  }
+  .learn-artwork .learn-art-top {
+    position: static;
+    margin: 0 0 0 -0.01095rem;
+    width: 6.3988rem;
+    height: 4.21rem;
+  }
+  .learn-artwork .learn-art {
+    position: static;
+    margin: -0.063rem 0 0 -0.4782rem;
+    width: 22.463rem;
+    height: 35.754rem;
+  }
+  .learn-art-bottom {
+    left: 28.101rem;
+    top: calc(79.92rem - 4.2755rem);
+    width: 10.4626rem;
+    height: 7.955rem;
+  }
+}

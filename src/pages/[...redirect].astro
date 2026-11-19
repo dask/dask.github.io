@@ -1,0 +1,30 @@
+---
+import { knownRedirects } from '../lib/redirects';
+
+export function getStaticPaths() {
+  return knownRedirects.map(({ source, destination }) => ({
+    params: { redirect: source.replace(/^\//, '') },
+    props: { destination },
+  }));
+}
+const { destination } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dask blog and events have moved</title>
+    <link rel="canonical" href={destination} />
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <script is:inline define:vars={{ destination }}>
+      window.location.replace(destination);
+    </script>
+  </head>
+  <body>
+    <p>
+      Continue to <a href={destination}>the Dask blog</a>.
+    </p>
+  </body>
+</html>

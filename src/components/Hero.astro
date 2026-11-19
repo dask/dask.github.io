@@ -1,0 +1,31 @@
+---
+import { asset } from '../data/site';
+const { title, center = false, art } = Astro.props;
+---
+
+<section
+  class:list={[
+    'page-hero',
+    'dark-grid',
+    {
+      center,
+      'with-art': art,
+      'brand-hero': art === 'illustration-brand-guide-hero.svg',
+    },
+  ]}
+>
+  <div class="hero-copy">
+    <h1 class="boxed">{title}</h1>
+    <slot />
+  </div>
+  {art && (
+    <img
+      class:list={[
+        'hero-art',
+        { 'powered-art': art === 'dask-powered-by.svg' },
+      ]}
+      src={asset(art)}
+      alt=""
+    />
+  )}
+</section>

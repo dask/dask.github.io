@@ -1,0 +1,64 @@
+---
+import Site from '../layouts/Site.astro';
+import '../styles/get-help.css';
+import Hero from '../components/Hero.astro';
+import Support from '../components/Support.astro';
+import { asset } from '../data/site';
+---
+
+<Site title="Dask | Get Help">
+  <Hero title="Get Help" />
+  <section class="help-content light-grid">
+    <div class="help-intro">
+      <h2>Asking for help</h2>
+      <p>
+        We welcome usage questions and bug reports from all users, even those
+        who are new to using the project. There are a few things you can do to
+        improve the likelihood of quickly getting a good answer.
+      </p>
+      <div class="help-icons">
+        <a href="https://github.com/dask/dask" aria-label="Ask on GitHub">
+          <img src={asset('git-hub.svg')} alt="" />
+        </a>
+        <a href="https://dask.discourse.group" aria-label="Ask on Discourse">
+          <img src={asset('chat.svg')} alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="help-answers">
+      <article>
+        <h3>Ask questions in the right place</h3>
+        <p>
+          We strongly prefer the use of{' '}
+          <a href="https://dask.discourse.group">Discourse</a> or{' '}
+          <a href="https://github.com/dask/dask">GitHub</a>. Discourse and
+          GitHub are more easily searchable by future users, and therefore can
+          be useful to many more people than those directly involved. If you
+          have a general question about how something should work or want best
+          practices then use{' '}
+          <a href="https://dask.discourse.group">Discourse</a>. If you think you
+          have found a bug then use{' '}
+          <a href="https://github.com/dask/dask">GitHub</a>
+        </p>
+      </article>
+      <article>
+        <h3>Ask only in one place</h3>
+        <p>
+          Please restrict yourself to posting your question in only one place
+          (likely the Dask Discourse or GitHub) and don’t post in both
+        </p>
+      </article>
+      <article>
+        <h3>Create a minimal example</h3>
+        <p>
+          It is ideal to create minimal, complete, verifiable examples. This
+          significantly reduces the time that answerers spend understanding your
+          situation, resulting in higher quality answers more quickly.{' '}
+          <a href="#">See also</a> this blog post about crafting minimal bug
+          reports. These have a much higher likelihood of being answered
+        </p>
+      </article>
+    </div>
+  </section>
+  <Support />
+</Site>

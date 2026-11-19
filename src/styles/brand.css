@@ -1,0 +1,822 @@
+/* brand: component-owned base, desktop, tablet, mobile and reduced-motion rules. Keep each selector in its owning tier; do not append refinement layers. */
+.brand-body {
+  --brand-rail: 5.0625rem;
+  /* Paint spans the content; the interactive group has its own compact sticky box. */
+  background-image: linear-gradient(
+    to right,
+    var(--pink) 0 var(--brand-rail),
+    transparent var(--brand-rail)
+  );
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--brand-rail) minmax(0, 1fr);
+}
+.brand-body > section {
+  grid-column: 2;
+  min-width: 0;
+  scroll-margin-top: 1px;
+  /* Align the grid across the viewport, including the sticky rail. */
+  background-size: 100vw auto;
+  background-position: right top;
+}
+.brand-rail {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  padding-block: 2.5002rem;
+  background: var(--pink);
+  z-index: 10;
+}
+.brand-sidebar {
+  position: sticky;
+  top: 5.0004rem;
+  height: 19.999rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  gap: 0.9999rem;
+  color: white;
+}
+.brand-nav-icon {
+  display: contents;
+}
+.brand-sidebar a {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.999rem;
+  height: 2.999rem;
+  border-radius: 50%;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+.brand-sidebar svg,
+.brand-sidebar img {
+  width: 1.73925rem;
+  height: 1.73925rem;
+  object-fit: contain;
+}
+.brand-sidebar a:hover:not([aria-current]) {
+  background: rgb(246 246 246 / 15%);
+}
+.brand-sidebar a[aria-current] {
+  background: #f6f6f6;
+  color: var(--ink);
+}
+.brand-sidebar a[aria-current] img {
+  filter: brightness(0);
+}
+.brand-logos {
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(50% - 1.75rem) minmax(0, 1fr);
+  padding: 0 5.125rem 4.86914rem 3.625rem;
+}
+.brand-logo-copy {
+  background-color: transparent;
+  padding: 9.8125rem 5.875rem 0 0;
+}
+.brand-logos > .brand-logo-copy {
+  /* The copy and its real paper travel together, constrained by their artwork
+     track. The 40px sticky inset is shared with the original guidance panels. */
+  position: sticky;
+  align-self: start;
+  top: calc(40px - var(--copy-paper-top));
+  min-block-size: calc(var(--copy-paper-top) + var(--copy-paper-height));
+  margin-bottom: calc(0.048828125rem + 0.2502rem);
+}
+.brand-body h2 {
+  margin-bottom: 2.25rem;
+}
+.brand-body p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.brand-body .button {
+  margin-top: 1.5rem;
+  line-height: 2rem;
+}
+.brand-logo-action,
+.palette-action {
+  display: contents;
+}
+.logo-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2502rem;
+  margin: 5.1875rem 0.1875rem 0 -0.123046875rem;
+  text-align: center;
+}
+.logo-showcase:has(
+    [data-logo-color][aria-selected='true']:not([data-variant='primary'])
+  )
+  .logo-mark
+  img {
+  width: auto;
+}
+/* Each foreground logo canvas shares the selected section paper, leaving the
+   native grid visible only in the seams, as in the reference artwork panels. */
+.word-mark,
+.logo-options,
+.logo-mark {
+  background-color: var(--logo-paper, #fff);
+}
+.logo-showcase h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.word-mark,
+.logo-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  aspect-ratio: 634.46875 / 395.125;
+  padding: 2.7rem 0 0;
+  margin: 0 0 0.162109375rem 0.1251rem;
+}
+.logo-mark {
+  margin-bottom: 0;
+}
+.word-mark img,
+.logo-mark img {
+  width: 24rem;
+  height: 7.499rem;
+  max-width: 90%;
+  object-fit: contain;
+  margin-top: 5.0004rem;
+  flex-shrink: 0;
+}
+.logo-options {
+  aspect-ratio: 634.46875 / 155.796875;
+  padding-top: 0.9rem;
+  margin: 0 0 0.0544805rem 0.1251rem;
+}
+.logo-options p {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  margin-bottom: 1.5rem;
+}
+.logo-options [role='tablist'] {
+  position: absolute;
+  left: calc(50vw - var(--brand-rail));
+  right: 5.625vw;
+  top: calc(50% + 0.1343rem);
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+}
+.logo-options button {
+  border: 0;
+  width: max(60px, 4.443vw);
+  height: 2.25rem;
+  padding: 0;
+}
+.logo-options button[aria-selected='true'] {
+  width: max(62px, 4.443vw);
+  outline: none;
+  border: 1px solid #000;
+}
+.logo-options button[data-variant='white'][aria-selected='true'] {
+  border-color: #fff;
+}
+.palette-section {
+  background-image: var(--grid-dark);
+  min-height: 40.1875rem;
+  padding: 5rem 5rem 5rem 3.625rem;
+  display: grid;
+  grid-template-columns: 43.2fr 56.8fr;
+  gap: 5.625rem;
+  background-color: #fc6e6b;
+}
+.palette-copy {
+  align-self: start;
+  padding-top: 2.25rem;
+}
+.palette-copy p {
+  max-width: 30.625rem;
+}
+.palette-copy .color-name,
+.palette-copy .color-label {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+.palette-copy .color-hex {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.palette-copy .accessible-colors {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.palette-copy .accessible-colors strong {
+  font-weight: 600;
+}
+.palette-copy .button {
+  margin-top: 0.75rem;
+}
+.palette-grid {
+  /* Foreground swatches paint above the adjacent decorative copy sheet. */
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(6, 5rem);
+  grid-auto-flow: column;
+  align-content: center;
+}
+.palette-grid button {
+  height: 5rem;
+  text-align: left;
+  padding: 0.5625rem 1.875rem;
+  border: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  min-width: 0;
+}
+.palette-grid button[aria-pressed='true'] {
+  color: transparent !important;
+  background: var(--palette-paper, #fc6e6b) !important;
+}
+.mono {
+  font-family: Inconsolata, monospace;
+}
+.palette-grid button[data-color='#61BA92'][aria-pressed='false'] {
+  color: white !important;
+}
+@media (min-width: 992px) {
+  .brand-logo-action {
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 3.5rem;
+  }
+  .brand-logo-copy .button {
+    margin-top: 0;
+    line-height: 32px;
+    color: var(--dark);
+  }
+  .brand-logo-copy p {
+    font-size: 0.9999rem;
+    line-height: 1.5003rem;
+  }
+  .palette-section {
+    grid-template-columns: 30.5634765625rem minmax(0, 1fr);
+    gap: 5.7626953125rem;
+    padding-right: 4.9875rem;
+  }
+  .palette-copy {
+    padding-top: 2.5625rem;
+  }
+  .palette-copy h2 {
+    margin-bottom: 0.5004rem;
+  }
+  .palette-grid {
+    margin-block: 0.180625rem;
+    grid-template-rows: repeat(6, 4.9853515625rem);
+    align-content: start;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .brand-body {
+    --brand-rail: 3.4375rem;
+  }
+  .brand-rail {
+    padding-block: 1.33344rem 5.33376rem;
+  }
+  .brand-rail::before {
+    /* The painted tablet strip is wider than its legacy content reservation. */
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 7.26vw;
+    background: var(--pink);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .brand-sidebar {
+    top: 2.66688rem;
+    height: 10.666rem;
+    gap: 0.84192rem;
+  }
+  .brand-sidebar a {
+    width: 2.3994rem;
+    height: 2.3994rem;
+    transform: translateX(calc(3.63vw - var(--brand-rail) / 2));
+  }
+  .brand-sidebar svg,
+  .brand-sidebar img {
+    width: 1.44rem;
+    height: 1.44rem;
+  }
+  .brand-logos {
+    min-height: 0;
+    padding-bottom: 2.784rem;
+    padding-left: 1.9375rem;
+    padding-right: 0;
+    grid-template-columns: 45% 55%;
+  }
+  .brand-logos > .brand-logo-copy {
+    margin-bottom: 0.498046875rem;
+  }
+  .brand-logo-copy {
+    padding: 4.73012rem 3.64453125rem 0 0;
+  }
+  .brand-logos .brand-logo-copy h2 {
+    margin-bottom: 1.2rem;
+  }
+  .brand-logos .brand-logo-copy p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.96rem;
+  }
+  .brand-body h2 {
+    font-size: 1.684375rem;
+    line-height: 1.894375rem;
+    margin-bottom: 1rem;
+  }
+  .brand-body p {
+    font-size: 0.842187rem;
+    line-height: 1.263125rem;
+    margin-bottom: 1rem;
+  }
+  .brand-body .button {
+    margin-top: 1rem;
+  }
+  .logo-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 0.10512rem;
+    margin: 3.5302734375rem 3.7890625rem 0 -0.50390625rem;
+  }
+  /* These are the observed artwork canvas proportions, not section heights.
+     In-flow captions and images can enlarge their canvases if text grows. */
+  .word-mark,
+  .logo-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    aspect-ratio: 321.484375 / 211.953125;
+    padding: 1.44rem 0 0;
+    margin: 0.10512rem 0 0.087541875rem 0.06672rem;
+  }
+  .word-mark img,
+  .logo-mark img {
+    width: 12.8rem;
+    height: 3.999rem;
+    margin-top: 2.66688rem;
+    flex-shrink: 0;
+  }
+  .logo-showcase h3 {
+    font-size: 0.94752rem;
+    line-height: 1.59984rem;
+  }
+  .logo-options {
+    height: auto;
+    aspect-ratio: 321.484375 / 99.828125;
+    margin: 0.10512rem 0 0.183245rem 0.06672rem;
+    padding: 0.48rem 0 0;
+  }
+  .logo-options p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0;
+  }
+  .logo-options [role='tablist'] {
+    position: absolute;
+    left: calc(50vw - var(--brand-rail));
+    right: 7vw;
+    top: calc(50% + 2.5vw + 0.0718rem);
+    transform: translateY(-50%);
+    gap: 0.96rem;
+  }
+  .logo-options button {
+    height: 2.3994rem;
+  }
+  .brand-logo-copy .button {
+    font-size: 0.94752rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.84192rem;
+    margin-top: 0.90625rem;
+    color: var(--dark);
+  }
+  /* Tablet geometry uses the 768px design basis. Unequal swatch tracks are intentional. */
+  .palette-section {
+    min-height: 34.02734375rem;
+    padding: 3.42578125rem 3.359375rem 3.36rem 1.908203125rem;
+    gap: 3.0654296875rem;
+    grid-template-columns: 15.5888671875rem minmax(0, 1fr);
+    background-image: var(--grid-dark);
+    background-size: 100vw auto;
+    background-position: right top;
+    background-repeat: repeat-y;
+  }
+  .palette-copy {
+    padding-top: 1.3037109375rem;
+  }
+  .palette-copy h2 {
+    font-size: 1.68432rem;
+    line-height: 1.89456rem;
+    margin-bottom: 0.42096rem;
+  }
+  .palette-copy p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 1.2rem;
+  }
+  .palette-copy .color-hex,
+  .palette-copy .accessible-colors {
+    font-size: 0.94752rem;
+    line-height: 1.59984rem;
+  }
+  .palette-copy .accessible-colors {
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .palette-copy .button {
+    margin-top: 0.96rem;
+    font-size: 0.94752rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.84192rem;
+  }
+  .palette-grid {
+    grid-template-columns: 10.666rem minmax(0, 1fr);
+    grid-template-rows: repeat(6, 4.5380859375rem);
+    align-content: start;
+  }
+  /* Hiding White's longest label releases the source's intrinsic first track.
+     This settled tablet state has equal tracks; landscape remains invariant. */
+  .palette-section:has([data-color='#FFFFFF'][aria-pressed='true'])
+    .palette-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .palette-grid button {
+    height: auto;
+    padding: 9px 30px;
+    font-size: 0.94752rem;
+    line-height: 1.59984rem;
+    font-weight: 400;
+  }
+  .palette-copy .color-name,
+  .palette-copy .color-label {
+    font-size: 0.736875rem;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .brand-body {
+    background-image: none;
+    display: block;
+  }
+  .brand-body > section {
+    background-size: var(--grid-size);
+    background-position: center top;
+    scroll-margin-top: 80px;
+  }
+  .brand-rail {
+    position: sticky;
+    top: 0;
+    padding: 0;
+  }
+  .brand-sidebar {
+    position: relative;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10.038vw;
+    gap: 0;
+  }
+  /* Narrow phones retain fixed controls; the icon line box scales inside
+     viewport-relative padding, including its natural baseline behavior. */
+  .brand-sidebar a {
+    display: block;
+    width: 52px;
+    height: 52px;
+    padding: 4vw;
+  }
+  .brand-nav-icon {
+    display: block;
+    aspect-ratio: 1;
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+  }
+  .brand-nav-icon svg,
+  .brand-nav-icon img {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    vertical-align: baseline;
+  }
+  .brand-logos {
+    display: block;
+    padding: 5.875rem 11.06vw 3.75rem;
+    background-image: var(--grid-dark);
+    min-height: 0;
+    padding-bottom: 5.2138671875rem;
+  }
+  .brand-logos > .brand-logo-copy {
+    position: relative;
+    top: auto;
+    align-self: auto;
+    min-block-size: 0;
+    margin-bottom: 0;
+  }
+  .brand-logo-copy {
+    padding: 0;
+  }
+  .brand-body h2 {
+    font-size: 1.82rem;
+    line-height: 2.08rem;
+    margin-bottom: 1.21875rem;
+  }
+  .brand-body p {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+    margin-bottom: 1.04rem;
+  }
+  .brand-body .button {
+    margin-top: 1.5rem;
+    line-height: 1.56rem;
+  }
+  .logo-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 84vw;
+    margin: 5.009rem 0 0 -3.466vw;
+  }
+  .logo-showcase h3 {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+  }
+  .word-mark,
+  .logo-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 327.59375 / 157.546875;
+    margin: 0.1352rem 0 0.1352rem 0.03385rem;
+    padding: 1.21875rem 0 0;
+  }
+  .logo-mark {
+    margin-bottom: 0;
+  }
+  .word-mark img,
+  .logo-mark img {
+    width: 9.75rem;
+    height: 3.65625rem;
+    margin-top: 1.4625rem;
+  }
+  .logo-options {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 327.59375 / 159.890625;
+    margin: 0.1352rem 0 0.1352rem 0.03385rem;
+    padding: 0.975rem 0 0;
+  }
+  .logo-options p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-bottom: 0;
+  }
+  .logo-options [role='tablist'] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(74.5% + 0.0477rem);
+    transform: translateY(-50%);
+    gap: 0.73125rem;
+  }
+  .logo-options button {
+    height: 2.4375rem;
+  }
+  .palette-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(max-content, 28.005859375rem) auto;
+    gap: 0;
+    min-height: 71.75rem;
+    padding: 5.875rem 11.2vw 5rem;
+    background-image: var(--grid-dark);
+    background-size: var(--grid-size);
+    background-position: center top;
+    background-repeat: repeat-y;
+  }
+  .palette-copy {
+    padding: 0;
+    width: calc(100% - 0.06445rem);
+    margin-left: 0.001rem;
+    margin-top: 0.0205078rem;
+  }
+  .palette-copy > p:first-of-type {
+    margin-bottom: 1.21875rem;
+  }
+  .palette-copy .color-name,
+  .palette-copy .color-label {
+    font-size: 0.91rem;
+    line-height: 1.56rem;
+    margin: 0;
+  }
+  .palette-copy .color-hex {
+    font-size: 1.17rem;
+    margin-bottom: 1.21875rem;
+  }
+  .palette-copy .accessible-colors {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    margin-bottom: 0;
+  }
+  .palette-copy .button {
+    margin-top: 1.04008rem;
+  }
+  .palette-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-auto-flow: row;
+    align-self: start;
+    margin: 0 -3.6vw;
+  }
+  .palette-grid button {
+    height: auto;
+    line-height: 1.56rem;
+    padding: 9px 30px;
+    font-size: 1.04rem;
+    font-weight: 400;
+  }
+  .brand-logo-copy .button {
+    margin-top: 0.9115rem;
+  }
+  .palette-copy h2 {
+    margin-bottom: 0.51992rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .palette-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: row;
+  }
+  .palette-grid button {
+    height: auto;
+    padding: 9px 30px;
+  }
+  .brand-sidebar {
+    height: 5.148rem;
+  }
+  .brand-nav-icon {
+    display: contents;
+  }
+  .brand-nav-icon svg,
+  .brand-nav-icon img {
+    display: block;
+    width: 1.779rem;
+    height: 1.779rem;
+  }
+  .brand-sidebar a {
+    display: flex;
+    padding: 0;
+    width: 3.276rem;
+    height: 3.276rem;
+  }
+  .brand-body > section {
+    scroll-margin-top: 5.148rem;
+  }
+  .page-hero.with-art.brand-hero:has(.hero-copy) {
+    /* The Brand illustration/copy canvas has this measured landscape ratio.
+       Content remains in flow; no hidden overflow or downstream compensation. */
+    min-height: 0;
+    width: 100%;
+    aspect-ratio: 1 / 0.46675;
+    padding-bottom: 0;
+  }
+  .page-hero.brand-hero .hero-copy > p:last-child {
+    margin-bottom: 0;
+  }
+  .brand-logos {
+    min-height: 0;
+    padding: 5.70482rem 10.93vw 4.135rem 11.07vw;
+  }
+  .brand-logo-action,
+  .palette-action {
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .brand-logo-action {
+    margin-top: 1.82rem;
+  }
+  .palette-action {
+    margin-top: 1.56rem;
+  }
+  .brand-logo-copy h2 {
+    margin-bottom: 1.17rem;
+  }
+  .brand-logo-copy p {
+    margin-bottom: 1.56rem;
+  }
+  .brand-logo-copy .button {
+    margin-top: 0;
+    color: var(--dark);
+  }
+  .logo-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: auto;
+    margin: 3.535rem -3.33vw 0 -3.47vw;
+  }
+  .word-mark,
+  .logo-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: auto;
+    aspect-ratio: 508.828125 / 198.328125;
+    background-color: var(--logo-paper, #fff);
+    padding: 1.404rem 0 0;
+    margin: 0.26rem 0 0.26rem 0.065rem;
+  }
+  .word-mark img,
+  .logo-mark img {
+    width: 15.912rem;
+    height: 6.551rem;
+    margin-top: 1.404rem;
+    flex-shrink: 0;
+  }
+  .logo-options {
+    height: auto;
+    width: auto;
+    aspect-ratio: 508.828125 / 150.25;
+    background-color: var(--logo-paper, #fff);
+    margin: 0.26rem 0 0.26rem 0.065rem;
+    padding: 1.872rem 0 0;
+  }
+  .logo-options p {
+    margin-bottom: 0;
+  }
+  .logo-options [role='tablist'] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(67.5% + 0.0949rem);
+    transform: translateY(-50%);
+    gap: 1.404rem;
+  }
+  .logo-options button {
+    height: 2.808rem;
+  }
+  .palette-section {
+    min-height: 0;
+    padding-top: 5.70482rem;
+    padding-bottom: 0;
+    /* Independent copy and swatch tracks reproduce the source pane reservation.
+       max-content lets either region grow under text zoom without clipping. */
+    grid-template-rows: minmax(max-content, 26.4655rem) minmax(
+        max-content,
+        15.88184rem
+      );
+  }
+  .palette-copy {
+    width: auto;
+    margin-top: 0;
+    margin-inline: 0.004867rem 0.123rem;
+  }
+  .palette-copy h2 {
+    margin-bottom: 0.52rem;
+  }
+  .palette-copy p,
+  .palette-copy > p:first-of-type {
+    max-width: none;
+    margin-bottom: 1.56rem;
+  }
+  .palette-copy .color-name,
+  .palette-copy .color-label {
+    margin-bottom: 0;
+  }
+  .palette-copy .color-hex {
+    margin-bottom: 1.17rem;
+  }
+  .palette-copy .accessible-colors {
+    margin-bottom: 0;
+  }
+  .palette-copy .button {
+    margin-top: 0;
+  }
+  .palette-grid {
+    margin-top: 0;
+  }
+}

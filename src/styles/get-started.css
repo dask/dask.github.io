@@ -1,0 +1,145 @@
+.get-started-intro .page-hero p {
+  font-weight: 400;
+  font-size: 1.5003rem;
+  line-height: 1.7496rem;
+  width: max-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+/* get-started: component-owned base, desktop, tablet, mobile and reduced-motion rules. Keep each selector in its owning tier; do not append refinement layers. */
+.get-started-intro > .dark-grid {
+  background-image: none;
+}
+.install-section {
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 44% 63%;
+  gap: 0;
+  background-color: var(--ink);
+  color: white;
+  overflow: hidden;
+  height: 29.9375rem;
+}
+.install-copy {
+  padding: 5rem 8% 4.375rem 1.75rem;
+  max-width: 31.875rem;
+}
+.install-copy h2 {
+  max-width: 26.499rem;
+  margin-bottom: 0.5004rem;
+}
+.install-copy p {
+  max-width: 26.499rem;
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  margin-bottom: 1.5003rem;
+}
+
+@media (min-width: 992px) {
+  .get-started-intro .page-hero p {
+    margin-top: 1.7496rem;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .get-started-intro .page-hero p {
+    font-size: 1.26336rem;
+    line-height: 1.4736rem;
+  }
+  .install-section {
+    height: 20.1875rem;
+    grid-template-columns: 57% 70%;
+  }
+  .install-copy {
+    padding: 1.58691rem 3.375rem 1.875rem 0.9129rem;
+  }
+  .install-copy h2 {
+    max-width: 18.54395rem;
+    font-size: 1.68432rem;
+    line-height: 1.89456rem;
+    margin-bottom: 0.42096rem;
+  }
+  .install-copy p {
+    max-width: 18.54395rem;
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.96rem;
+  }
+  .install-section > .terminal {
+    height: 20.1875rem;
+  }
+}
+@media (max-width: 767px) {
+  .get-started-intro .page-hero p {
+    font-size: 1.56rem;
+    line-height: 2.07992rem;
+  }
+  .install-section {
+    display: block;
+    overflow: hidden;
+    height: 46.6875rem;
+    position: relative;
+    padding: 0;
+  }
+  .install-copy {
+    max-width: none;
+    padding: 4.54785rem 12.15vw 0 11.2vw;
+  }
+  .install-section .terminal {
+    width: 100%;
+    height: 16.25rem;
+    margin-left: 8vw;
+  }
+  .install-copy h2 {
+    font-size: 1.82008rem;
+    line-height: 2.07992rem;
+    margin-bottom: 0.51992rem;
+  }
+  .install-copy p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-bottom: 1.04008rem;
+    margin-top: 0;
+  }
+  .install-section > .terminal {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 8vw;
+    margin: 0;
+    width: calc(100% - 8vw);
+    height: 16.25rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .get-started-intro .page-hero p {
+    font-size: 1.3rem;
+    line-height: 1.56rem;
+  }
+  .install-section {
+    height: 47.45rem;
+  }
+  .install-copy {
+    padding-top: 3.3776rem;
+    padding-left: 10.87vw;
+    padding-right: 11vw;
+  }
+  .install-copy h2 {
+    max-width: none;
+    font-size: 3.889vw;
+    line-height: 4.444vw;
+    margin-bottom: 1.111vw;
+  }
+  .install-copy p {
+    max-width: none;
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+    margin-bottom: 3.333vw;
+  }
+  .install-section > .terminal {
+    left: 7.26vw;
+    width: 105vw;
+    height: 23.68rem;
+  }
+}

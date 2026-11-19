@@ -1,0 +1,545 @@
+/* Deployment: independent selector and media geometry; shared workload banks
+   deliberately keep their own existing layout. All artwork retains its ratio. */
+.deployment {
+  position: relative;
+  padding: 5.0004rem 5.625vw;
+  background-color: var(--ink);
+}
+.deployment > .boxed {
+  border-width: 2px;
+  min-block-size: 5.625vw;
+  margin: auto;
+  font-size: 3.5001rem;
+  line-height: 3.5622rem;
+  padding: 0.5004rem 1.5003rem;
+}
+.deployment-tabs {
+  width: 77.39909vw;
+  margin: 5.0625rem auto 0.09rem;
+}
+.deployment .tablist {
+  position: absolute;
+  left: 0;
+  top: 10.08rem;
+  width: 100%;
+  height: 4.9492rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.deployment .tablist button {
+  position: relative;
+  display: block;
+  min-height: 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: white;
+  font-size: 1.125rem;
+  line-height: 1.5003rem;
+  font-weight: 600;
+  padding: 0.7497rem 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.deployment .tablist button:first-child {
+  padding-right: 4.5rem;
+  margin-right: -1.2501rem;
+}
+.deployment .tablist button:last-child {
+  padding-left: 4.5rem;
+  margin-left: -1.2501rem;
+}
+.deployment .tablist button[aria-selected='false'] {
+  /* Only the inactive semantic tab owns the overlapping switch hit area. */
+  z-index: 1;
+  color: #adadad;
+}
+.deployment-switch {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5002rem;
+  height: 1.2501rem;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.15rem;
+}
+.deployment-switch i {
+  display: block;
+  background: #fff;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+.deployment
+  [role='tab']:first-child[aria-selected='false']
+  .deployment-switch
+  i {
+  transform: translateX(1.2rem);
+}
+.deployment .workload-panel {
+  grid-template-columns: 57.24299% 43.0695%;
+  min-height: 0;
+  align-items: stretch;
+}
+.deployment .workload-copy {
+  margin-top: 0.1251rem;
+  padding: 0 1.5003rem 0 0;
+  min-width: 0;
+  justify-content: space-between;
+}
+.deployment .workload-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 91.465%;
+  padding: 2.5002rem 0 0 1.5003rem;
+  margin-bottom: 3.0006rem;
+}
+.deployment .workload-copy h2 {
+  width: max-content;
+  max-width: 100%;
+  font-size: 2.25rem;
+  line-height: 2.8746rem;
+  margin: 0 0 0.8994rem;
+}
+.deployment .workload-copy p {
+  font:
+    400 0.9999rem/1.5003rem Inter,
+    sans-serif;
+  margin: 0 0 0.7497rem;
+}
+.deployment .workload-actions {
+  margin-top: 1.5003rem;
+  gap: 1.5003rem;
+  flex-wrap: wrap;
+}
+.deployment .workload-actions .button {
+  color: #262326;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  padding: 0.7497rem 0.9999rem;
+}
+.deployment .workload-actions .text-link {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  width: max-content;
+  max-width: 100%;
+  border-bottom: 1px solid var(--yellow);
+  text-decoration: none;
+}
+.deployment .workload-logos {
+  align-items: flex-start;
+  margin: 0;
+  padding: 1.5003rem 0 1.5003rem 1.5003rem;
+  gap: 1.9998rem;
+  flex-wrap: nowrap;
+}
+.deployment .workload-logos img {
+  width: auto;
+  height: 1.9992rem;
+  max-width: none;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: none;
+  opacity: 1;
+}
+.deployment .workload-panel > .terminal {
+  margin: 1.5003rem 1.5003rem 1.5003rem 0;
+  width: calc(100% - 1.5003rem);
+  height: auto;
+  min-height: 0;
+  border-color: #494649;
+  aspect-ratio: 1.313998;
+  align-self: start;
+}
+.deployment .terminal .window-bar {
+  height: auto;
+  padding: 0.9999rem 0 0.8748rem 0.9999rem;
+  gap: 0.2502rem;
+  background: #353235;
+}
+.deployment .terminal .window-bar i {
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background: #fc6e6b;
+  flex-shrink: 0;
+}
+.deployment .terminal .window-bar i:nth-child(2) {
+  background: #ffc11e;
+}
+.deployment .terminal .window-bar i:nth-child(3) {
+  background: #61ba92;
+}
+.deployment .terminal-body {
+  padding: 0.9rem 1.5003rem;
+}
+.deployment .workload-panel > .terminal pre {
+  font: 0.9rem/1.35rem monospace;
+  padding: 0;
+  margin: 0.9rem 0;
+  white-space: pre;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .deployment {
+    padding: 3.36rem 7.26vw;
+  }
+  .deployment > .boxed {
+    border-width: 0.16rem;
+    font-size: 2.52624rem;
+    line-height: 1.89984rem;
+    padding: 0.63168rem 1.26336rem;
+  }
+  .deployment-tabs {
+    width: 85.137vw;
+    margin: 3.456rem auto 0.048rem;
+  }
+  .deployment .tablist {
+    top: 6.912rem;
+    height: 3.2637rem;
+  }
+  .deployment .tablist button {
+    font-size: 0.96rem;
+    line-height: 1.26336rem;
+    padding: 0.39984rem 0;
+  }
+  .deployment .tablist button:first-child {
+    padding-right: 2.4rem;
+    margin-right: -0.66672rem;
+  }
+  .deployment .tablist button:last-child {
+    padding-left: 2.4rem;
+    margin-left: -0.66672rem;
+  }
+  .deployment-switch {
+    width: 1.33344rem;
+    height: 0.66672rem;
+    padding: 0.07rem;
+  }
+  .deployment-switch i {
+    width: 0.45rem;
+    height: 0.45rem;
+  }
+  .deployment
+    [role='tab']:first-child[aria-selected='false']
+    .deployment-switch
+    i {
+    transform: translateX(0.65rem);
+  }
+  .deployment .workload-panel {
+    grid-template-columns: 52.03925% 48.1854%;
+  }
+  .deployment .workload-copy {
+    margin: 0.10512rem;
+    padding: 0 0.80016rem 0 0;
+    width: 100%;
+  }
+  .deployment .workload-text {
+    width: 100%;
+    padding: 0.96rem 0.80016rem 0;
+    margin-bottom: 0.24rem;
+  }
+  .deployment .workload-copy h2 {
+    font-size: 1.68432rem;
+    line-height: 1.89456rem;
+    margin-bottom: 0.63408rem;
+  }
+  .deployment .workload-copy p {
+    font-size: 0.7752rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.39984rem;
+  }
+  .deployment .workload-actions {
+    margin-top: 0.80016rem;
+    gap: 0.80016rem;
+    flex-direction: column;
+    align-items: start;
+  }
+  .deployment .workload-actions .button {
+    font-size: 0.94752rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.84192rem;
+  }
+  .deployment .workload-actions .text-link {
+    font-size: 0.94752rem;
+    line-height: 0.94752rem;
+  }
+  .deployment .workload-logos {
+    padding: 0.48rem 0 0.85376rem 0.80016rem;
+    gap: 1.06656rem;
+  }
+  .deployment .workload-logos img {
+    height: 1.06656rem;
+  }
+  .deployment .workload-panel > .terminal {
+    margin: 1.16256rem 1.16256rem 1.104rem 0;
+    width: calc(100% - 1.16256rem);
+    aspect-ratio: 1.043219;
+  }
+  .deployment .terminal .window-bar {
+    padding: 0.72rem 0 0.48rem 0.72rem;
+    gap: 0.13344rem;
+  }
+  .deployment .terminal .window-bar i {
+    width: 0.48rem;
+    height: 0.48rem;
+  }
+  .deployment .terminal-body {
+    padding: 0.48rem 0.80016rem;
+  }
+  .deployment .workload-panel > .terminal pre {
+    font-size: 0.672rem;
+    line-height: 0.96rem;
+    margin: 0.672rem 0;
+  }
+}
+@media (max-width: 479px) {
+  .deployment {
+    padding: 5.3625rem 7.6vw;
+  }
+  .deployment > .boxed {
+    margin: -0.4875rem 0 0;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 2.34rem;
+    line-height: 2.73rem;
+  }
+  .deployment-tabs {
+    width: 84.46715vw;
+    margin: 10.2375rem auto 0.024375rem;
+  }
+  .deployment .tablist {
+    top: 12.675rem;
+    height: auto;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 7.6vw;
+    gap: 1.21875rem;
+  }
+  .deployment .tablist button {
+    font-size: 1.21875rem;
+    line-height: 1.56rem;
+    padding: 0.20304rem 0;
+    color: #adadad;
+  }
+  .deployment .tablist button:first-child,
+  .deployment .tablist button:last-child {
+    padding: 0.20304rem 0;
+    margin: 0;
+  }
+  .deployment .tablist button[aria-selected='true'] {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-underline-offset: 0.375rem;
+  }
+  .deployment-switch {
+    display: none;
+  }
+  .deployment .workload-panel {
+    display: flex;
+    flex-direction: column;
+  }
+  .deployment .workload-copy {
+    margin: 0.05338rem 0 0;
+    padding: 0;
+    min-block-size: 0;
+    width: 100%;
+    aspect-ratio: 0.79688364;
+    flex: none;
+    justify-content: space-between;
+  }
+  .deployment .workload-text {
+    width: 100%;
+    padding: 2.925rem 0.81242rem 0.2925rem;
+    margin-bottom: 1.70625rem;
+  }
+  .deployment .workload-copy h2 {
+    font-size: 1.82008rem;
+    line-height: 2.07992rem;
+    width: max-content;
+    margin-bottom: 0.76367rem;
+  }
+  .deployment .workload-copy p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-bottom: 0.73125rem;
+  }
+  .deployment .workload-actions {
+    margin-top: 0.975rem;
+    gap: 0.975rem;
+    flex-direction: column;
+    align-items: start;
+  }
+  .deployment .workload-actions .button {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04008rem;
+  }
+  .deployment .workload-actions .text-link {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .deployment .workload-logos {
+    padding: 0.24375rem 0 0.24375rem 0.40633rem;
+    margin: 0;
+    height: 9vw;
+    flex-shrink: 1;
+    gap: 1.096875rem;
+  }
+  .deployment .workload-logos img {
+    height: 1.21875rem;
+  }
+  .deployment .workload-panel > .terminal {
+    width: 100%;
+    margin: 1.21875rem 0 0;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1.097;
+  }
+  .deployment .terminal .window-bar {
+    padding: 0.73125rem 0 0.4875rem 0.73125rem;
+    gap: 0.195rem;
+  }
+  .deployment .terminal .window-bar i {
+    width: 0.4875rem;
+    height: 0.4875rem;
+  }
+  .deployment .terminal-body {
+    padding: 0.24375rem 0.4875rem 0.24375rem 0.73125rem;
+  }
+  .deployment .workload-panel > .terminal pre {
+    font-size: 0.63375rem;
+    line-height: 1.21875rem;
+    margin: 0.63375rem 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .deployment {
+    padding: 4.0014rem 7.26vw;
+  }
+  .deployment > .boxed {
+    border-width: 0.2rem;
+    font-size: 2.46312rem;
+    line-height: 1.85234rem;
+    padding: 0.936rem 1.23175rem;
+    background: var(--ink);
+  }
+  .deployment-tabs {
+    width: 85.137vw;
+    margin: 4.212rem auto 0.0468rem;
+  }
+  .deployment .tablist {
+    top: 8.424rem;
+    height: 3.744rem;
+    gap: 3.276rem;
+  }
+  .deployment .tablist button {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.38985rem 0;
+  }
+  .deployment .tablist button:first-child,
+  .deployment .tablist button:last-child {
+    padding: 0.38985rem 0;
+    margin: 0;
+  }
+  .deployment-switch {
+    display: none;
+  }
+  .deployment .tablist button[aria-selected='true'] {
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-underline-offset: 0.375rem;
+  }
+  .deployment .workload-panel {
+    display: flex;
+    flex-direction: column;
+  }
+  .deployment .workload-copy {
+    width: 100%;
+    margin: 0.10254rem 0.10254rem 0;
+    padding: 0;
+  }
+  .deployment .workload-text {
+    width: 100%;
+    padding: 1.872rem 1.56rem 0.5616rem;
+    margin-bottom: 1.872rem;
+  }
+  .deployment .workload-copy h2 {
+    font-size: 1.82rem;
+    line-height: 2.08rem;
+    margin-bottom: 0.52rem;
+  }
+  .deployment .workload-copy p {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+    margin-bottom: 0.936rem;
+  }
+  .deployment .workload-actions {
+    margin-top: 1.404rem;
+    gap: 0.78rem;
+    flex-direction: row;
+  }
+  .deployment .workload-actions .button {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04rem;
+  }
+  .deployment .workload-actions .text-link {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+  }
+  .deployment .workload-logos {
+    padding: 0.468rem 0 0 0.78rem;
+    margin: 0;
+    gap: 2.34rem;
+  }
+  .deployment .workload-logos img {
+    height: 2.34rem;
+  }
+  .deployment .workload-panel > .terminal {
+    margin: 4.68rem 0 0;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1.71655;
+  }
+  .deployment .terminal .window-bar {
+    padding: 0.936rem 0 0.702rem 0.936rem;
+    gap: 0.3744rem;
+  }
+  .deployment .terminal .window-bar i {
+    width: 0.702rem;
+    height: 0.702rem;
+  }
+  .deployment .terminal-body {
+    padding: 0.468rem 0.936rem 0.468rem 1.404rem;
+  }
+  .deployment .workload-panel > .terminal pre {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+    margin: 1.04rem 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .deployment-switch i {
+    transition: none;
+  }
+}
+
+.deployment .tablist button > span:first-child {
+  display: block;
+}

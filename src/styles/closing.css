@@ -1,0 +1,319 @@
+/* Closing call to action: intrinsic text and action rows beside an intentionally
+   off-canvas terminal illustration. No page-height or clipping compensation. */
+.home-install {
+  display: grid;
+  grid-template-columns: calc(50vw - 5.625vw + 0.11133rem) 50vw;
+  align-items: stretch;
+  gap: 0;
+  padding: 5.125rem 0 0 5.625vw;
+  background-color: #f5f7f5;
+  overflow: hidden;
+}
+.home-install > div:first-child {
+  margin: 0.2502rem 0.1251rem 0.3753rem 0.2502rem;
+  padding-top: 0.9rem;
+  width: calc(50vw - 5.625vw - 3.41309rem);
+  min-width: 0;
+}
+.home-install h2 {
+  font-size: 2.8746rem;
+  line-height: 3.5001rem;
+  font-weight: 700;
+  margin: 0;
+}
+.home-install p {
+  font-size: 1.125rem;
+  line-height: 1.5003rem;
+  font-weight: 600;
+  max-width: 25.19922rem;
+  margin: 0.9rem 0 0;
+}
+.closing-actions {
+  height: 5rem;
+  display: flex;
+  align-items: flex-end;
+}
+.home-install > .terminal {
+  width: 50vw;
+  aspect-ratio: 2.27275;
+  height: auto;
+  min-height: 0;
+  border-color: #ebeaee;
+  display: flex;
+  flex-direction: column;
+}
+.home-install .window-bar {
+  background: #ebeaee;
+  flex-shrink: 0;
+  height: auto;
+  padding: 0.9999rem 0 0.8748rem 0.9999rem;
+  gap: 0.2502rem;
+}
+.home-install .window-bar i {
+  background: #fc6e6b;
+  width: 0.6875rem;
+  height: 0.6875rem;
+}
+.home-install .window-bar i:nth-child(2) {
+  background: #ffc11e;
+}
+.home-install .window-bar i:nth-child(3) {
+  background: #61ba92;
+}
+.home-install .terminal.install .terminal-body {
+  padding: 0.9rem 5.0004rem 0.9rem 1.5003rem;
+  flex: 1;
+  min-height: 0;
+}
+.home-install .terminal.install pre {
+  padding: 0;
+  margin: 0.9rem 0;
+  min-height: 0;
+  font-size: 0.9rem;
+  line-height: 1.35rem;
+}
+.laptop-note {
+  background: #062959 url('/assets/grid-half-home.svg') left top/100% auto;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  padding: 0 5.625vw;
+}
+.closing-art {
+  width: 13.5rem;
+  height: 13.5rem;
+  object-fit: contain;
+  margin: 1.5003rem 0 1.5003rem calc(10.9844vw - 5.625vw);
+}
+.laptop-copy {
+  width: calc(100% - 3.03809rem);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.laptop-note p {
+  width: 100%;
+  font-size: 1.5003rem;
+  line-height: 1.7496rem;
+  font-weight: 700;
+  margin: 0;
+}
+.laptop-note .text-link {
+  border-bottom: 1px solid var(--yellow);
+  text-decoration: none;
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  display: inline-block;
+  margin-top: 1.5003rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .home-install {
+    grid-template-columns: calc(50vw - 7.26vw + 0.12402rem) 50vw;
+    padding: 3.46484rem 0 0 7.26vw;
+  }
+  .home-install > div:first-child {
+    width: auto;
+    margin: 0.10512rem;
+    padding: 0.48rem 0 3.36rem;
+  }
+  .home-install h2 {
+    font-size: 1.89456rem;
+    line-height: 2.2104rem;
+  }
+  .home-install p {
+    max-width: none;
+    font-size: 0.94752rem;
+    line-height: 1.59984rem;
+    margin-top: 0.96rem;
+  }
+  .closing-actions {
+    height: 3.84864rem;
+  }
+  .home-install .button {
+    font-size: 0.94752rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.84192rem;
+  }
+  .home-install > .terminal {
+    aspect-ratio: 1.4205;
+    align-self: start;
+  }
+  .home-install .window-bar {
+    height: auto;
+    padding: 0.72rem 0 0.48rem 0.72rem;
+    gap: 0.13344rem;
+  }
+  .home-install .window-bar i {
+    width: 0.48rem;
+    height: 0.48rem;
+  }
+  .home-install .terminal.install .terminal-body {
+    padding: 0.48rem 2.66688rem 0.48rem 0.80016rem;
+  }
+  .home-install .terminal.install pre {
+    font-size: 0.672rem;
+    line-height: 0.96rem;
+    margin: 0.672rem 0;
+  }
+  .laptop-note {
+    padding: 0 7.26vw;
+    background-image: none;
+  }
+  .closing-art {
+    width: 13.92rem;
+    height: 13.92rem;
+    margin: 1.536rem 0;
+  }
+  .laptop-copy {
+    width: 100%;
+  }
+  .laptop-note p {
+    font-size: 1.26336rem;
+    line-height: 1.4736rem;
+  }
+  .laptop-note .text-link {
+    font-size: 0.94752rem;
+    line-height: 0.94752rem;
+    margin-top: 2.23926rem;
+  }
+}
+@media (max-width: 767px) {
+  .home-install {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 5.49219rem 0 0 7.7vw;
+  }
+  .home-install > div:first-child {
+    width: 93vw;
+    margin: 0.05338rem 0 0;
+    padding: 0;
+  }
+  .home-install h2 {
+    font-size: 2.07992rem;
+    line-height: 2.34rem;
+  }
+  .home-install p {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    max-width: none;
+    margin-top: 0.73125rem;
+  }
+  .closing-actions {
+    height: 4.87461rem;
+  }
+  .home-install .button {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04008rem;
+  }
+  .home-install > .terminal {
+    width: 93vw;
+    aspect-ratio: 3.32168;
+    margin-top: 5.11875rem;
+  }
+  .home-install .window-bar {
+    height: auto;
+    padding: 0.73125rem 0 0.4875rem 0.73125rem;
+    gap: 0.195rem;
+  }
+  .home-install .window-bar i {
+    width: 0.4875rem;
+    height: 0.4875rem;
+  }
+  .home-install .terminal.install .terminal-body {
+    padding: 0.24375rem 1.354275rem 0.24375rem 0.73125rem;
+  }
+  .home-install .terminal.install pre {
+    font-size: 0.63375rem;
+    line-height: 1.21875rem;
+    margin: 0.63375rem 0;
+  }
+  .laptop-note {
+    padding: 0 7.33vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    background-image: none;
+  }
+  .laptop-copy {
+    width: 100%;
+    order: -1;
+    margin: 1.95rem 0 0.975rem;
+  }
+  .laptop-note p {
+    font-size: 1.56rem;
+    line-height: 2.07992rem;
+  }
+  .laptop-note .text-link {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-top: 2.22461rem;
+  }
+  .closing-art {
+    width: 29vw;
+    height: 29vw;
+    margin: 0 auto 1.95rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .home-install {
+    padding: 4.21rem 0 0 7.26vw;
+  }
+  .home-install > div:first-child {
+    margin: 0.463rem 0 0 0.262rem;
+    width: 92.562vw;
+  }
+  .home-install h2 {
+    font-size: 4.444vw;
+    line-height: 2.34rem;
+  }
+  .home-install p {
+    width: 27.144rem;
+    margin-top: 0.936rem;
+  }
+  .closing-actions {
+    height: 4.472rem;
+  }
+  .home-install > .terminal {
+    width: 93vw;
+    aspect-ratio: 2.67245;
+    margin-top: 4.301rem;
+    margin-left: 0.1594rem;
+  }
+  .home-install .window-bar {
+    height: auto;
+    padding: 0.936rem 0 0.702rem 0.936rem;
+    gap: 0.3744rem;
+  }
+  .home-install .window-bar i {
+    width: 0.702rem;
+    height: 0.702rem;
+  }
+  .home-install .terminal.install .terminal-body {
+    padding: 0.468rem 2.6rem 0.468rem 1.404rem;
+  }
+  .home-install .terminal.install pre {
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+    margin: 2.222vw 0;
+  }
+  .laptop-copy {
+    margin: 3.744rem 0 1.872rem;
+  }
+  .laptop-note p {
+    font-size: 1.3rem;
+    line-height: 1.56rem;
+  }
+  .laptop-note .text-link {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+    margin-top: 2.808rem;
+  }
+  .closing-art {
+    margin-bottom: 3.744rem;
+  }
+}

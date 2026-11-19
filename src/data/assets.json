@@ -1,0 +1,712 @@
+[
+  {
+    "path": "/assets/Inter-SemiBold.ttf",
+    "url": "https://assets.website-files.com/655926fa24195711dbf38624/6628429d01fc72a5c71192c3_Inter-SemiBold.ttf",
+    "kind": "font"
+  },
+  {
+    "path": "/assets/Inter-Bold.ttf",
+    "url": "https://assets.website-files.com/655926fa24195711dbf38624/662842e507f8c884e9fc25b3_Inter-Bold.ttf",
+    "kind": "font"
+  },
+  {
+    "path": "/assets/Inter-Regular.ttf",
+    "url": "https://assets.website-files.com/655926fa24195711dbf38624/6628429d496dd850d9a7f033_Inter-Regular.ttf",
+    "kind": "font"
+  },
+  {
+    "path": "/assets/Inter-Medium.ttf",
+    "url": "https://assets.website-files.com/655926fa24195711dbf38624/6628429d1c553f3f1e90c96f_Inter-Medium.ttf",
+    "kind": "font"
+  },
+  {
+    "path": "/assets/Inconsolata-Regular.ttf",
+    "url": "https://assets.website-files.com/655926fa24195711dbf38624/662842810894d9fbf39db197_Inconsolata-Regular.ttf",
+    "kind": "font"
+  },
+  {
+    "path": "/assets/Inter-Light.ttf",
+    "url": "https://assets.website-files.com/655926fa24195711dbf38624/6628429d3f623e2f826d340a_Inter-Light.ttf",
+    "kind": "font"
+  },
+  {
+    "path": "/assets/dask-header-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38653_dask-header-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/mobile-get-started.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3869e_mobile-get-started.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/mobile-community.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf386a5_mobile-community.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/mobile-blog.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3869d_mobile-blog.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Parquet_logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816565d46236166851240_Parquet_logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Apache-arrow-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/6628165698c9a123d5612caf_Apache-arrow-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Pandas_logo-gray.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/66281656453c4b8c508022ec_Pandas_logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/NumPy-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/66281673860e80095d97c187_NumPy-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Xarray-Logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816564008ae32a73e28e9_Xarray-Logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/zarr-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/66281656037c4fde07990884_zarr-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/xGBoost-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/6628511cfd3044723ca3a1bd_xGBoost-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/PyTorch_logo_black-1.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/6628511c357532b9aa2ceee2_PyTorch_logo_black%201.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/optuna-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/6628511c79f5583a89c86af8_optuna-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/scikit-learn-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/6628511cef5d0f004c696317_scikit-learn-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Kubernetes_logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816c94fc043f7607cd513_Kubernetes_logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Yarn-logo-kitten.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816c9696a03456b400847_Yarn-logo-kitten.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Slurm_logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816c9d02138a9f636074f_Slurm_logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/lsf-logo-svg-vector-2.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816c831245c5b5ed008f8_lsf-logo-svg-vector%202.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/openPBS-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/66351f26dee81f3f8415fcae_openPBS-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Amazon_Web_Services_Logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816c93922cd11ed344aa9_Amazon_Web_Services_Logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Google_Cloud_logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816c9a88d9c774f9ddd0e_Google_Cloud_logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Microsoft_Azure_Logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662816c99c8d6e226c9f1a6f_Microsoft_Azure_Logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Pandas_logo-color.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/66326000a3b83d7c243efd47_Pandas_logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Wes-McKinney.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262dd2629dfa6eda70a12_Wes%20McKinney.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Capital_One-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662af5ccaba9c68330ca03ac_Capital_One-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Ryan-McEntee.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262dd5388aff7bddbee67_Ryan%20McEntee.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/pangeo-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662af5cd7b3077382ff765cd_pangeo-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Paige-Martin.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262dd9e9398cb87c7128d_Paige%20Martin.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/simeio-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662af5cd349ea94f1fb1d37f_simeio-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/earthmover-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/664f9602df8e027c53e4729e_earthmover-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Ryan-Abernathy.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262ddc804c47ae2d1dbde_Ryan%20Abernathy.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Fanatics-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662af5cd0527eaf000044dff_Fanatics-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Jacqueline-Nolis.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262dc72dbb759f91c6862_Jacqueline%20Nolis.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/GrubHub-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662af5cdcbf67680b1f25a9f_GrubHub-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Hugues-Demers.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262dc32a4fc8ecc683bcb_Hugues%20Demers.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Wayfair-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662af5cd5b1a50ed7d574480_Wayfair-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Meenakshi-Sharma.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262dc08e06b5fc0bcc69e_Meenakshi%20Sharma.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/rebuy_logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/66326264c91d02733ecbba21_rebuy_logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/John-Renken.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/663262dcdf4c53a0b3c8abfc_John%20Renken.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/arm-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/662c3e3cf7b7a2501ab9f3bb_arm-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/capital-one.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38664_capital-one.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/deshaw-co.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf386eb_deshaw-co.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/grubhub.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38789_grubhub.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/microsoft.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3878a_microsoft.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/nasa.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3878c_nasa.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/nvidia.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38711_nvidia.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/shell.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38790_shell.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/two-sigma-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/662c3e17e0a164b57fb98db6_two-sigma-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/us-air-force.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38791_us-air-force.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/defense-department.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/664f9d587d81d2dac45d96e6_defense-department.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/walmart.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38792_walmart.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Pandas-logo.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662815b1f8e7ea8ce6c88ccb_Pandas-logo.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/prefect-logo.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662815b05075f11bdb83d6dc_prefect-logo.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Xarray-logo.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662815b1be74ea174135b09b_Xarray-logo.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/TPC-logo.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662815b48f7a7f0e6ea02537_TPC-logo.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/nasa-logo.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662815b12c440cb7a494a103_nasa-logo.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/xGBoost-logo.webp",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662815b19c8d6e226c9e1f48_xGBoost-logo.webp",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/illustration-home-stay-connected.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3866a_illustration-home-stay-connected.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/git-hub.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38654_git-hub.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/twitter.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38655_twitter.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/youtube.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38656_youtube.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/stack-x.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38657_stack-x.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/chat.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38658_chat.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38661_vector-grid.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/switch-black.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/662985b52ef0037191c9c2aa_switch-black.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid-white-bg.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3866e_vector-grid-white-bg.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/grid-half-home.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3868e_grid-half-home.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/illustration-get-started-top.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38690_illustration-get-started-top.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/illustration-get-started-middle.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38691_illustration-get-started-middle.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/illustration-get-started-bottom.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3868f_illustration-get-started-bottom.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/anaconda.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3864f_anaconda.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/coiled-black-logo.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38a4c_coiled%20black%20logo.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Quansight-01-01.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38862_Quansight-01-01.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/grid-half-get-st.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38675_grid-half-get-st.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/dask-powered-by.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3865f_dask-powered-by.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/saturn-cloud.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3872c_saturn-cloud.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/barclays.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3874d_barclays.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/chan-zuckerberg-initiative.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38787_chan-zuckerberg-initiative.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/citi-bank.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38788_citi-bank.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/mit.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3878b_mit.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/nih.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3878d_nih.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/novartis.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3878e_novartis.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/oak-ridge.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3878f_oak-ridge.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/wayfair.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38793_wayfair.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/cesium.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38794_cesium.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/contra-force.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38795_contra-force.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/dataprep.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38796_dataprep.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/datashader.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3879d_datashader.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/featuretools.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf387b3_featuretools.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/intake.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf387c6_intake.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/iris.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf387dd_iris.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/kartothek.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf387f0_kartothek.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/light-gbm.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38804_light-gbm.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/mo-analysis.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38817_mo-analysis.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/napari.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38829_napari.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/numpy.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3882a_numpy.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/pandas.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3882b_pandas.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/pangeo.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3882c_pangeo.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/prefect.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3882d_prefect.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/rapids.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3882e_rapids.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/satpy.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3882f_satpy.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/scikit-allel.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38830_scikit-allel.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/scikit-image.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38831_scikit-image.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/scikit-learn.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38832_scikit-learn.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/skyportal.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38833_skyportal.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/snorkel.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38834_snorkel.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/stumpy.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38835_stumpy.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/tpot.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38836_tpot.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/tsfresh.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38848_tsfresh.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/xarray.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3884a_xarray.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Xarray-Spatial.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38849_Xarray-Spatial.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/xGBoost.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3885c_xGBoost.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/dask-chart-2.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf386a6_dask-chart-2.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/illustration-brand-guide-hero.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38693_illustration-brand-guide-hero.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-lockup-Primary.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3869b_Dask%20Logo-lockup-Primary.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-Icon-Primary.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38694_Dask%20Logo-Icon-Primary.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-Lockup-on-Pink.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3869a_Dask%20Logo-Lockup-on-Pink.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-Icon-on-Pink.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38696_Dask%20Logo-Icon-on-Pink.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-Lockup-on-blue.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38699_Dask%20Logo-Lockup-on-blue.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-Lockup-white.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3869c_Dask%20Logo-Lockup-white.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-Icon-White.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38697_Dask%20Logo-Icon-White.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/landsat-satellite-image-climate-change-GettyImages-1354422915.jpg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38a49_landsat-satellite-image-climate-change-GettyImages-1354422915.jpg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Dask-Logo-lockup-primary.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38a46_Dask%20Logo-lockup-primary.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/1586914303741.jpeg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38a47_1586914303741.jpeg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/Waters-technology-logo.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38861_Waters%20technology-logo.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/prn_cision_logo_desktop.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3885d_prn_cision_logo_desktop.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/download.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38a48_download.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/business-wire-vector-logo.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3885e_business-wire-vector-logo.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/datanami-logo-2018.png",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf3885f_datanami-logo-2018.png",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/infoworld-white-logo.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf3863f/655926fa24195711dbf38860_infoworld-white-logo.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid-v.mobile.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38672_vector-grid-v.mobile.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid-v.mobile-white-bg.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38674_vector-grid-v.mobile-white-bg.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid-tablet.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3866d_vector-grid-tablet.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid-tablet-white-bg.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf3866f_vector-grid-tablet-white-bg.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid-h.mobile3.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38671_vector-grid-h.mobile3.svg",
+    "kind": "artwork"
+  },
+  {
+    "path": "/assets/vector-grid-h.mobile-white-bg.svg",
+    "url": "https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf38673_vector-grid-h.mobile-white-bg.svg",
+    "kind": "artwork"
+  }
+]

@@ -1,0 +1,313 @@
+/* Use-case cards own their artwork, separator, content and responsive composition. */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.125rem;
+  margin-inline: 0.12rem;
+  text-align: left;
+}
+.case {
+  display: block;
+  background: #f6f6f6;
+  min-width: 0;
+  margin: 0.125rem;
+}
+.case-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 0.125rem;
+}
+.case-art img {
+  width: 100%;
+  height: 6.7275rem;
+  object-fit: contain;
+}
+.case-divider {
+  height: 0.125rem;
+  background: #33363d;
+  margin: 0 1rem 0.125rem;
+}
+.case-info {
+  padding: 0.9rem 2rem 1.5rem;
+  margin: 0 0.125rem;
+}
+.case h3 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+.case small {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin: 0.25rem 0 0.9rem;
+}
+.tags span {
+  background: #080815;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+}
+.case p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin: 0;
+}
+.case:hover h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+}
+.more-cases {
+  grid-column: span 2;
+  /* Observed desktop CTA minimum; content can grow without clipping. */
+  min-block-size: 24.125rem;
+  margin: 0.125rem;
+  background: #ebeaee;
+  padding: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.more-cases h3 {
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+.more-cases p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin: 0;
+}
+.more-cases > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.more-cases .button {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  padding: 0.75rem 1rem;
+}
+.more-cases .text-link {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .cases-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.105rem;
+    margin-inline: 0;
+  }
+  .case {
+    width: 99.6%;
+    margin: 0.0667rem 0.105rem 0.105rem;
+  }
+  .case-art {
+    padding: 0.8rem 0.842rem;
+    margin: 0.105rem 0;
+  }
+  .case-art img {
+    height: 4.9375rem;
+  }
+  .case-divider {
+    height: 0.105rem;
+    margin: 0 0.533rem 0.0667rem;
+  }
+  .case-info {
+    padding: 1.2rem 0.842rem;
+    margin: 0 0.0667rem;
+  }
+  .case h3 {
+    font-size: 1.0525rem;
+    line-height: 1.44rem;
+    margin-bottom: 0.533rem;
+  }
+  .case small,
+  .case p,
+  .tags span {
+    font-size: 0.7368rem;
+    line-height: 1.26336rem;
+  }
+  .tags {
+    margin: 0.1334rem 0 0.48rem;
+    gap: 0.2rem;
+  }
+  .tags span {
+    padding: 0.1334rem 0.48rem;
+  }
+  .more-cases {
+    margin: 0.0667rem 0.105rem 0.105rem;
+    grid-column: 1/-1;
+    min-block-size: 0;
+    padding: 3.264rem 1.92rem;
+  }
+  .more-cases h3 {
+    font-size: 1.684375rem;
+    line-height: 1.894375rem;
+    margin-bottom: 0.421rem;
+  }
+  .more-cases p {
+    font-size: 0.7368rem;
+    line-height: 1.26336rem;
+  }
+  .more-cases > div {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  .more-cases .button {
+    font-size: 0.9475rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.842rem;
+  }
+  .more-cases .text-link {
+    font-size: 0.9475rem;
+    line-height: 0.9475rem;
+  }
+}
+@media (max-width: 767px) {
+  .cases-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.26rem;
+    margin-inline: 0;
+  }
+  .case {
+    margin: 0.0678rem 0.05338rem 0.52rem;
+  }
+  .case-art {
+    padding: 1.04rem;
+    margin: 0.26rem 0;
+  }
+  .case-art img {
+    height: 7.4425rem;
+  }
+  .case-divider {
+    height: 0.13rem;
+    margin: 0 0.2708rem 0.0339rem;
+  }
+  .case-info {
+    padding: 1.21875rem 0.975rem 1.21875rem 1.21875rem;
+    margin: 0 0.0339rem;
+  }
+  .case h3 {
+    font-size: 1.3rem;
+    line-height: 2.08rem;
+    margin-bottom: 0.52rem;
+  }
+  .case small,
+  .case p,
+  .tags span {
+    font-size: 0.91rem;
+    line-height: 1.56rem;
+  }
+  .tags {
+    gap: 0.1016rem;
+    margin: 0.0678rem 0 0.24375rem;
+  }
+  .tags span {
+    padding: 0.0678rem 0.24375rem;
+  }
+  .more-cases {
+    grid-column: auto;
+    min-block-size: 0;
+    margin: 0.0678rem 0.05338rem 0.52rem;
+    padding: 2.4375rem 1.21875rem;
+    align-items: flex-start;
+  }
+  .more-cases h3 {
+    font-size: 1.82rem;
+    line-height: 2.08rem;
+    margin-bottom: 0.52rem;
+  }
+  .more-cases p {
+    font-size: 0.91rem;
+    line-height: 1.56rem;
+  }
+  .more-cases > div {
+    align-self: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.975rem;
+    margin-top: 0.975rem;
+  }
+  .more-cases .button {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04rem;
+  }
+  .more-cases .text-link {
+    border-bottom: 1px solid var(--yellow);
+    text-decoration: none;
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .cases-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.13rem;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+  .case {
+    width: 99.6%;
+  }
+  .case,
+  .more-cases {
+    margin: 0.13rem 0.1025rem;
+  }
+  .case-art {
+    padding: 0.78rem 0.821rem;
+    margin: 0.065rem 0;
+  }
+  .case-art img {
+    height: 6.265rem;
+  }
+  .case-divider {
+    margin: 0 0.52rem 0.065rem;
+  }
+  .case-info {
+    padding: 1.17rem 1.404rem 1.3572rem;
+    margin: 0 0.065rem;
+  }
+  .case h3 {
+    line-height: 1.82rem;
+  }
+  .tags {
+    gap: 0.195156rem;
+    margin: 0.13rem 0 0.468rem;
+  }
+  .tags span {
+    padding: 0.13rem 0.468rem;
+  }
+  .more-cases {
+    grid-column: 1/-1;
+    padding: 2.5272rem 1.872rem;
+    align-items: center;
+  }
+  .more-cases > div {
+    align-self: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.404rem;
+    gap: 0.78rem;
+  }
+}

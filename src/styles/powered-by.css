@@ -1,0 +1,365 @@
+/* powered-by: component-owned base, desktop, tablet, mobile and reduced-motion rules. Keep each selector in its owning tier; do not append refinement layers. */
+.sponsors {
+  padding: 10.09375rem 5.625vw 0;
+}
+.sponsors-intro {
+  margin-inline: 0.25rem;
+  padding: calc(3.243925rem - 16px) 0 calc(3.243925rem - 16px) 2.5002rem;
+  background: white;
+}
+.sponsors-intro > div {
+  font-size: 18px;
+  line-height: 32px;
+}
+.sponsors h2 {
+  margin-bottom: 0.5004rem;
+}
+.sponsors .text-link {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+}
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.1251rem;
+  margin-top: 0.25rem;
+}
+.sponsor-card {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  aspect-ratio: 0.997262;
+  min-height: 0;
+  margin: 0.1251rem;
+  width: calc(100% - 0.30957rem);
+  background: white;
+}
+.sponsor-media {
+  contain: inline-size;
+  margin: 0 0 0.1251rem;
+  padding: 1.5003rem 2.5002rem;
+}
+.sponsor-card img {
+  width: 100%;
+  height: 6.72754rem;
+  object-fit: contain;
+  margin: 0;
+}
+.sponsor-divider {
+  background: var(--slate);
+  height: 0.1251rem;
+  margin-inline: 0.9999rem;
+}
+.sponsor-copy {
+  min-height: 0;
+  margin: 0.1251rem;
+  padding: 0.9rem 1.5003rem 0 2.5002rem;
+}
+.sponsor-card h3 {
+  margin: 0 0 0.9999rem;
+  font-size: 1.2501rem;
+  line-height: 1.9998rem;
+}
+.sponsor-card p {
+  margin: 0;
+  font-size: 0.8748rem;
+  line-height: 1.5003rem;
+}
+.metrics {
+  background-color: #f5f7f5;
+  padding: 5.875rem calc(var(--gutter) + 1.5rem) 5rem;
+  margin-top: 0;
+  height: 45.0625rem;
+  min-height: 45.0625rem;
+}
+.metrics h2 {
+  margin-bottom: 7.75rem;
+}
+.metric {
+  border-left: 0.125rem solid var(--slate);
+  padding-left: 1.5rem;
+  margin-bottom: 7.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.metric strong {
+  font-weight: 300;
+  color: var(--blue);
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+}
+.metric small {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.metric .text-link {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+}
+.metrics .metric:last-child {
+  margin-bottom: 0;
+}
+
+.metrics {
+  position: relative;
+}
+.adoption-chart {
+  position: absolute;
+  width: 55.5vw;
+  left: 38.94vw;
+  top: 12.17rem;
+}
+
+@media (min-width: 992px) {
+}
+@media (max-width: 991px) {
+  .metrics {
+    padding: 5rem var(--gutter);
+    min-height: 40.625rem;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .sponsors {
+    padding: 6.94922rem 7.26vw 0;
+  }
+  .sponsors-intro {
+    margin-inline: 0.13344rem;
+    padding: calc(2.187455rem - 16px) 0 calc(2.187455rem - 16px) 1.33344rem;
+  }
+  .sponsors h2 {
+    font-size: 1.68432rem;
+    line-height: 1.89456rem;
+    margin-bottom: 0.42096rem;
+  }
+  .sponsors .text-link {
+    font-size: 0.94752rem;
+    line-height: 0.94752rem;
+  }
+  .sponsor-grid {
+    gap: 0.10512rem;
+    margin-top: 0.10512rem;
+  }
+  .sponsor-card {
+    aspect-ratio: 0.486334;
+    padding-bottom: 1.30469rem;
+    margin: 0.06672rem 0.10512rem 0.10512rem;
+    width: calc(100% - 0.24316rem);
+  }
+  .sponsor-media {
+    margin: 0.10512rem 0;
+    padding: 0.80016rem 0.84192rem;
+  }
+  .sponsor-card img {
+    height: 4.9375rem;
+  }
+  .sponsor-divider {
+    height: 0.10512rem;
+    margin-inline: 0.53328rem;
+  }
+  .sponsor-copy {
+    min-height: 0;
+    margin: 0.06672rem;
+    padding: 0.48rem 0.84192rem 0.84192rem;
+  }
+  .sponsor-card h3 {
+    font-size: 1.05264rem;
+    line-height: 1.44rem;
+    margin-bottom: 0.53328rem;
+  }
+  .sponsor-card p {
+    font-size: 0.7368rem;
+    line-height: 1.26336rem;
+  }
+  .metric .text-link {
+    font-size: 0.94752rem;
+    line-height: 0.94752rem;
+  }
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 5rem 0.13rem;
+    height: 47.4375rem;
+    min-height: 47.4375rem;
+    padding: 3.46rem 7.26vw;
+  }
+  .metrics h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+  .metric {
+    margin: 0;
+  }
+  .metric strong {
+    font-size: 1.894375rem;
+    line-height: 2.210625rem;
+  }
+  .adoption-chart {
+    width: 85vw;
+    left: 7.26vw;
+    top: auto;
+    bottom: 3.46rem;
+  }
+}
+@media (max-width: 767px) {
+  .sponsors {
+    padding: 2.81055rem 7.7vw 0;
+  }
+  .sponsors-intro {
+    margin-inline: 0.07422rem;
+    padding: calc(2.40467rem - 16px) 0 calc(2.40467rem - 16px) 0.67714rem;
+  }
+  .sponsors h2 {
+    font-size: 1.82008rem;
+    line-height: 2.07992rem;
+    margin-bottom: 0.51992rem;
+  }
+  .sponsors .text-link {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .sponsor-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.26008rem 0.06776rem;
+    margin-top: 0.1348rem;
+  }
+  .sponsor-card {
+    display: flow-root;
+    aspect-ratio: auto;
+    margin: 0.06776rem 0.05338rem 0.51992rem;
+    width: auto;
+  }
+  .sponsor-card:first-child {
+    width: fit-content;
+    max-width: calc(100% - 0.10676rem);
+  }
+  .sponsor-media {
+    margin: 0.26rem 0;
+    padding: 1.04008rem;
+  }
+  .sponsor-card img {
+    height: 7.44238rem;
+  }
+  .sponsor-divider {
+    height: 0.12992rem;
+    margin-inline: 0.27081rem;
+  }
+  .sponsor-copy {
+    min-height: 0;
+    margin: 0.03388rem 0.03388rem 0;
+    padding: 0.24375rem 0.42754rem 1.56rem;
+  }
+  .sponsor-card h3 {
+    font-size: 1.29992rem;
+    line-height: 2.07992rem;
+    margin-bottom: 0.51992rem;
+  }
+  .sponsor-card p {
+    font-size: 0.90992rem;
+    line-height: 1.56rem;
+  }
+  .metric .text-link {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .metrics {
+    padding: 6.25rem 10.8vw;
+    height: 61.625rem;
+    min-height: 61.625rem;
+  }
+  .metrics h2 {
+    margin-bottom: 5rem;
+    font-size: 1.82rem;
+    line-height: 2.08rem;
+  }
+  .metric {
+    padding-left: 1.25rem;
+    margin-top: 6.25rem;
+    margin-bottom: 9.375rem;
+  }
+  .metric strong {
+    font-size: 1.82rem;
+    line-height: 2.08rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .sponsors {
+    padding: 8.422rem 7.26vw 0;
+  }
+  .sponsors-intro {
+    margin: 0 0.347rem;
+    padding: calc(2.444rem - 16px) 0 calc(2.444rem - 16px) 1.3rem;
+  }
+  .sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.185rem 0.13rem;
+    margin-top: 0.28563rem;
+  }
+  .sponsor-card {
+    margin: 0.1025rem;
+    width: calc(100% - 0.205rem);
+    padding-bottom: 0;
+    aspect-ratio: 0.99454;
+  }
+  .sponsor-card:first-child {
+    width: fit-content;
+    max-width: calc(100% - 0.205rem);
+    aspect-ratio: auto;
+  }
+  .sponsor-media {
+    margin: 0.065rem 0;
+    padding: 0.78rem 0.8207rem;
+  }
+  .sponsor-card img {
+    height: 6.265rem;
+  }
+  .sponsor-divider {
+    height: 0.13rem;
+    margin: 0 0.52rem 0.065rem;
+  }
+  .sponsor-copy {
+    min-height: 0;
+    margin: 0 0.065rem;
+    padding: 0.468rem 0.8207rem 0.234rem;
+  }
+  .sponsor-card h3 {
+    line-height: 1.82rem;
+  }
+  .metric .text-link {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+  }
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6.2rem 0.13rem;
+    align-content: start;
+    height: 51.56rem;
+    min-height: 51.56rem;
+    padding: 4.21rem 7.6vw;
+  }
+  .metrics h2 {
+    grid-column: 1 / -1;
+    margin: 0.78rem 0 0 1.56rem;
+  }
+  .metric {
+    margin: 0;
+  }
+  .adoption-chart {
+    width: 85vw;
+    left: 7.6vw;
+    top: auto;
+    bottom: 4.21rem;
+  }
+}
+@media (max-width: 479px) {
+  .adoption-chart {
+    width: 84vw;
+    left: 7.7vw;
+    top: auto;
+    bottom: 4.39rem;
+  }
+}

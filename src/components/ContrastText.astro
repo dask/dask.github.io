@@ -1,0 +1,14 @@
+---
+const { entries } = Astro.props as {
+  entries: { hex: string; rating: string }[];
+};
+---
+
+<p class="accessible-colors">
+  {entries.map(({ hex, rating }, index) => (
+    <>
+      {index > 0 && ' '}
+      <strong>{hex}</strong>({rating})
+    </>
+  ))}
+</p>

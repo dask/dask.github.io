@@ -1,0 +1,507 @@
+/* Performance owns its two art/copy tracks and stacked tablet ticker.
+   Frame aspects belong to the illustrations; text is never clipped. */
+.performance {
+  background-color: white;
+  padding: 5.0625rem 5.625vw;
+}
+.performance > h2 {
+  background: white;
+  padding: 0.634765rem 0;
+  margin: 0.125rem 0.3994rem;
+}
+.performance-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.25rem;
+  align-items: stretch;
+}
+.performance-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.9997rem;
+  margin: 0.125rem 0.08789rem 0.26953rem 0.125rem;
+  background: white;
+  min-width: 0;
+}
+.performance h3 {
+  font-size: 1.2501rem;
+  line-height: 1.9998rem;
+  margin: 0 0 0.9999rem;
+}
+.performance .text-link {
+  display: inline;
+  text-decoration: none;
+  border-bottom: 1px solid var(--yellow);
+}
+.performance p {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  margin: 0 0 0.7497rem;
+}
+.gauge-sheet {
+  background: white;
+  margin-right: 0.2129rem;
+  padding: 1.5003rem;
+  aspect-ratio: 1.59522;
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+}
+.benchmark-art {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5625rem;
+  background: #f6f6f6;
+  width: 100%;
+  min-width: 0;
+}
+.benchmark-art > svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.performance-row.humans {
+  margin: 5.17969rem 0.17578rem 0 0;
+  padding-bottom: 5rem;
+}
+.humans .performance-copy {
+  margin: 0.125rem 0.126rem 0.26953rem 0;
+}
+.human-code {
+  min-height: 0;
+  margin: 0.125rem 0 0.125rem 0.125rem;
+  padding: 1.5003rem;
+  background: white;
+  min-width: 0;
+  aspect-ratio: 2.01655;
+}
+.human-code .terminal {
+  border-color: #ebeaee;
+  height: 100%;
+  min-height: 0;
+}
+.human-code .window-bar {
+  background: #ebeaee;
+}
+.human-code .window-bar i {
+  opacity: 1;
+  background: #fc6e6b;
+}
+.human-code .window-bar i:nth-child(2) {
+  background: #ffc11e;
+}
+.human-code .window-bar i:nth-child(3) {
+  background: #61ba92;
+}
+.cheap {
+  --ticker-left: calc(5.625vw + 0.23926rem + 2.9997rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 3.219703;
+  min-height: 0;
+  background: white;
+  margin: 0 0.23926rem;
+  padding: 2.9997rem;
+  text-align: center;
+}
+.cheap > h3,
+.cheap > p {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.cheap > * {
+  flex-shrink: 0;
+}
+.cheap > p:last-child {
+  width: 906px;
+}
+.cost-demo {
+  display: grid;
+  grid-template-columns: 650px minmax(0, 1fr);
+  gap: 16px;
+  width: min(906px, calc(100vw - var(--ticker-left)));
+  max-width: none;
+  margin: 0.6003rem auto calc(16px + 0.3994rem);
+  text-align: left;
+  font:
+    600 16px/24px Inter,
+    sans-serif;
+}
+.rows-total {
+  background: #f6f6f6;
+  border: 1px solid #ebeaee;
+  padding: 40px 32px;
+  flex: 1;
+  min-width: 0;
+}
+.rows-total output {
+  display: block;
+  white-space: pre;
+  font:
+    700 30px/45px Inter,
+    sans-serif;
+  letter-spacing: 0.08rem;
+  word-spacing: 0.2rem;
+  font-variant-numeric: tabular-nums;
+  background: #ebeaee;
+  border: 1px solid #ccc;
+  padding: 8px 24px;
+  margin-top: 4px;
+}
+.cost-total {
+  background: #262326;
+  color: white;
+  border: 1px solid #262326;
+  padding: 40px 24px 40px 32px;
+  width: auto;
+}
+.cost-digits {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-top: 4px;
+  font:
+    700 30px/45px Inter,
+    sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.cost-digits output {
+  background: #33363d;
+  border: 1px solid #080815;
+  letter-spacing: 5px;
+  padding: 8px 12px;
+  line-height: 45px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .performance {
+    padding: 3.4656rem 7.26vw;
+  }
+  .performance > h2 {
+    font-size: 1.89456rem;
+    line-height: 2.2104rem;
+    padding: 0.50293rem 0;
+    margin: 0.06543rem 0.20508rem 0.0664rem;
+  }
+  .performance-copy {
+    padding: 0.48rem 1.2rem;
+    margin: 0.1045rem -0.06543rem 0.2393rem 0.1045rem;
+  }
+  .performance h3 {
+    font-size: 1.05264rem;
+    line-height: 1.68432rem;
+    margin-bottom: 0.5322rem;
+  }
+  .performance .text-link {
+    display: inline-block;
+    font-size: 0.84192rem;
+  }
+  .performance p {
+    font-size: 0.7752rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.39984rem;
+  }
+  .gauge-sheet {
+    margin: 0 0.01465rem 0 0.02441rem;
+    padding: 0.80016rem 0.43262rem;
+    aspect-ratio: 1.21128;
+  }
+  .benchmark-art {
+    padding: 0 0.8623rem;
+  }
+  .performance-row.humans {
+    margin: 3.45508rem -0.08984rem 0 0;
+    padding-bottom: 3.36rem;
+    grid-template-columns: calc(50% + 0.001875rem) minmax(0, 1fr);
+  }
+  .humans .performance-copy {
+    margin: 0.1045rem 0.10255rem 0.2393rem -0.14746rem;
+  }
+  .human-code {
+    min-height: 0;
+    margin: 0.1045rem;
+    padding: 0.80016rem;
+    aspect-ratio: 1.21729;
+  }
+  .cheap {
+    margin: 0.14355rem 0.12305rem 0;
+    padding: 0.24rem 1.2rem;
+    text-align: left;
+    aspect-ratio: 1.53371;
+  }
+  .cheap > h3,
+  .cheap > p {
+    margin-left: 0;
+  }
+  .cost-demo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    margin: 0.32016rem 0 calc(16px + 0.2129rem);
+  }
+  .rows-total {
+    flex: none;
+  }
+  .rows-total {
+    padding: 1.2rem 0.96rem;
+  }
+  .cost-total {
+    padding: 1.2rem 1.5rem 1.2rem 0.96rem;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .performance {
+    padding: 5.3625rem 7.6vw 5.11875rem;
+  }
+  .performance > h2 {
+    text-align: left;
+    font-size: 2.07992rem;
+    line-height: 2.34rem;
+    padding: 0.09766rem 0.40633rem;
+    margin: 0.0332rem 0.10352rem 0.0332rem;
+  }
+  .performance-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.19336rem;
+  }
+  .performance-copy {
+    padding: 0 0.609375rem;
+    margin: 0 0.08301rem 0 0;
+    display: flex;
+    justify-content: flex-start;
+    aspect-ratio: 1.36239;
+    min-height: 0;
+  }
+  .performance .text-link {
+    display: inline-block;
+  }
+  .performance h3,
+  .performance p {
+    flex-shrink: 0;
+  }
+  .performance h3 {
+    font-size: 1.29992rem;
+    line-height: 2.07992rem;
+    margin-bottom: 0.405rem;
+  }
+  .performance p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-bottom: 0.73125rem;
+  }
+  .gauge-sheet {
+    order: -1;
+    margin: 0 0.08301rem 0 0;
+    padding: 0.24375rem;
+    aspect-ratio: 2.03;
+  }
+  .benchmark-art {
+    padding: 0 0.5293rem;
+  }
+  .performance-row.humans {
+    margin: 5.4145rem 0 0;
+    padding-bottom: 5.3625rem;
+    gap: 0.19336rem;
+  }
+  .humans .performance-copy {
+    margin: 0 0.08301rem 0 0;
+    aspect-ratio: 1.017716;
+  }
+  .human-code .terminal-body {
+    padding: 0.24375rem 0.4875rem 0.24375rem 0.73125rem;
+  }
+  .human-code .terminal pre {
+    font-size: 0.63375rem;
+    line-height: 1.21875rem;
+    margin: 0.63375rem 0;
+    padding: 0;
+  }
+  .human-code .window-bar {
+    height: 1.705rem;
+  }
+  .human-code .window-bar i {
+    width: 0.4875rem;
+    height: 0.4875rem;
+  }
+  .human-code {
+    min-height: 0;
+    margin: 0.12109rem 0.08301rem 0 0;
+    padding: 0.24375rem;
+    aspect-ratio: 2.07063;
+  }
+  .cheap {
+    margin: 0.07227rem 0.0625rem 0;
+    padding: 0.4875rem 0.609375rem 0.4875rem;
+    text-align: left;
+    aspect-ratio: auto;
+    justify-content: flex-start;
+  }
+  .cheap > h3,
+  .cheap > p {
+    margin-left: 0;
+  }
+  .cheap h3 {
+    margin-bottom: 0.48633rem;
+  }
+  .cost-demo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.73125rem;
+    margin: 0.2373rem 0 0.96973rem;
+    font-size: 0.5416125rem;
+    line-height: 0.81241875rem;
+  }
+  .rows-total {
+    padding: 1.21875rem 0.975rem;
+  }
+  .rows-total output {
+    font-size: 18px;
+    line-height: 1.096875rem;
+    padding: 8px 0 8px 12px;
+    margin-top: 7px;
+    letter-spacing: 1px;
+    word-spacing: 0;
+  }
+  .cost-total {
+    width: 100%;
+    padding: 1.21875rem 0.73125rem 1.21875rem 0.975rem;
+  }
+  .cost-digits {
+    margin-top: 7px;
+    font-size: 18px;
+    line-height: 1.096875rem;
+  }
+  .cost-digits output {
+    font-size: 18px;
+    line-height: 1.096875rem;
+    padding: 8px 0 8px 12px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .performance {
+    padding: 4.212rem 7.26vw;
+  }
+  .performance > h2 {
+    text-align: center;
+    padding: 0.72rem 0;
+    margin: 0 0.16rem;
+  }
+  .performance-row {
+    gap: 0.2808rem;
+  }
+  .performance-copy {
+    display: flex;
+    justify-content: center;
+    aspect-ratio: auto;
+    padding: 2.525rem 1.17rem;
+    margin: 0.0913rem 0.0576rem 0.1862rem 0.1025rem;
+  }
+  .performance h3 {
+    font-size: 1.3rem;
+    line-height: 2.08rem;
+    margin-bottom: 0.312rem;
+  }
+  .performance p {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+    margin-bottom: 0.936rem;
+  }
+  .gauge-sheet {
+    margin: 0 0.0576rem 0 0.1025rem;
+    padding: 0.78rem;
+    aspect-ratio: 2.49894;
+  }
+  .benchmark-art {
+    max-width: 28.08rem;
+    padding: 0 0.78rem;
+  }
+  .performance-row.humans {
+    margin: 4.0973rem 0 0;
+    padding-bottom: 4rem;
+    gap: 0.2808rem;
+  }
+  .humans .performance-copy {
+    margin: 0.0913rem 0.0576rem 0.1862rem 0.1025rem;
+    padding: 0.848rem 1.17rem;
+    aspect-ratio: auto;
+  }
+  .human-code .terminal-body {
+    padding: 0.468rem 0.936rem 0.468rem 1.404rem;
+  }
+  .human-code .terminal pre {
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+    margin: 2.222vw 0;
+  }
+  .human-code .window-bar {
+    height: 2.337rem;
+  }
+  .human-code .window-bar i {
+    width: 0.702rem;
+    height: 0.702rem;
+  }
+  .human-code {
+    min-height: 0;
+    margin: 0.234rem 0.0576rem 0 0.1025rem;
+    padding: 0.78rem;
+    aspect-ratio: 2.55422;
+  }
+  .cheap {
+    margin: 0.14rem 0.121rem 0;
+    padding: 0.936rem 1.17rem 1.256rem;
+  }
+  .cheap h3 {
+    margin-bottom: 0.468rem;
+  }
+  .cost-demo {
+    gap: 1.404rem;
+    margin: 0.468rem 0 1.404rem;
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+  }
+  .rows-total,
+  .cost-total {
+    padding: 1.872rem 1.404rem;
+  }
+  .rows-total output,
+  .cost-digits,
+  .cost-digits output {
+    font-size: 1.872rem;
+    line-height: 2.106rem;
+  }
+  .rows-total output,
+  .cost-digits {
+    margin-top: 4px;
+  }
+}
+
+/* Phone typing can enlarge the row intrinsically. As on the reference, only the
+   decorative paper's last few pixels meet the section viewport; all copy ink
+   stays inside it. This is a component boundary, not a document overflow mask. */
+@media (max-width: 479px) and (prefers-reduced-motion: no-preference) {
+  .performance {
+    overflow: clip;
+  }
+  .performance-row.humans[data-intrinsic] {
+    width: var(--human-row-width);
+  }
+  .humans[data-intrinsic] .human-code,
+  .humans[data-intrinsic] .performance-copy {
+    width: 99.6%;
+    margin-right: 0;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+  .humans[data-intrinsic] .human-code {
+    height: calc(84.8vw * 0.996 / 2.07063);
+  }
+  .humans[data-intrinsic] .performance-copy {
+    height: calc(84.8vw * 0.996 / 1.017716);
+  }
+}

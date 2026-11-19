@@ -1,0 +1,271 @@
+/* Workload bank: independent copy/media tracks and actual terminal viewports.
+   Deployment and Install keep their own component styles. */
+.workload-tabs .workload-logos img {
+  max-width: none;
+}
+.workload-tabs .workload-actions .text-link {
+  text-decoration: none;
+  border-bottom: 1px solid var(--yellow);
+}
+.workload-tabs .workload-actions .button {
+  color: #262326;
+}
+.workload-tabs .tablist button:hover {
+  color: var(--yellow);
+}
+.workload-tabs .tablist button[aria-selected='true']:hover {
+  color: #fff;
+}
+.workload-tabs .terminal {
+  --bar-top: 0.9999rem;
+  --bar-bottom: 0.8748rem;
+  --bar-left: 0.9999rem;
+  --dot: 0.6875rem;
+  --dot-gap: 0.2502rem;
+  --code-pad: 0.9rem 1.5003rem;
+  --code-size: 0.9rem;
+  --code-line: 1.35rem;
+  font:
+    400 16px/24px Inter,
+    sans-serif;
+  border-color: #494649;
+}
+.workload-tabs .terminal .window-bar {
+  height: auto;
+  flex-shrink: 0;
+  padding: var(--bar-top) 0 var(--bar-bottom) var(--bar-left);
+  gap: var(--dot-gap);
+  background: #353235;
+}
+.workload-tabs .terminal .window-bar i {
+  width: var(--dot);
+  height: var(--dot);
+  flex-shrink: 0;
+  background: #fc6e6b;
+}
+.workload-tabs .terminal .window-bar i:nth-child(2) {
+  background: #ffc11e;
+}
+.workload-tabs .terminal .window-bar i:nth-child(3) {
+  background: #61ba92;
+}
+.workload-tabs .terminal-body {
+  flex: 1;
+  min-height: 0;
+  padding: var(--code-pad);
+}
+.workload-tabs .workload-panel > .terminal pre {
+  font-size: var(--code-size);
+  line-height: var(--code-line);
+  padding: 0;
+  margin: var(--code-size) 0;
+}
+@media (min-width: 992px) {
+  .workload-tabs .workload-panel {
+    grid-template-columns: 57.24299% 43.0695%;
+  }
+  .workload-tabs .workload-copy {
+    margin-top: 0.1251rem;
+    padding: 0 1.5003rem 0 0;
+    justify-content: space-between;
+  }
+  .workload-tabs .workload-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 91.465%;
+    padding: 2.5002rem 0 0 1.5003rem;
+    margin-bottom: 3.0006rem;
+  }
+  .workload-tabs .workload-copy h2 {
+    width: max-content;
+    max-width: 100%;
+  }
+  .workload-tabs .workload-copy p {
+    font-size: 0.9999rem;
+    line-height: 1.5003rem;
+    margin-bottom: 0.7497rem;
+  }
+  .workload-tabs .workload-actions {
+    gap: 1.5003rem;
+    margin-top: 1.5003rem;
+  }
+  .workload-tabs .workload-actions .text-link {
+    font-size: 0.9999rem;
+    line-height: 1.5003rem;
+  }
+  .workload-tabs .workload-logos {
+    padding: 1.5003rem 0 1.5003rem 1.5003rem;
+    margin: 0;
+    gap: 1.9998rem;
+  }
+  .workload-tabs .workload-logos img {
+    height: 1.9992rem;
+  }
+  .workload-tabs .workload-panel > .terminal {
+    margin: 1.5003rem 1.5003rem 1.5003rem 0;
+    width: calc(100% - 1.5003rem);
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.073454;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .workload-tabs .tablist {
+    width: calc(100% - 0.08496rem);
+  }
+  .workload-tabs .workload-panel {
+    grid-template-columns: calc(52.03925% - 0.08496rem) calc(
+        48.1854% - 0.091rem
+      );
+  }
+  .workload-tabs .workload-copy {
+    margin: 0.10512rem;
+    padding: 0 0.80016rem 0 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .workload-tabs .workload-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 0.96rem 0.80016rem 0;
+    margin-bottom: 0.24rem;
+  }
+  .workload-tabs .workload-copy h2 {
+    width: max-content;
+    max-width: 100%;
+  }
+  .workload-tabs .workload-copy p {
+    margin-bottom: 0.39984rem;
+  }
+  .workload-tabs .workload-actions {
+    margin-top: 0.80016rem;
+    gap: 0.80016rem;
+  }
+  .workload-tabs .workload-actions .button {
+    font-size: 0.94752rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.84192rem;
+  }
+  .workload-tabs .workload-logos {
+    margin: 0;
+    padding: 0.48rem 0 0.87344rem 0.80016rem;
+    gap: 1.06656rem;
+  }
+  .workload-tabs .workload-panel > .terminal {
+    margin: 1.16256rem 1.16256rem 1.104rem 0;
+    width: 18.52734375rem;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.037637;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
+  .workload-tabs .terminal {
+    --bar-top: 0.72rem;
+    --bar-bottom: 0.48rem;
+    --bar-left: 0.72rem;
+    --dot: 0.48rem;
+    --dot-gap: 0.13344rem;
+    --code-pad: 0.48rem 0.80016rem;
+    --code-size: 0.672rem;
+    --code-line: 0.96rem;
+  }
+}
+@media (max-width: 479px) {
+  .workload-tabs .workload-copy {
+    margin: 0.05338rem 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  .workload-tabs .workload-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 2.925rem 0.81242rem 0.2925rem;
+    margin-bottom: 1.70625rem;
+  }
+  .workload-tabs .workload-copy h2 {
+    width: max-content;
+    max-width: 100%;
+    margin-bottom: 0.51992rem;
+  }
+  .workload-tabs .workload-copy p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin: 0.24375rem 0 0.73125rem;
+  }
+  .workload-tabs .workload-actions {
+    margin-top: 0.975rem;
+    gap: 0.975rem;
+  }
+  .workload-tabs .workload-actions .text-link {
+    width: max-content;
+    max-width: calc(100% + 2rem);
+    white-space: nowrap;
+  }
+  .workload-tabs .workload-logos {
+    height: 9vw;
+    padding: 0.24375rem 0 0.24375rem 0.40633rem;
+    margin: 0;
+    align-items: start;
+    flex-wrap: nowrap;
+  }
+  .workload-tabs .workload-logos:not(:has(img)) {
+    display: none;
+  }
+  .workload-tabs .workload-panel > .terminal {
+    height: auto;
+    min-height: 0;
+    margin-top: 1.21875rem;
+  }
+  .workload-tabs .terminal {
+    --bar-top: 0.73125rem;
+    --bar-bottom: 0.4875rem;
+    --bar-left: 0.73125rem;
+    --dot: 0.4875rem;
+    --dot-gap: 0.195rem;
+    --code-pad: 0.24375rem 0.4875rem 0.24375rem 0.73125rem;
+    --code-size: 0.63375rem;
+    --code-line: 1.21875rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .workload-tabs .workload-copy {
+    margin: 0.10254rem 0.10254rem 0;
+    width: 100%;
+  }
+  .workload-tabs .workload-actions {
+    gap: 0.78rem;
+  }
+  .workload-tabs .workload-logos {
+    width: calc(100% + 3.12rem);
+    margin-left: -0.78rem;
+    flex-wrap: nowrap;
+    min-height: 2.34rem;
+  }
+  .workload-tabs .workload-panel > .terminal {
+    margin-top: 4.68rem;
+    min-height: 0;
+    aspect-ratio: 2.08496;
+    display: flex;
+    flex-direction: column;
+  }
+  .workload-tabs .terminal {
+    --bar-top: 0.936rem;
+    --bar-bottom: 0.702rem;
+    --bar-left: 0.936rem;
+    --dot: 0.702rem;
+    --dot-gap: 0.3744rem;
+    --code-pad: 0.468rem 0.936rem 0.468rem 1.404rem;
+    --code-size: 1.04rem;
+    --code-line: 1.56rem;
+  }
+}
