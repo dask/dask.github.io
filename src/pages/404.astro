@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<Site title="Dask | Page not available">
+<Site title="Dask | Page not available" analytics={false}>
   <Hero title="Page not available" />
   <section class="unavailable light-grid">
     <h2>We couldn’t find that page.</h2>
