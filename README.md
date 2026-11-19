@@ -17,8 +17,7 @@ layouts, animations and redirects.
 GitHub Actions CI checks pull requests. The Pages workflow builds and publishes
 upstream main, with separate build and deployment jobs and main-only manual
 runs. Read the Docs builds native Astro PR previews with version-mounted links,
-assets and canonical URLs. The default Pages origin is https://dask.github.io/;
-`SITE_URL` configures the build origin.
+assets and canonical URLs. The production canonical origin is https://dask.org/.
 
 Blog, events and the news archive routes target https://blog.dask.org/.
 Known routes include HTML redirects; unknown scoped paths use the static 404
