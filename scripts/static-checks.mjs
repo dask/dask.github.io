@@ -24,7 +24,7 @@ for (const [file, expected] of Object.entries(manifest.legacy)) {
     'built legacy ' + file,
   );
 }
-const origin = process.env.SITE_URL || 'https://dask.github.io';
+const origin = 'https://dask.org';
 for (const slug of [
   '',
   'get-started',
