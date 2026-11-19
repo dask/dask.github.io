@@ -70,7 +70,7 @@ it does not select RTD as the production host.** If maintainers later choose RTD
 an administrator must select the production/default version and URL/versioning
 policy in RTD, verify the generated artifact and redirect/404 behavior on that
 host (RTD's hosted 404 behavior may differ from Pages), then separately coordinate
-any domain/DNS/certificate cutover and the Pages deployment opt-in. Do not enable
+any domain/DNS/certificate cutover and disabling the Pages workflow. Do not enable
 two competing production publishers. Keep the existing hosting credit unchanged
 until maintainers explicitly request a hosting/credit change.
 
@@ -98,10 +98,10 @@ repository without a generated root index.
    PRs, and do not replace CI with pull_request_target.
 4. Under **Settings → Environments → github-pages**, restrict deployment branches
    to main and configure required human reviewers as appropriate.
-5. Under **Settings → Secrets and variables → Actions → Variables**, set
-   `PAGES_DEPLOY_ENABLED=true` only when ready. Leave `SITE_URL` unset for the
-   preview. Run **Actions → GitHub Pages → Run workflow → main**. Subsequent
-   pushes to main deploy while this explicit opt-in remains enabled.
+5. Leave `SITE_URL` unset for the initial organization-root deployment. Run
+   **Actions → GitHub Pages → Run workflow → main** when ready. Pushes to
+   upstream main also build and deploy automatically; no repository-variable
+   opt-in is required. Coordinate the Pages source switch before merging.
 6. Verify https://dask.github.io/ in a real browser: all six pages, credit,
    mobile navigation, assets, known redirects, arbitrary blog/event URLs,
    and unrelated 404s. CI is not proof of a successful live deployment.
@@ -109,9 +109,9 @@ repository without a generated root index.
 Forks, PR events, and manual non-main refs cannot use the deployment job.
 Build/upload and deployment are separate jobs in one trusted workflow; only
 `dist/` is uploaded. No repository credentials persist in checkout.
-Remove/disable the opt-in to stop future deployments; this does not roll back
-an already published site. Revert through a reviewed commit and redeploy for
-rollback.
+Disable the GitHub Pages workflow in Actions to stop future workflow runs; this
+does not cancel in-progress runs or roll back an already published site. Revert
+through a reviewed commit and redeploy for rollback.
 
 ### Later optional custom domain cutover
 

@@ -14,4 +14,4 @@ Do not change public redirect destinations, add submission backends, claim a
 custom domain, or modify deployment permissions without explicit maintainer
 review. CI runs with read-only permissions on fork PRs; never add secrets or
 privileged PR execution. Deployment is main-only and requires administrator
-setup and opt-in described in README. Maintainers merge; automation does not.
+Pages source setup described in README. Maintainers merge; automation does not.

@@ -10,8 +10,8 @@ concurrency:
 jobs:
   build:
     # Never deploy fork/PR code or a manually selected non-main branch.
-    # Opt-in only after an administrator switches Pages from legacy to Actions.
-    if: github.repository == 'dask/dask.github.io' && github.ref == 'refs/heads/main' && vars.PAGES_DEPLOY_ENABLED == 'true'
+    # An administrator must select GitHub Actions as the Pages source.
+    if: github.repository == 'dask/dask.github.io' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
