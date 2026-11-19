@@ -26,6 +26,6 @@ page and JavaScript. Unrelated missing paths remain 404s. Legacy slides and
 closed-survey pages are included. Forms have no submission backend.
 
 Dask content and implementation are attributed to Dask core developers.
-[LICENSE.txt](LICENSE.txt) contains the BSD license; [licenses](licenses/)
-contains font and renderer notices. Third-party artwork and trademarks retain
+[LICENSE.txt](LICENSE.txt) contains the BSD license.
+[THIRD_PARTY_LICENSES.txt](THIRD_PARTY_LICENSES.txt) contains font and renderer notices. Third-party artwork and trademarks retain
 their owners' rights.
