@@ -49,17 +49,6 @@ const enableTagManager =
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
   </head>
   <body>
-    {enableTagManager && (
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${tagManagerId}`}
-          title="Google Tag Manager"
-          height="0"
-          width="0"
-          style="display:none;visibility:hidden"
-        />
-      </noscript>
-    )}
     <a class="skip-link" href="#main">
       Skip to content
     </a>

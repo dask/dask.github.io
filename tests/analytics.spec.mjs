@@ -9,7 +9,6 @@ const canonical = 'https://dask.org';
 const id = 'GTM-P4GQM59';
 const tagManager = 'https://www.googletagmanager.com';
 const loader = `${tagManager}/gtm.js?id=${id}`;
-const fallback = `${tagManager}/ns.html?id=${id}`;
 let output;
 
 test.beforeAll(async () => {
@@ -41,12 +40,11 @@ test('only the six content pages in the production artifact contain the original
     if (!file.endsWith('.html')) continue;
     const html = await readFile(path.join(output, file), 'utf8');
     expect(html).not.toMatch(/UA-18218894-5|G-M6Z7MD5JX6|3553212/);
+    expect(html).not.toContain(`${tagManager}/ns.html`);
     if (tracked.includes(file)) {
-      expect(html.split(id)).toHaveLength(3);
+      expect(html.split(id)).toHaveLength(2);
       expect(html.match(/googletagmanager\.com\/gtm\.js/g)).toHaveLength(1);
       expect(html).toMatch(/<head>[\s\S]*gtm\.js[\s\S]*<\/head>/);
-      expect(html).toMatch(/<body>\s*<noscript>\s*<iframe/);
-      expect(html).toContain(`src="${fallback}"`);
     } else {
       expect(html).not.toContain(tagManager);
     }
@@ -81,10 +79,16 @@ for (const scenario of [
     expected: [],
   },
   {
-    name: 'no JavaScript',
+    name: 'canonical host without JavaScript',
     origin: canonical,
     script: false,
-    expected: [fallback],
+    expected: [],
+  },
+  {
+    name: 'alternate host without JavaScript',
+    origin: 'https://dask.github.io',
+    script: false,
+    expected: [],
   },
 ]) {
   test(`Tag Manager requests on ${scenario.name} are scoped and stubbed`, async ({
@@ -110,8 +114,6 @@ for (const scenario of [
             contentType: 'application/javascript',
             body: '',
           });
-        if (url === fallback)
-          return route.fulfill({ contentType: 'text/html', body: '' });
         return route.abort();
       });
       const page = await context.newPage();
