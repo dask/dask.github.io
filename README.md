@@ -27,6 +27,59 @@ already-running local preview. Generated test reports/screenshots go to ignored
 or navigate to external redirect destinations. Chromium is the automated engine;
 this is not a cross-browser or exact visual-equivalence certification.
 
+## Source files versus generated output
+
+`public/` is **source input**, not generated output: Astro copies these checked-in
+images, fonts and preserved legacy HTML documents into each build. Keep them
+tracked. The generated `dist/`, `.astro/`, `node_modules/`, and test `evidence/`
+are ignored and untracked. Read the Docs output `_readthedocs/` is ignored too.
+The same source can build for Pages or Read the Docs without committing output.
+
+## Read the Docs PR previews
+
+The already-configured `daskorg` project builds PR previews from
+`.readthedocs.yaml`: Ubuntu 24.04, supported Node.js 24, locked `npm ci`, then a
+native Astro HTML build into `$READTHEDOCS_OUTPUT/html`. No Sphinx, uv, Python
+environment, deploy credential or Pages permission is needed. The helper uses
+RTD's `READTHEDOCS_CANONICAL_URL`, including its language/version mount, for
+preview canonicals and asset URLs. It prefixes author-written root-relative HTML
+links in the **generated preview only**; source files and Pages output stay
+unchanged. Never guess a preview URL from the PR number: follow the successful
+RTD check/build's actual preview link.
+
+```sh
+npm run test:readthedocs
+# Or reproduce the RTD build job locally, with output outside this checkout:
+READTHEDOCS_CANONICAL_URL=https://preview.example.invalid/en/59/ \
+READTHEDOCS_OUTPUT=/tmp/dask-rtd-reproduction node scripts/readthedocs-build.mjs
+```
+
+The focused check builds real root/version-mounted artifacts on dynamic local
+ports and checks six routes, canonicals, local assets and internal links, the
+hosting credit, brand image states, scoped redirects and unrelated 404s.
+`npm run check` includes this focused preview gate as well as the production
+Pages regressions. The RTD project must retain PR builds and the
+GitHub integration; failed builds expose diagnostics in their RTD build page.
+PR builds must not receive production secrets or execute privileged deployment
+hooks. Public preview content is untrusted PR output, not a production release.
+
+RTD can also host the production static Astro HTML: its custom build interface
+supports arbitrary HTML generators, and the helper uses each version's supplied
+canonical URL rather than a fixed PR URL. **This change only enables previews;
+it does not select RTD as the production host.** If maintainers later choose RTD,
+an administrator must select the production/default version and URL/versioning
+policy in RTD, verify the generated artifact and redirect/404 behavior on that
+host (RTD's hosted 404 behavior may differ from Pages), then separately coordinate
+any domain/DNS/certificate cutover and the Pages deployment opt-in. Do not enable
+two competing production publishers. Keep the existing hosting credit unchanged
+until maintainers explicitly request a hosting/credit change.
+
+Official references, checked 2026-11-19:
+
+- https://docs.readthedocs.com/platform/stable/build-customization.html
+- https://docs.readthedocs.com/platform/stable/config-file/v2.html
+- https://docs.readthedocs.com/platform/stable/reference/environment-variables.html
+
 ## Deployment: administrator action required
 
 **This migration does not change Pages settings, deploy, or change DNS.**
