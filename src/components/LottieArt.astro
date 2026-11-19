@@ -1,0 +1,19 @@
+---
+const { name, label, class: className } = Astro.props;
+---
+
+<div class={className} data-lottie={name} role="img" aria-label={label}>
+  <img
+    src={`/animations/${name}.png`}
+    alt=""
+    width={name === 'dask-home' ? 1080 : 842}
+    height={name === 'dask-home' ? 593 : 412}
+  />
+  <div
+    data-lottie-player
+    data-src={`/animations/${name}.json`}
+    aria-hidden="true"
+  ></div>
+</div>
+
+<script src="../scripts/lottie.ts"></script>

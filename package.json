@@ -11,11 +11,13 @@
     "format:check": "prettier --check .",
     "test:redirects": "node scripts/redirect-checks.mjs",
     "test:static": "node scripts/static-checks.mjs",
-    "check": "npm run format:check && npm run build && npm run test:static && npm test && npm run test:redirects && npm run test:readthedocs",
-    "test:readthedocs": "node scripts/readthedocs-checks.mjs"
+    "check": "npm run format:check && npm run build && npm run test:static && npm test && npm run test:redirects && npm run test:readthedocs && npm run test:lottie",
+    "test:readthedocs": "node scripts/readthedocs-checks.mjs",
+    "test:lottie": "node scripts/lottie-checks.mjs"
   },
   "dependencies": {
-    "astro": "^7.4.12"
+    "astro": "^7.4.12",
+    "lottie-web": "5.13.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

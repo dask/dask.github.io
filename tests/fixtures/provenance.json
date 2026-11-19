@@ -206,7 +206,12 @@
   "intentionalChanges": [
     "src/components/Footer.astro",
     "src/layouts/Site.astro",
-    "src/styles/footer-papers.css"
+    "src/styles/footer-papers.css",
+    "src/components/Dashboard.astro",
+    "src/components/Gauges.astro",
+    "src/scripts/site.ts",
+    "src/styles/illustrations.css",
+    "src/styles/performance.css"
   ],
   "legacy": {
     "slides.html": "42bd63856cd79a7b4ff8242c9c550c2a343709aad1c1b7ac474d2d13aed6e65e",

@@ -1,146 +1,34 @@
-/* Independently drawn homepage illustrations. Geometry is based on rendered references. */
+/* Exact original artwork, proportionally fitted; local posters also work without JS. */
 .dashboard-art {
-  height: 20.1875rem;
-  position: relative;
-  margin-left: 0;
-}
-.dashboard-frame {
   width: 36rem;
-  height: 20.125rem;
-  background: #262326;
-  border: 1px solid #555;
-  overflow: hidden;
+  height: auto;
+  aspect-ratio: 1080 / 593;
+  position: relative;
 }
-.dashboard-top {
-  height: 1.5rem;
-  border-bottom: 1px solid #555;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding-left: 1rem;
+[data-lottie] {
+  position: relative;
 }
-.dashboard-top i {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: #080815;
-}
-.dashboard-panes {
-  display: grid;
-  gap: 0.25rem;
-  padding: 0.625rem 0.875rem 0;
-  height: calc(100% - 1.5rem);
-  grid-template-columns: 48.8% 51.2%;
-}
-.dashboard-left,
-.dashboard-right {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.dashboard-tab {
-  font:
-    0.5rem/1.0625rem Inter,
-    sans-serif;
-  letter-spacing: 0.5px;
-  background: #333137;
-  color: #999;
-  padding: 0 0.625rem;
-  align-self: start;
-  height: 1.0625rem;
-}
-.dashboard-tab.selected {
-  background: #ebeaee;
-  color: #999;
-}
-.dashboard-code {
-  height: 8.3125rem;
-  background: #333137;
-  display: flex;
-  align-items: end;
-  color: #fff;
-  font:
-    0.5rem/0.75rem Inconsolata,
-    monospace;
-  padding: 0.5rem 0.75rem;
-}
-.dashboard-code code {
-  font: inherit;
-  white-space: pre;
-}
-.dashboard-code code .keyword {
-  color: #1f5aff;
-}
-.dashboard-code code .string {
-  color: #61ba92;
-}
-.dashboard-code code .comment {
-  color: #ef1561;
-}
-.dashboard-code code .number {
-  color: #fc6e6b;
-  font-weight: 400;
-}
-.progress-stream {
-  height: 6.25rem;
+[data-lottie] > img {
+  display: block;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-.task-stream {
+[data-lottie-player] {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+[data-lottie-player] svg {
   width: 100%;
-  flex: 1;
-  min-height: 0;
+  height: 100%;
+  display: block;
 }
-.progress-task,
-.stream-task {
-  transform-box: fill-box;
-  transform-origin: bottom;
+.lottie-ready > img {
+  visibility: hidden;
 }
-.gauge-arc {
-  stroke-dasharray: 480 660;
-}
-.is-playing .progress-task {
-  animation: progress-fill 4s ease-in-out var(--delay) infinite;
-}
-.is-playing .stream-task {
-  animation: task-fill 5s ease-in-out var(--delay) infinite;
-}
-.is-playing .gauge-arc {
-  animation: gauge-fill 8s ease-in-out infinite;
-}
-.is-playing .is-playing .gauge-1 {
-  animation-delay: -3s;
-}
-@keyframes progress-fill {
-  0%,
-  100% {
-    transform: scaleY(0.1);
-    opacity: 0.1;
-  }
-  40%,
-  80% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
-@keyframes task-fill {
-  0%,
-  10%,
-  100% {
-    opacity: 0;
-  }
-  30%,
-  85% {
-    opacity: 1;
-  }
-}
-@keyframes gauge-fill {
-  0%,
-  100% {
-    stroke-dasharray: 40 660;
-  }
-  50% {
-    stroke-dasharray: 480 660;
-  }
+.lottie-ready > [data-lottie-player] {
+  visibility: visible;
 }
 @media (max-width: 991px) and (min-width: 768px) {
   .dashboard-art {
@@ -149,11 +37,6 @@
     top: -3.375rem;
     width: 36.5rem;
     height: 20.375rem;
-  }
-  .dashboard-frame {
-    width: 36.5rem;
-    height: 20.375rem;
-    transform: none;
   }
 }
 @media (max-width: 767px) {
@@ -165,29 +48,12 @@
     height: 15.3125rem;
     margin: 0;
   }
-  .dashboard-frame {
-    width: 36rem;
-    height: 20.125rem;
-    transform: scale(0.765);
-    transform-origin: top left;
-  }
-  .dashboard-top {
-    height: 1.5rem;
-  }
-  .dashboard-panes {
-    padding-top: 0.625rem;
-  }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
   .dashboard-art {
     top: 24.22rem;
     left: 0;
-    height: 23.68rem;
-  }
-  .dashboard-frame {
-    transform: none;
-    width: 43.52rem;
     height: 23.68rem;
   }
 }

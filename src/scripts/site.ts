@@ -338,7 +338,7 @@ if (brandLinks.length) {
   addEventListener('resize', updateBrandSection);
   updateBrandSection();
 }
-// Locally drawn dashboard, resource gauges and rolling counters: no animation runtime.
+// Native HTML rolling counters (independent of the original Lottie artwork).
 const illustrations = document.querySelectorAll<HTMLElement>(
   '[data-illustration]',
 );
@@ -350,18 +350,6 @@ const artObserver = new IntersectionObserver(
         'is-playing',
         entry.isIntersecting && !reduceMotion.matches,
       );
-      if (root.dataset.illustration === 'gauges') {
-        const svg = root.querySelector('svg')!;
-        if (entry.isIntersecting && !reduceMotion.matches) {
-          if (!root.dataset.gaugesStarted) {
-            root
-              .querySelectorAll<SVGAnimateTransformElement>('animateTransform')
-              .forEach((animation) => animation.beginElement());
-            root.dataset.gaugesStarted = 'true';
-          }
-          svg.unpauseAnimations();
-        } else svg.pauseAnimations();
-      }
       if (!entry.isIntersecting) root.dataset.started = '';
       if (
         root.dataset.illustration !== 'counter' ||

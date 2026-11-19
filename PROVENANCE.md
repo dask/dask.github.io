@@ -7,7 +7,7 @@ Approved native Astro source: `dask/dask.org`, commit
 The local source checkout's untracked rebuild-file-inventory.txt was not imported.
 
 All six pages, shared components/styles/data, and public assets are imported.
-Only three production source files intentionally differ: Footer adds the shared
+Initial migration changes: Footer adds the shared
 hosting credit; Site uses Astro's configured canonical origin; footer-papers CSS
 puts the credit on its own visible line. Astro config defaults to organization
 root Pages and allows a later SITE_URL override. No page content is rebuilt
@@ -54,3 +54,38 @@ directories and exercises 116 browser cases (JS on/off) against a genuine static
 production remains root, with no /dask.org base. All external redirect requests
 are intercepted. Generated evidence, dist, node_modules, Git objects, private
 build paths and bulk reference screenshots are excluded from the migration.
+
+## Original homepage Lottie artwork (2026-11-19)
+
+At the user's request the independently recreated dashboard and gauges are
+replaced, not overlaid, by the exact JSON referenced by the live
+`https://www.dask.org/` homepage (verified against its data-src URLs):
+
+- `public/animations/dask-home.json` ←
+  `https://cdn.prod.website-files.com/655926fa24195711dbf38624/655926fa24195711dbf388c3_Dask_Home_2_Updates.json`
+  (2,768,513 bytes; SHA-256
+  `76423fcd4c9991490f5a5d09231727324380f874acb76cbfbe3c0f81305ac543`).
+- `public/animations/type-gauge.json` ←
+  `https://cdn.prod.website-files.com/655926fa24195711dbf38624/6633b38bbf5010e99c1329dc_Type-Gauge.json`
+  (96,903 bytes; SHA-256
+  `6b9e60ae47ddb6c5287e493f29d023cac7044416133d3234121d41e4dee8e8f0`).
+
+The dashboard includes one nested vector precomposition. Recursive inspection
+found no external/embedded images, fonts, glyph font dependencies, URLs or
+expressions in either file. These are original Dask artwork, not a newly licensed
+third-party asset; the attribution/rights reservation above still applies.
+The exact-byte/resource audit is reproducible offline in `npm run test:lottie`.
+No Webflow code is used. The MIT standalone `lottie-web@5.13.0` dependency is
+locked, its license retained in `licenses/lottie-web-MIT.txt`. We use its SVG
+**light** build, which excludes expressions/eval. Playback preserves the original
+frame rates, timing, loop and intrinsic viewBox proportions; loading is lazy,
+offscreen/hidden playback pauses, and reduced motion uses a static local poster.
+
+The two PNG posters are intentional checked-in source fallback assets derived
+from frame 48 of those JSONs, not a tracked `dist/` build. Regenerate them with
+`node scripts/lottie-posters.mjs`. They remain usable without JavaScript and
+when animation loading fails. Native HTML counters and terminal typing remain
+independent and unchanged. Obsolete recreated SVG/CSS/SMIL and its dashboard/gauge
+motion assertions were removed; terminal motion checks remain. New browser tests
+check real rendered pixel/frame advancement, desktop/mobile, root and RTD mounts,
+no external requests, offscreen pause and dynamic/static reduced motion.

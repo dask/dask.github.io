@@ -51,12 +51,12 @@
 .benchmark-art {
   display: flex;
   align-items: center;
-  padding: 0 1.5625rem;
+  padding: 0;
   background: #f6f6f6;
   width: 100%;
   min-width: 0;
 }
-.benchmark-art > svg {
+.benchmark-art > img {
   width: 100%;
   height: auto;
   display: block;

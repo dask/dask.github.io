@@ -163,3 +163,14 @@ Astro recommends its official action; this repository uses the also-supported
 explicit npm build plus GitHub's official configure/upload/deploy actions to
 keep build tooling and job permissions auditable. Action SHAs resolve the
 commented major-version refs; review upstream changes before updating pins.
+
+### Homepage artwork
+
+The homepage dashboard and resource gauges use exact original Dask Lottie JSON,
+served locally with the standalone, expression-free SVG light player (no Webflow
+or runtime CDN). Reduced motion/no-JS use local static posters; offscreen and
+background animations pause. Native HTML counters remain separate.
+`npm run test:lottie` verifies original hashes, safe self-contained data and
+rendered desktop/mobile playback under root and RTD version paths. See
+[provenance](PROVENANCE.md#original-homepage-lottie-artwork-2026-11-19)
+for original URLs, licenses and reproducible poster generation.
