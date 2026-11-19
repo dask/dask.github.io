@@ -10,8 +10,7 @@ for (const route of pages) {
     const response = await request.get(new URL(path, baseURL).href);
     expect(response.status()).toBe(200);
     const html = await response.text();
-    const origin = process.env.SITE_URL || 'https://dask.github.io';
-    const canonical = new URL('/' + path, origin).href;
+    const canonical = new URL('/' + path, 'https://dask.org').href;
     expect(html).toContain(`rel="canonical" href="${canonical}"`);
     expect(html).not.toMatch(/webflow\.js|jquery|cdn\.prod\.website-files/i);
   });
