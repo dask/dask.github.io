@@ -1,0 +1,64 @@
+/* Exact original artwork, proportionally fitted; local posters also work without JS. */
+.dashboard-art {
+  width: 36rem;
+  height: auto;
+  aspect-ratio: 1080 / 593;
+  position: relative;
+}
+[data-lottie] {
+  position: relative;
+}
+[data-lottie] > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+[data-lottie-player] {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+[data-lottie-player] svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.lottie-ready > img {
+  visibility: hidden;
+}
+.lottie-ready > [data-lottie-player] {
+  visibility: visible;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .dashboard-art {
+    position: absolute;
+    left: 57.3vw;
+    top: -3.375rem;
+    width: 36.5rem;
+    height: 20.375rem;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard-art {
+    position: absolute;
+    top: 22.5625rem;
+    left: 0;
+    width: 100%;
+    height: 15.3125rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .dashboard-art {
+    top: 24.22rem;
+    left: 0;
+    height: 23.68rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .is-playing * {
+    animation: none !important;
+  }
+}

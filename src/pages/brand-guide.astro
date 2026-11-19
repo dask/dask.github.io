@@ -1,0 +1,238 @@
+---
+import Site from '../layouts/Site.astro';
+import '../styles/brand.css';
+import '../styles/tone.css';
+import '../styles/specimens.css';
+import Hero from '../components/Hero.astro';
+import BrandNav from '../components/BrandNav.astro';
+import ContrastText from '../components/ContrastText.astro';
+import { asset, colors } from '../data/site';
+const brandColorOrder = [
+  '#FFFFFF',
+  '#F6F6F6',
+  '#EBEAEE',
+  '#FFC11E',
+  '#FC6E6B',
+  '#EF1561',
+  '#61BA92',
+  '#1F5AFF',
+  '#183D72',
+  '#33363D',
+  '#262326',
+  '#080815',
+];
+const fonts = [
+  ['Inter', 'Heading 1', 'Bold, 56px'],
+  ['Inter', 'Heading 2', 'Bold, 46px'],
+  ['Inter', 'Heading 2-small', 'SemiBold, 36px'],
+  ['Inter', 'Heading 3', 'Bold, 20px'],
+  ['Inter', 'Text-xlarge', 'Light, 36px'],
+  ['Inter', 'Text-large', 'Light, 24px'],
+  ['Inter', 'Text-medium', 'Regular, 18px'],
+  ['Inter', 'Text-regular', 'Light, 16px'],
+  ['Inter', 'Text-small', 'Light, 14px'],
+  ['Inter', 'Text-tiny', 'Light, 12px'],
+  ['Inconsolata', 'syntax/code', 'Regular, 16px'],
+];
+const logoStates = [
+  ['White', '#ffffff', 'primary'],
+  ['Pink', '#ef1561', 'pink'],
+  ['Blue', '#1f5aff', 'blue'],
+  ['Black', '#080815', 'white'],
+];
+const tone = [
+  'For non-official Dask communications, either by individuals or associated corporations we can make no expectations of tone. So while speaking about Dask with your own voice, or the voice of your company, please do not feel burdened by the expectations of this document. We trust that you know best how to speak with your audience.',
+  'For official Dask communications we try to strike a balance that is exciting while genuine, and informative while light-hearted. In particular …',
+  'We strive to promote positive news about Dask, either its technical features:',
+  'Did you know that Dask can integrate well with Scikit-Learn? Read more here! or interesting and important ways in which the project has been used. We’re excited to see Dask used in the fight against Malaria. Read more in this article.',
+  'We avoid overt self-praise, especially if it is not very well proven.\nDask is 100x faster than Spark!',
+  'We temper positive results with ways in which we can improve, and highlight opportunities for others to engage.\nWe’re excited to announce Dask integration with Cassandra!\n…\nBut there is still plenty to do.',
+  'We don’t linger long on negative results, but we do make sure to acknowledge them in order to maintain an honest reputation.\nWhile running this benchmark we actually found that Dask performed worse for one part of it. That led us to fix a bug (see PR #1234) and now things are running smoothly again.',
+  'We endeavor to highlight the work of others, both among our own contributors, and among the project that are adjacent to Dask.\nNext, we apply the new dask.dataframe.foo operation (recently contributed by Alice Chen)',
+];
+---
+
+<Site title="Dask | Brand Guide">
+  <Hero title="Brand Guide" art="illustration-brand-guide-hero.svg">
+    <p>
+      This site includes both resources and guidelines for presenting and
+      communicating Dask to a broad audience. We hope that this serves to
+      generate a strong and consistent message among the many groups that
+      contribute to Dask and it’s surrounding software projects.
+    </p>
+    <p>
+      We hope that these resources make your job easier, and we thank you for
+      your efforts in communicating about the project.
+    </p>
+  </Hero>
+  <div class="brand-body">
+    <BrandNav />
+    <section id="logos" class="brand-logos light-grid">
+      <div class="brand-logo-copy">
+        <h2 class="medium-title">Logos</h2>
+        <p>
+          The Dask logo is made up of two components: The Logo Mark and the Word
+          Mark, which together make up the Horizontal Logo. Using the Logo Mark
+          alone should be reserved for instances where the Horizontal Logo is
+          already present, or as an avatar when “Dask” appears alongside the
+          Logo Mark in plain text.
+        </p>
+        <p>Dask logos are available below.</p>
+        <div class="brand-logo-action">
+          <a
+            class="button"
+            href="https://www.dropbox.com/s/hokky7ihto4z4rd/Dask-Logos.zip?dl=1"
+          >
+            Download Logos
+          </a>
+        </div>
+      </div>
+      <div class="logo-showcase" id="logo-showcase">
+        <div class="word-mark">
+          <h3>Word Mark</h3>
+          <img
+            src={asset('Dask-Logo-lockup-Primary.svg')}
+            data-primary={asset('Dask-Logo-lockup-Primary.svg')}
+            data-pink={asset('Dask-Logo-Lockup-on-Pink.svg')}
+            data-blue={asset('Dask-Logo-Lockup-on-blue.svg')}
+            data-white={asset('Dask-Logo-Lockup-white.svg')}
+            alt="Dask horizontal logo"
+          />
+        </div>
+        <div class="logo-options">
+          <p>Color Alternatives</p>
+          <div role="tablist" aria-label="Logo background color">
+            {logoStates.map(([name, hex, variant], i) => (
+              <button
+                role="tab"
+                aria-label={`${name} color tab`}
+                aria-selected={i === 0 ? 'true' : 'false'}
+                aria-controls="logo-showcase"
+                data-logo-color={hex}
+                data-variant={variant}
+                style={`background-color:${hex}`}
+              ></button>
+            ))}
+          </div>
+        </div>
+        <div class="logo-mark">
+          <h3>Logo Mark</h3>
+          <img
+            src={asset('Dask-Logo-Icon-Primary.svg')}
+            data-primary={asset('Dask-Logo-Icon-Primary.svg')}
+            data-pink={asset('Dask-Logo-Icon-on-Pink.svg')}
+            data-blue={asset('Dask-Logo-Icon-Primary.svg')}
+            data-white={asset('Dask-Logo-Icon-White.svg')}
+            alt="Dask logo mark"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="colors" class="palette-section">
+      <div class="palette-copy">
+        <h2 class="medium-title">Colors</h2>
+        <p>
+          Select a background color to view accessible brand color combinations
+          for text or other elements. Note: colors marked AA18 should only be
+          used for large type (18px or larger).
+        </p>
+        <p class="color-name">Salmon</p>
+        <p class="color-hex">#FC6E6B</p>
+        <p class="color-label">Accessible Text Colors</p>
+        <ContrastText
+          entries={[
+            { hex: '#33363D', rating: 'AA18' },
+            { hex: '#262326', rating: 'AA' },
+            { hex: '#080815', rating: 'AA' },
+          ]}
+        />
+        <div class="palette-action">
+          <button class="button copy-color">Copy Hex Code</button>
+        </div>
+      </div>
+      <div class="palette-grid">
+        {[...colors]
+          .sort(
+            (a, b) =>
+              brandColorOrder.indexOf(a[1]) - brandColorOrder.indexOf(b[1]),
+          )
+          .map(([name, hex]) => (
+            <button
+              data-color={hex}
+              data-name={name}
+              aria-label={`Select ${name} ${hex}`}
+              aria-pressed={name === 'Salmon' ? 'true' : 'false'}
+              style={`background:${hex};color:${['#FFFFFF', '#F6F6F6', '#EBEAEE', '#FFC11E', '#FC6E6B', '#61BA92'].includes(hex) ? '#080815' : 'white'}`}
+            >
+              {hex}
+            </button>
+          ))}
+      </div>
+    </section>
+    <section id="typography" class="brand-type light-grid large-grid">
+      <div>
+        <h2 class="medium-title">Typography</h2>
+        <p>
+          Inter and <span class="mono">Inconsolata</span> are the primary Dask
+          typefaces. Inter is best for for H-level titles and longform body
+          copy. <span class="mono">Inconsolata</span> should be used when
+          displaying syntax/code snippets or as a labeling device for charts,
+          graphics, and specialty layout components.
+        </p>
+        <div class="type-action">
+          <a
+            class="button"
+            href="https://www.dropbox.com/s/o89igbdknyieedp/Dask-Fonts.zip?dl=1"
+          >
+            Download Typefaces
+          </a>
+        </div>
+      </div>
+      <div class="type-specimens">
+        {fonts.map(([font, label, note]) => (
+          <div class="type-row">
+            <div class="type-cell">
+              <p class="type-sample" style={`font-family:${font}`}>
+                {font}
+              </p>
+            </div>
+            <div class="type-cell">
+              <p class="type-label">{label}</p>
+            </div>
+            <div class="type-cell">
+              <p class="type-label">{note}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    <section id="tone" class="brand-tone light-grid">
+      <div class="tone-sheet tone-intro-sheet">
+        <div class="tone-intro">
+          <h2 class="medium-title">Tone</h2>
+          <p>
+            The Dask community is broad and diverse, mixing a volunteer open
+            source community, academics and government workers, and for-profit
+            corporations. These sub-communities understandably have different
+            needs and expectations around communication, which can sometimes
+            conflict with each other.
+          </p>
+        </div>
+      </div>
+      <div class="tone-sheet tone-examples-sheet">
+        <div class="tone-examples">
+          {tone.map((text, index) => (
+            <p class:list={{ 'tone-emphasis': index === 2 }}>
+              {text.split('\n').map((line, i) => (
+                <>
+                  {i > 0 && <br />}
+                  {line}
+                </>
+              ))}
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+</Site>

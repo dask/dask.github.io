@@ -1,0 +1,191 @@
+/* Footer paint has its own grid cells; the text tracks remain owned by chrome.
+   Sheets are decorative and never clip ink or affect navigation flow. */
+.footer-brand > a,
+.footer-nav h2,
+.footer-links,
+.socials,
+.copyright {
+  position: relative;
+  isolation: isolate;
+}
+.footer-brand > a::before,
+.footer-nav h2::before,
+.footer-links::before,
+.socials::before,
+.copyright::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  background: #33363d;
+  left: var(--sheet-left);
+  top: var(--sheet-top);
+  width: var(--sheet-width);
+  height: var(--sheet-height);
+}
+.footer-brand > a {
+  --sheet-left: -2.49512rem;
+  --sheet-top: -2.77246rem;
+  --sheet-width: 39.44043rem;
+  --sheet-height: 5rem;
+}
+.footer-nav h2 {
+  border-bottom-color: transparent;
+  border-bottom-width: 0;
+  --sheet-left: -1.99512rem;
+  --sheet-top: -2.25rem;
+  --sheet-width: 9.4707rem;
+  --sheet-height: 4.76953rem;
+}
+.footer-nav h2::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  background: var(--yellow);
+  left: -0.1211rem;
+  top: 2.51953rem;
+  width: 5.84766rem;
+  height: 0.09277rem;
+}
+.footer-links {
+  --sheet-left: -1.99512rem;
+  --sheet-top: -1.49902rem;
+  --sheet-width: 9.4707rem;
+  --sheet-height: 14.61523rem;
+}
+.socials {
+  --sheet-left: -2.49512rem;
+  --sheet-top: -2rem;
+  --sheet-width: 39.44043rem;
+  --sheet-height: 5rem;
+}
+.copyright {
+  --sheet-left: -2.49512rem;
+  --sheet-top: -6.89844rem;
+  --sheet-width: 39.44043rem;
+  --sheet-height: 9.82715rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-brand > a {
+    --sheet-left: -1.23145rem;
+    --sheet-top: -1.79492rem;
+    --sheet-width: 40.7207rem;
+    --sheet-height: 6.65234rem;
+  }
+  .footer-nav h2 {
+    --sheet-left: -1.06641rem;
+    --sheet-top: -0.85449rem;
+    --sheet-width: 9.9834rem;
+    --sheet-height: 3.31152rem;
+  }
+  .footer-nav h2::after {
+    left: -0.06641rem;
+    top: 2.45703rem;
+    width: 8.0498rem;
+    height: 0.078125rem;
+  }
+  .footer-links {
+    --sheet-left: -1.06641rem;
+    --sheet-top: -0.83984rem;
+    --sheet-width: 9.9834rem;
+    --sheet-height: 13.11328rem;
+  }
+  .socials {
+    --sheet-left: -1.33301rem;
+    --sheet-top: -0.74609rem;
+    --sheet-width: 40.73047rem;
+    --sheet-height: 3.17676rem;
+  }
+  .copyright {
+    --sheet-left: -1.33301rem;
+    --sheet-top: -3.85059rem;
+    --sheet-width: 40.73047rem;
+    --sheet-height: 6.43164rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer-brand > a {
+    --sheet-left: -0.66992rem;
+    --sheet-top: -0.87695rem;
+    --sheet-width: 20.47461rem;
+    --sheet-height: 4.86523rem;
+  }
+  .footer-nav h2 {
+    --sheet-left: -0.54004rem;
+    --sheet-top: -2.51074rem;
+    --sheet-width: 20.47461rem;
+    --sheet-height: 4.875rem;
+  }
+  .footer-nav h2::after {
+    left: -0.03223rem;
+    top: 2.36426rem;
+    width: 19.49805rem;
+    height: 0.0498rem;
+  }
+  .footer-links {
+    --sheet-left: -0.54004rem;
+    --sheet-top: -0.73047rem;
+    --sheet-width: 20.47949rem;
+    --sheet-height: calc(100% + 2.559375rem);
+  }
+  .socials {
+    --sheet-left: -0.68945rem;
+    --sheet-top: -2.00098rem;
+    --sheet-width: 20.47949rem;
+    --sheet-height: 6.09375rem;
+  }
+  .copyright {
+    --sheet-left: -0.68945rem;
+    --sheet-top: -2.68066rem;
+    --sheet-width: 20.47949rem;
+    --sheet-height: 7.06836rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .footer-brand > a {
+    --sheet-left: -1.273rem;
+    --sheet-top: 0rem;
+    --sheet-width: 39.6205rem;
+    --sheet-height: 7.6749rem;
+  }
+  .footer-nav h2 {
+    --sheet-left: -1.04rem;
+    --sheet-top: -4.788rem;
+    --sheet-width: 19.6549rem;
+    --sheet-height: 7.8614rem;
+  }
+  .footer-nav h2::after {
+    left: -0.065rem;
+    top: 3.0734rem;
+    width: 17.7703rem;
+    height: 0.09734rem;
+  }
+  .footer-links {
+    --sheet-left: -1.04rem;
+    --sheet-top: -0.936rem;
+    --sheet-width: 19.6549rem;
+    --sheet-height: 11.7rem;
+  }
+  .socials {
+    --sheet-left: -1.3rem;
+    --sheet-top: -2.9336rem;
+    --sheet-width: 39.6314rem;
+    --sheet-height: 7.955rem;
+  }
+  .copyright {
+    --sheet-left: -1.3rem;
+    --sheet-top: -2.808rem;
+    --sheet-width: 39.6314rem;
+    --sheet-height: 7.6749rem;
+  }
+}
+
+/* Shared in-flow hosting credit immediately follows the copyright line. */
+.copyright > span,
+.hosting-credit {
+  display: block;
+}
+.hosting-credit {
+  width: fit-content;
+  text-decoration: underline;
+}

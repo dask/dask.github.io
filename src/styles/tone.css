@@ -1,0 +1,158 @@
+/* Tone owns its actual text tracks and flow; no fixed or minimum section heights. */
+.brand-tone {
+  position: relative;
+  isolation: isolate;
+  background-color: #f6f6f6;
+}
+.tone-sheet {
+  position: relative;
+  isolation: isolate;
+  background-color: #f6f6f6;
+}
+.tone-intro-sheet {
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+.tone-intro,
+.tone-examples {
+  display: flow-root;
+}
+/* Effective insets combine the observed outer gutter and paper-panel padding.
+   At 1440: two 523px text columns separated by 116px. */
+@media (min-width: 992px) {
+  .brand-tone {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    padding: 5.0004rem 5.0625rem 5.0004rem 0;
+  }
+  .tone-sheet {
+    margin: 0.125rem;
+    padding: 7.2715rem 3.5rem 0.87rem;
+  }
+  .tone-intro-sheet {
+    /* The short paper is two fifths of the intrinsic examples track. */
+    height: 40%;
+  }
+  .tone-examples {
+    padding-top: 2.25rem;
+  }
+  .brand-tone h2 {
+    font-size: 2.25rem;
+    line-height: 2.8746rem;
+    margin-bottom: 2.25rem;
+  }
+  .brand-tone p {
+    font-size: 0.9999rem;
+    line-height: 1.5003rem;
+    margin-bottom: 1.5003rem;
+  }
+  .tone-examples > p:nth-child(2) {
+    margin-bottom: 2.25rem;
+  }
+  .brand-tone .tone-emphasis {
+    font-size: 1.125rem;
+    line-height: 1.5003rem;
+  }
+}
+
+/* At 768: two approximately 264.7px text tracks; the reserved rail is separate. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .brand-tone {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 0.10512rem;
+    padding: 7.26vw 7.26vw 7.26vw calc(7.26vw - var(--brand-rail));
+  }
+  .tone-sheet {
+    margin: 0.10512rem 0.06672rem 0.06672rem;
+    padding: 3.8784rem 1.86672rem 3.8784rem 1.92rem;
+  }
+  .tone-examples {
+    padding-top: 1.2rem;
+  }
+  .brand-tone h2 {
+    font-size: 1.68432rem;
+    line-height: 1.89456rem;
+    margin-bottom: 1.2rem;
+  }
+  .brand-tone p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.96rem;
+  }
+  .tone-examples > p:nth-child(2) {
+    margin-bottom: 1.2rem;
+  }
+  .brand-tone .tone-emphasis {
+    font-size: 0.94752rem;
+    line-height: 1.59984rem;
+  }
+}
+/* Stacked landscape copy retains its own line-sized paragraph rhythm. */
+@media (min-width: 480px) and (max-width: 767px) {
+  .brand-tone {
+    display: block;
+    padding: calc(7.26vw + 0.936rem) 7.6vw 7.26vw;
+  }
+  .tone-sheet {
+    margin-inline: 0.065rem;
+    padding-inline: 1.559844rem 1.820052rem;
+  }
+  .tone-examples-sheet {
+    margin-bottom: 0.065rem;
+  }
+  .tone-intro-sheet {
+    padding-top: 3.276rem;
+  }
+  .tone-examples {
+    padding-top: 1.17rem;
+  }
+  .brand-tone h2 {
+    font-size: 1.820052rem;
+    line-height: 2.079792rem;
+    margin-bottom: 1.17rem;
+  }
+  .brand-tone p {
+    font-size: 1.039896rem;
+    line-height: 1.559844rem;
+    margin-bottom: 1.559844rem;
+  }
+  .brand-tone .tone-emphasis {
+    font-size: 1.17rem;
+    line-height: 1.559844rem;
+  }
+}
+/* Accepted narrow-phone composition is deliberately independent of the larger tiers. */
+@media (max-width: 479px) {
+  .brand-tone {
+    display: block;
+    padding: 5.3625rem 7.7vw 4.875rem;
+  }
+  .tone-sheet {
+    margin-inline: 0.0339rem;
+    padding-inline: 0.81242rem 0.94794rem;
+    display: flow-root;
+  }
+  .tone-examples-sheet {
+    margin-bottom: 0.0339rem;
+  }
+  .tone-intro-sheet {
+    padding-top: 1.7rem;
+  }
+  .tone-examples {
+    padding-top: 1.21875rem;
+  }
+  .brand-tone p {
+    margin-bottom: 1.04rem;
+  }
+  .tone-examples > p:nth-child(2) {
+    margin-bottom: 1.21875rem;
+  }
+  .brand-tone .tone-emphasis {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+  }
+}

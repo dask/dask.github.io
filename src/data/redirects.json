@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/blog",
+    "destination": "https://blog.dask.org/",
+    "status": "resolved",
+    "reason": "Jacob authorized all excluded blog/event URLs to the blog homepage; discard source path, query and fragment."
+  },
+  {
+    "source": "/blog/[...slug]",
+    "destination": "https://blog.dask.org/",
+    "status": "resolved",
+    "reason": "Jacob authorized all excluded blog/event URLs to the blog homepage; discard source path, query and fragment."
+  },
+  {
+    "source": "/events",
+    "destination": "https://blog.dask.org/",
+    "status": "resolved",
+    "reason": "Jacob authorized all excluded blog/event URLs to the blog homepage; discard source path, query and fragment."
+  },
+  {
+    "source": "/events/[...slug]",
+    "destination": "https://blog.dask.org/",
+    "status": "resolved",
+    "reason": "Jacob authorized all excluded blog/event URLs to the blog homepage; discard source path, query and fragment."
+  },
+  {
+    "source": "/archive/2022-news-events",
+    "destination": "https://blog.dask.org/",
+    "status": "resolved",
+    "reason": "Jacob authorized all excluded blog/event URLs to the blog homepage; discard source path, query and fragment."
+  }
+]

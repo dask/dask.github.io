@@ -1,0 +1,62 @@
+---
+import '../styles/footer-papers.css';
+import { asset, docs, demo, socials } from '../data/site';
+const columns = [
+  ['Get Started', ['Latest', docs]],
+  [
+    'Community',
+    ['Get Help', '/get-help'],
+    ['Powered By', '/powered-by'],
+    ['Demo Day', demo],
+  ],
+  [
+    'Blog',
+    ['Dask Blog', '/blog'],
+    ['Contribute', 'https://github.com/dask/dask-blog/blob/gh-pages/README.md'],
+  ],
+  ['Brand', ['Brand Guidelines', '/brand-guide']],
+];
+---
+
+<footer class="site-footer dark-grid">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" aria-label="Dask home">
+        <img
+          src={asset('dask-header-logo.svg')}
+          alt="Dask"
+          width="152"
+          height="48"
+        />
+      </a>
+      <div class="socials">
+        {socials.map(([img, name, url]) => (
+          <a href={url} aria-label={name}>
+            <img src={asset(img)} alt="" width="32" height="32" />
+          </a>
+        ))}
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      {columns.map(([title, ...links]) => (
+        <div>
+          <h2>{title}</h2>
+          <div class="footer-links">
+            {links.map(([label, href]) => (
+              <a href={href}>{label}</a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </nav>
+  </div>
+  <p class="copyright">
+    <span>
+      Copyright © {new Date().getFullYear()} Dask core developers. New-BSD
+      Licensed
+    </span>
+    <a class="hosting-credit" href="https://github.com/dask/dask.github.io">
+      Hosted by GitHub Pages
+    </a>
+  </p>
+</footer>

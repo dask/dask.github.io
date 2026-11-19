@@ -1,0 +1,56 @@
+[
+  {
+    "date": "July 19, 2022",
+    "title": "Using AI and machine learning to kickstart climate change fightback",
+    "href": "https://www.itpro.co.uk/technology/artificial-intelligence-ai/368494/using-ai-and-machine-learning-to-kickstart-climate",
+    "image": "landsat-satellite-image-climate-change-GettyImages-1354422915.jpg"
+  },
+  {
+    "date": "June 7, 2022",
+    "title": "The New Dask: The Open Source Library for Scaling Python Reveals a New Style",
+    "href": "https://www.prnewswire.com/news-releases/the-new-dask-the-open-source-library-for-scaling-python-reveals-a-new-style-301561251.html",
+    "image": "Dask-Logo-lockup-primary.png"
+  },
+  {
+    "date": "June 6, 2022",
+    "title": "Distributed Computing for AI: A Status Report",
+    "href": "https://gradientflow.com/distributed-computing-for-ai-a-status-report/",
+    "image": "1586914303741.jpeg"
+  },
+  {
+    "date": "May 25, 2022",
+    "title": "IMD & IRD Awards 2022: Best market data newcomer",
+    "href": "https://www.waterstechnology.com/awards-rankings/7947666/imd-ird-awards-2022-best-market-data-newcomer-vendor-or-product-maystreet",
+    "image": "Waters-technology-logo.png"
+  },
+  {
+    "date": "May 24, 2022",
+    "title": "Python at Scale Summit, Presented by NumFOCUS Opens the Call for Proposals",
+    "href": "https://www.prnewswire.com/news-releases/python-at-scale-summit-presented-by-numfocus-opens-the-call-for-proposals-301553604.html",
+    "image": "prn_cision_logo_desktop.png"
+  },
+  {
+    "date": "May 19, 2022",
+    "title": "Forecasting Grubhub Order Volume At Scale",
+    "href": "https://bytes.grubhub.com/forecasting-grubhub-order-volume-at-scale-a966c2f901d2",
+    "image": "download.png"
+  },
+  {
+    "date": "May 18, 2022",
+    "title": "HPC-AI Advisory Council Announces 5th Annual APAC HPC-AI Competition",
+    "href": "https://www.businesswire.com/news/home/20220518005828/en/HPC-AI-Advisory-Council-Announces-5th-Annual-APAC-HPC-AI-Competition-That-Tackles-The-Pressing-Global-Problems-of-Human-Health-and-Sustainability",
+    "image": "business-wire-vector-logo.png"
+  },
+  {
+    "date": "February 15, 2022",
+    "title": "Coiled Finds Traction in Deploying Dask at Scale",
+    "href": "https://www.datanami.com/2022/02/15/coiled-finds-traction-in-deploying-dask-at-scale/",
+    "image": "datanami-logo-2018.png"
+  },
+  {
+    "date": "July 21, 2021",
+    "title": "6 essential Python tools for data science—now improved",
+    "href": "https://www.infoworld.com/article/3233250/6-essential-python-tools-for-data-science-now-improved.html",
+    "image": "infoworld-white-logo.svg"
+  }
+]

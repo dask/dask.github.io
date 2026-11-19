@@ -1,0 +1,62 @@
+---
+import { asset, docs, demo } from '../data/site';
+---
+
+<header class="site-header">
+  <a href="/" aria-label="Dask home">
+    <img
+      class="header-logo"
+      src={asset('dask-header-logo.svg')}
+      alt="Dask"
+      width="134"
+      height="42"
+    />
+  </a>
+  <button
+    class="menu-toggle"
+    aria-label="Open menu"
+    aria-expanded="false"
+    aria-controls="site-nav"
+  >
+    ≡
+  </button>
+  <nav id="site-nav" aria-label="Main navigation">
+    <a href="/get-started" class="mobile-start">
+      <img src={asset('mobile-get-started.svg')} alt="" />
+      Get Started
+    </a>
+    <div class="community">
+      <button
+        class="community-toggle"
+        aria-expanded="false"
+        aria-controls="community-links"
+      >
+        <img class="mobile-icon" src={asset('mobile-community.svg')} alt="" />
+        Community
+        <span class="chevron" aria-hidden="true">
+          ⌄
+        </span>
+      </button>
+      <div id="community-links">
+        <a class="desktop-only" href={demo}>
+          Demo Day
+        </a>
+        <button class="mobile-only" data-dialog="newsletter">
+          Mailing List
+        </button>
+        <a href="/get-help">Get Help</a>
+        <a href="/powered-by">Powered By</a>
+        <a class="mobile-only" href="/archive/2022-news-events">
+          News &amp; Events
+        </a>
+      </div>
+    </div>
+    <a class="blog-link" href="/blog">
+      <img class="mobile-icon" src={asset('mobile-blog.svg')} alt="" />
+      Blog
+    </a>
+    <a href={docs} class="button docs-button">
+      Docs
+    </a>
+  </nav>
+</header>

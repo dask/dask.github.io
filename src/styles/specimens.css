@@ -1,0 +1,357 @@
+/* Typography specimens: actual samples differ from their printed design labels.
+   Rows align their three intrinsic cells at the bottom; labels retain their
+   paragraph margin, which is part of the observed baseline rhythm. */
+.brand-body > .brand-type {
+  margin-left: calc(-1 * var(--brand-rail));
+  width: calc(100% + var(--brand-rail));
+  padding: 10rem 5.625vw;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  align-items: start;
+  background-image: var(--grid-light);
+  background-repeat: repeat-y;
+}
+.brand-type > div:first-child {
+  --copy-paper-left: 0px;
+  --copy-paper-top: 0px;
+  --copy-paper-width: 100%;
+  --copy-paper-height: 100%;
+  min-height: 0;
+  margin: 40px 0.2502rem 0.2502rem 0.1251rem;
+  padding: 4.5rem 5.4999rem 0 3.5001rem;
+  aspect-ratio: 1.70706;
+}
+.brand-type > div:first-child h2 {
+  margin: 0;
+}
+.brand-type > div:first-child p {
+  margin: 2.25rem 0 0;
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+}
+.brand-type .mono {
+  font-size: 0.9999rem;
+  font-weight: 400;
+  line-height: 1.5003rem;
+}
+.brand-type .type-action {
+  margin-top: 3.5001rem;
+}
+.brand-type .button {
+  margin-top: 0;
+  line-height: 32px;
+}
+.type-specimens {
+  aspect-ratio: 1.00222;
+  margin: 0.1251rem;
+  padding: 3.6rem 0 0 2.7rem;
+  background: white;
+}
+.type-row {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5004rem;
+}
+.type-cell {
+  flex: 0 0 33%;
+  min-width: 0;
+}
+.type-cell p {
+  margin: 0;
+}
+.type-cell .type-label {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+  font-weight: 400;
+  color: #8d8f8e;
+  margin-bottom: 0.18rem;
+}
+.type-cell .type-sample {
+  font-weight: 400;
+  font-size: var(--sample-font);
+  line-height: var(--sample-line, 1.5003rem);
+}
+.type-row:nth-child(-n + 4) .type-sample {
+  font-weight: 700;
+}
+.type-row:nth-child(1) {
+  --sample-font: 3.5001rem;
+  --sample-line: 3.5622rem;
+}
+.type-row:nth-child(2) {
+  --sample-font: 2.8746rem;
+  --sample-line: 3.5001rem;
+}
+.type-row:nth-child(3),
+.type-row:nth-child(4) {
+  --sample-font: 1.2501rem;
+  --sample-line: 1.9998rem;
+}
+.type-row:nth-child(5) {
+  --sample-font: 2.25rem;
+  --sample-line: 2.8746rem;
+}
+.type-row:nth-child(6) {
+  --sample-font: 1.5003rem;
+  --sample-line: 1.7496rem;
+}
+.type-row:nth-child(7) {
+  --sample-font: 1.125rem;
+}
+.type-row:nth-child(8),
+.type-row:nth-child(11) {
+  --sample-font: 0.9999rem;
+}
+.type-row:nth-child(9) {
+  --sample-font: 0.8748rem;
+}
+.type-row:nth-child(10) {
+  --sample-font: 0.7497rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .brand-body > .brand-type {
+    padding: 5.33328rem 7.26vw;
+  }
+  .brand-type > div:first-child {
+    margin: 0.10512rem 0.13344rem 0 0.06672rem;
+    padding: 1.2rem 2.93328rem 1.2rem 1.92rem;
+    aspect-ratio: 0.84463;
+  }
+  .brand-type > div:first-child p {
+    margin-top: 1.2rem;
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+  }
+  .brand-type .mono {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+  }
+  .brand-type .type-action {
+    margin-top: 1.86672rem;
+  }
+  .brand-type .button {
+    font-size: 0.94752rem;
+    line-height: 1.26336rem;
+    padding: 0.63168rem 0.84192rem;
+  }
+  .type-specimens {
+    aspect-ratio: auto;
+    margin: 0.06672rem;
+    padding: 1.92rem 0 0 1.44rem;
+  }
+  .type-row {
+    margin-bottom: 0.26688rem;
+    --sample-line: 1.26336rem;
+  }
+  .type-cell .type-label {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+    margin-bottom: 0.096rem;
+  }
+  .type-row:nth-child(1) {
+    --sample-font: 1.86672rem;
+    --sample-line: 1.89984rem;
+  }
+  .type-row:nth-child(2) {
+    --sample-font: 1.89456rem;
+    --sample-line: 2.2104rem;
+  }
+  .type-row:nth-child(3) {
+    --sample-font: 1.05264rem;
+    --sample-line: 1.44rem;
+  }
+  .type-row:nth-child(4) {
+    --sample-font: 1.05264rem;
+    --sample-line: 1.68432rem;
+  }
+  .type-row:nth-child(5) {
+    --sample-font: 1.68432rem;
+    --sample-line: 1.92rem;
+  }
+  .type-row:nth-child(6) {
+    --sample-font: 1.26336rem;
+    --sample-line: 1.4736rem;
+  }
+  .type-row:nth-child(7) {
+    --sample-font: 0.94752rem;
+    --sample-line: 1.59984rem;
+  }
+  .type-row:nth-child(8),
+  .type-row:nth-child(11) {
+    --sample-font: 0.84192rem;
+  }
+  .type-row:nth-child(9) {
+    --sample-font: 0.7368rem;
+  }
+  .type-row:nth-child(10) {
+    --sample-font: 0.63168rem;
+  }
+  .type-row:nth-child(10) .type-sample {
+    margin-bottom: 0.42096rem;
+  }
+}
+@media (max-width: 767px) {
+  .brand-body > .brand-type {
+    margin-left: 0;
+    width: 100%;
+    padding: 11.11vw 7.7vw;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .brand-type > div:first-child {
+    margin: 0.135525rem 0 0.135525rem 0.03388rem;
+    padding: 0.609375rem 0.81241875rem;
+    aspect-ratio: auto;
+    width: calc(100% - 0.03388rem);
+  }
+  .brand-type > div:first-child p {
+    margin-top: 1.21875rem;
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .brand-type .mono {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .brand-type .type-action {
+    margin-top: 1.95rem;
+  }
+  .brand-type .button {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04008rem;
+  }
+  .type-specimens {
+    aspect-ratio: auto;
+    width: calc(100% - 0.06776rem);
+    margin: 0.03388rem;
+    padding: 0.975rem 0 0 0.73125rem;
+  }
+  .type-row {
+    margin-bottom: 0.135525rem;
+  }
+  .type-cell .type-label {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+    margin-bottom: 0.04875rem;
+  }
+  .type-row:nth-child(1) {
+    --sample-font: 40px;
+    --sample-line: 3.957999vw;
+  }
+  .type-row:nth-child(2) {
+    --sample-font: 2.07992rem;
+    --sample-line: 2.34rem;
+  }
+  .type-row:nth-child(3),
+  .type-row:nth-child(4) {
+    --sample-font: 1.29992rem;
+    --sample-line: 2.07992rem;
+  }
+  .type-row:nth-child(5) {
+    --sample-font: 1.82008rem;
+    --sample-line: 2.4375rem;
+  }
+  .type-row:nth-child(6) {
+    --sample-font: 1.56rem;
+    --sample-line: 2.07992rem;
+  }
+  .type-row:nth-child(6) .type-sample {
+    margin-bottom: 0.52004rem;
+  }
+  .type-row:nth-child(7) {
+    --sample-font: 1.17rem;
+    --sample-line: 1.56rem;
+  }
+  .type-row:nth-child(8),
+  .type-row:nth-child(11) {
+    --sample-font: 1.04008rem;
+    --sample-line: 1.56rem;
+  }
+  .type-row:nth-child(9) {
+    --sample-font: 0.90992rem;
+    --sample-line: 1.56rem;
+  }
+  .type-row:nth-child(10) {
+    --sample-font: 0.78rem;
+    --sample-line: 1.56rem;
+  }
+  .type-row:nth-child(10) .type-sample {
+    margin-bottom: 0.21377rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .brand-body > .brand-type {
+    padding: 11.11vw 7.26vw;
+  }
+  .brand-type > div:first-child {
+    margin: 0.26rem 0 0.26rem 0.065rem;
+    padding: 1.17rem 1.56rem;
+    width: calc(100% - 0.065rem);
+  }
+  .brand-type > div:first-child p {
+    margin-top: 1.17rem;
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+  }
+  .brand-type .mono {
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+  }
+  .brand-type .type-action {
+    margin-top: 1.82rem;
+  }
+  .brand-type .button {
+    font-size: 1.17rem;
+    line-height: 1.56rem;
+    padding: 0.78rem 1.04rem;
+  }
+  .type-specimens {
+    aspect-ratio: auto;
+    width: calc(100% - 0.13rem);
+    margin: 0.065rem;
+    padding: 1.872rem 0 0 1.404rem;
+  }
+  .type-row {
+    margin-bottom: 0.26rem;
+  }
+  .type-cell .type-label {
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+    margin-bottom: 0.0936rem;
+  }
+  .type-row:nth-child(2) {
+    --sample-font: 2.08rem;
+    --sample-line: 2.34rem;
+  }
+  .type-row:nth-child(2) .type-sample {
+    font-size: 4.444vw;
+  }
+  .type-row:nth-child(3) {
+    --sample-line: 3.889vw;
+  }
+  .type-row:nth-child(5) {
+    --sample-line: 2.808rem;
+  }
+  .type-row:nth-child(6) {
+    --sample-font: 1.3rem;
+    --sample-line: 1.56rem;
+  }
+  .type-row:nth-child(6) .type-sample {
+    margin-bottom: 0;
+  }
+  .type-row:nth-child(10) {
+    --sample-line: 1.3rem;
+  }
+  .type-row:nth-child(10) .type-sample {
+    margin-bottom: 0.41044rem;
+  }
+}
+
+.brand-type .type-action {
+  font:
+    300 18px/32px Inter,
+    sans-serif;
+}

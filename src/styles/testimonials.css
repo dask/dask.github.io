@@ -1,0 +1,227 @@
+/* Testimonial geometry is intrinsic: artwork, quotation, author and gaps own each card's size. */
+.testimonials {
+  --quote-padding: 2rem;
+  --quote-gap: 1.25rem;
+  --quote-logo-height: 2.5rem;
+  --quote-avatar: 1.8rem;
+  --quote-author-gap: 0.75rem;
+  --quote-font: 1.125rem;
+  --quote-line: 1.5rem;
+  --author-font: 1rem;
+  --author-line: 1.5rem;
+  --column-gap: 0.6246rem;
+  padding: 10.09rem var(--gutter) 10.0625rem;
+  display: grid;
+  grid-template-columns: 37.4fr 62.6fr;
+  background: white var(--grid-light) center top / var(--grid-size) repeat-y;
+}
+.quote-intro {
+  background-color: white;
+  padding: 1.5rem 1.5rem 0.9rem;
+  align-self: start;
+  position: sticky;
+  top: 1.5rem;
+}
+.quote-intro h2 {
+  font-size: 2.8746rem;
+  line-height: 3.5001rem;
+  margin: 0;
+}
+.quote-intro p {
+  max-width: 21.6rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.quote-benefits {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.quote-benefits li {
+  display: flex;
+  align-items: center;
+}
+.quote-benefits li:not(:last-child)::after {
+  content: '';
+  width: 1.5rem;
+  border-top: 1px solid var(--pink);
+  margin-inline: 0.75rem;
+}
+.quote-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--column-gap);
+  margin: 0 0.125rem;
+  min-width: 0;
+}
+.quote-columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--column-gap);
+  min-width: 0;
+}
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--quote-gap);
+  background: #f6f6f6;
+  padding: var(--quote-padding);
+  margin: 0;
+  min-width: 0;
+}
+.quote-logo {
+  filter: grayscale(1);
+  display: block;
+  align-self: flex-start;
+  width: auto;
+  height: var(--quote-logo-height);
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0;
+}
+.quote blockquote {
+  font-size: var(--quote-font);
+  line-height: var(--quote-line);
+  margin: 0;
+}
+.quote figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--quote-author-gap);
+  font-size: var(--author-font);
+  line-height: var(--author-line);
+}
+.quote figcaption img {
+  width: var(--quote-avatar);
+  height: var(--quote-avatar);
+  border-radius: 50%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .testimonials {
+    --quote-padding: 1.06656rem;
+    --quote-gap: 0.66672rem;
+    --quote-logo-height: 1.92rem;
+    --quote-avatar: 1.44rem;
+    --quote-author-gap: 0.39984rem;
+    --quote-font: 0.94752rem;
+    --quote-line: 1.59984rem;
+    --author-font: 0.84192rem;
+    --author-line: 1.26336rem;
+    --column-gap: 0.33312rem;
+    grid-template-columns: 38.83fr 61.17fr;
+    padding: 6.8916rem 7.26vw 5.6928rem;
+  }
+  .quote-intro {
+    padding: 0.8rem 0.8rem 0.48rem;
+  }
+  .quote-intro h2 {
+    font-size: 1.89456rem;
+    line-height: 2.2104rem;
+  }
+  .quote-intro p {
+    max-width: none;
+    font-size: 1.26336rem;
+    line-height: 1.4736rem;
+    margin: 0.53328rem 0;
+  }
+  .quote-benefits {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+  }
+  .quote-benefits li:not(:last-child)::after {
+    width: 0.8rem;
+    margin-inline: 0.4rem;
+  }
+  .quote-columns {
+    grid-template-columns: minmax(0, 1fr);
+    margin-inline: 0.06672rem;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials {
+    --quote-padding: 1.4625rem 1.21875rem;
+    --quote-gap: 0.975rem;
+    --quote-logo-height: 2.19375rem;
+    --quote-avatar: 1.70625rem;
+    --quote-author-gap: 0.4875rem;
+    --quote-font: 1.17rem;
+    --quote-line: 1.56rem;
+    --author-font: 1.04rem;
+    --author-line: 1.56rem;
+    --column-gap: 0.4875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8.06625rem 7.7vw 6.825rem;
+  }
+  .quote-intro {
+    position: static;
+    padding: 0.975rem 0.40633rem 0.975rem 0.81242rem;
+    width: 100%;
+  }
+  .quote-intro h2 {
+    font-size: 2.07992rem;
+    line-height: 2.34rem;
+  }
+  .quote-intro p {
+    max-width: none;
+    font-size: 1.56rem;
+    line-height: 2.07992rem;
+    margin: 0.2708rem 0 0.52rem;
+  }
+  .quote-benefits {
+    font-size: 1.04rem;
+    line-height: 1.56rem;
+  }
+  .quote-benefits li:not(:last-child)::after {
+    width: 0.40625rem;
+    margin-inline: 0.203125rem;
+  }
+  .quote-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.24375rem;
+    margin: 0 0.0339rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .testimonials {
+    --quote-padding: 1.56rem 1.404rem;
+    --quote-gap: 0.936rem;
+    --quote-logo-height: 2.7144rem;
+    --quote-avatar: 1.638rem;
+    --quote-author-gap: 0.468rem;
+    --column-gap: 0.325rem;
+    padding: 8.26rem 7.26vw 8.588rem;
+  }
+  .quote-intro {
+    padding: 1.872rem 0.78rem 1.872rem 1.56rem;
+  }
+  .quote-intro h2 {
+    font-size: 2.08rem;
+    line-height: 2.34rem;
+  }
+  .quote-intro p {
+    font-size: 1.3rem;
+    line-height: 1.56rem;
+    margin: 0.52rem 0 0.78rem;
+  }
+  .quote-benefits li:not(:last-child)::after {
+    width: 0.78rem;
+    margin-inline: 0.39rem;
+  }
+  .quote-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-inline: 0.065rem;
+    gap: var(--column-gap);
+  }
+}

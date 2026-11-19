@@ -1,0 +1,103 @@
+<dialog id="submission-dialog" aria-labelledby="dialog-heading">
+  <button class="dialog-close" aria-label="Close dialog">
+    ×
+  </button>
+  <div class="dialog-tabs" role="tablist" aria-label="Submission type">
+    <button role="tab" aria-selected="true" data-form="event">
+      Submit New Event
+    </button>
+    <button role="tab" aria-selected="false" data-form="press">
+      Submit News Feature
+    </button>
+    <button role="tab" aria-selected="false" data-form="newsletter">
+      Sign up for Newsletter
+    </button>
+  </div>
+  <h2 id="dialog-heading">Submit New Event</h2>
+  <form method="dialog">
+    <div class="name-fields">
+      <label>
+        First Name
+        <input
+          name="first-name"
+          placeholder="First Name"
+          autocomplete="given-name"
+          required
+        />
+      </label>
+      <label>
+        Last Name
+        <input
+          name="last-name"
+          placeholder="Last Name"
+          autocomplete="family-name"
+          required
+        />
+      </label>
+    </div>
+    <div class="newsletter-fields" hidden>
+      <label>
+        Company
+        <input name="company" placeholder="Company" required />
+      </label>
+    </div>
+    <label>
+      Email Address
+      <input
+        name="email"
+        type="email"
+        placeholder="Email Address"
+        autocomplete="email"
+        required
+      />
+    </label>
+    <div class="event-fields">
+      <label>
+        Event Date
+        <input name="event-date" placeholder="Event Date" required />
+      </label>
+      <label>
+        Event Time
+        <input name="event-time" placeholder="Event Time" required />
+      </label>
+      <label>
+        Location / Virtual
+        <input
+          name="event-location"
+          placeholder="Location / Virtual"
+          required
+        />
+      </label>
+      <label>
+        Event Description
+        <textarea
+          name="event-description"
+          placeholder="Event Description"
+          required
+        ></textarea>
+      </label>
+    </div>
+    <div class="press-fields" hidden>
+      <label>
+        URL of News Post
+        <input
+          name="news-url"
+          type="url"
+          placeholder="URL of News Post"
+          required
+        />
+      </label>
+      <label>
+        News Content
+        <textarea name="news-content" placeholder="News Content"></textarea>
+      </label>
+    </div>
+    <button type="submit" class="button">
+      Submit
+    </button>
+    <p class="backend-note">
+      Local preview: no information is sent. Submission service not connected.
+    </p>
+    <p role="status" class="form-status"></p>
+  </form>
+</dialog>

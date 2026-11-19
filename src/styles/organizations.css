@@ -1,0 +1,297 @@
+/* Organization banks own their card/media boxes. Intrinsic artwork is contained,
+   never stretched to substitute for the distinct media frames. */
+.org-section {
+  padding: 14.33203rem calc(5.625vw + 2.75rem) 0;
+}
+.org-intro {
+  max-width: 29.5498rem;
+  min-height: 25.84473rem;
+}
+.org-intro h2 {
+  margin-bottom: 1rem;
+}
+.org-intro p {
+  font-size: 0.9999rem;
+  line-height: 1.5003rem;
+}
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.1251rem;
+  margin-inline: -2.75rem;
+}
+.org-logo {
+  margin: 0 0.1251rem;
+  width: calc(100% - 0.30957rem);
+}
+.org-logo-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5003rem 2.5002rem;
+  margin-bottom: 0.1251rem;
+  background: white;
+}
+.logo-grid img {
+  width: 100%;
+  height: 6.74098rem;
+  object-fit: contain;
+  object-position: center;
+}
+.org-section.projects {
+  padding-top: 15.29785rem;
+  padding-bottom: 9.9rem;
+}
+.projects .org-intro {
+  display: flow-root;
+  width: calc(100% + 2.5002rem);
+  max-width: none;
+  min-height: 14.82715rem;
+}
+/* Center the whole content block in its paper. Its height changes at1100px
+   when the paragraph loses a line; no breakpoint-specific y nudge is needed. */
+.projects .org-copy {
+  min-block-size: var(--copy-paper-height);
+  margin-block-start: var(--copy-paper-top);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projects .org-intro p {
+  width: 50%;
+  margin-bottom: 0.9999rem;
+}
+.org-band {
+  text-align: center;
+  padding: 3.3916rem 5.625vw 5rem;
+  background-color: #ebeaee;
+}
+.org-band h2 {
+  width: fit-content;
+  margin: auto;
+  font-size: 2.25rem;
+  line-height: 2.8746rem;
+}
+.home-org-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.1251rem;
+  margin-top: 3.709rem;
+}
+.home-org-media {
+  margin: 0.189rem 0.1251rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-org-grid img {
+  width: 100%;
+  height: 9.71973rem;
+  object-fit: contain;
+  object-position: center;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .org-section {
+    padding: 9.35352rem calc(7.26vw + 1.46582rem) 0;
+  }
+  .org-intro {
+    max-width: 15.1328125rem;
+    min-height: 18.1416rem;
+  }
+  .org-intro h2 {
+    margin-bottom: 0.53328rem;
+  }
+  .projects .org-intro p {
+    width: 75%;
+    margin-bottom: 0.53328rem;
+  }
+  .org-intro p {
+    font-size: 0.84192rem;
+    line-height: 1.26336rem;
+  }
+  .logo-grid {
+    gap: 0.10512rem;
+    margin-inline: -1.46582rem;
+  }
+  .org-logo {
+    margin: 0 0.10512rem;
+    width: calc(100% - 0.24316rem);
+  }
+  .org-logo-media {
+    padding: 0.80016rem 0.84192rem;
+    margin: 0.10512rem 0;
+  }
+  .logo-grid img {
+    height: 4.96682rem;
+  }
+  .org-section.projects {
+    padding: 11.29785rem calc(7.26vw + 1.46582rem) 5.28rem;
+  }
+  .projects .org-intro {
+    max-width: none;
+    min-height: 9.28613rem;
+    width: calc(100% + 1.33344rem);
+  }
+  .projects .org-copy {
+    padding-top: 1.92rem;
+  }
+  .org-band {
+    padding: 2.4082rem 7.26vw 3.36rem;
+  }
+  .org-band h2 {
+    font-size: 1.68432rem;
+    line-height: 1.89456rem;
+  }
+  .home-org-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.10512rem;
+    margin-top: 2.56543rem;
+  }
+  .home-org-media {
+    margin: 0.10512rem;
+    padding: 1.44rem;
+  }
+  .home-org-grid img {
+    height: 3.60059rem;
+  }
+}
+@media (max-width: 767px) {
+  .org-section {
+    padding: 14.86035rem 10.8vw 0;
+  }
+  .org-intro {
+    width: 80.40865vw;
+    max-width: none;
+    min-height: calc(29.14945rem + 15.968px);
+  }
+  .org-intro h2 {
+    margin-bottom: 0.975rem;
+    font-size: 1.82008rem;
+    line-height: 2.07992rem;
+  }
+  .org-intro p {
+    font-size: 1.04008rem;
+    line-height: 1.56rem;
+  }
+  .logo-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.26008rem 0.06776rem;
+    margin-inline: -3.1vw;
+  }
+  .org-logo {
+    width: auto;
+    margin: 0 0.05338rem 1.21875rem;
+  }
+  .org-logo-media {
+    padding: 1.04008rem;
+    margin: 0.26008rem 0;
+  }
+  .logo-grid img {
+    height: 7.44336rem;
+  }
+  .org-section.projects {
+    padding: 7.05566rem 10.8vw 4.24125rem;
+  }
+  .projects .org-intro {
+    max-width: none;
+    min-height: 16.36426rem;
+    width: 81.22115vw;
+  }
+  .projects .org-copy {
+    padding: 1.95rem 0 0.73125rem;
+  }
+  .projects .org-intro p {
+    width: 97%;
+    margin-bottom: 0.270806rem;
+  }
+  .org-band {
+    padding: 3.140625rem 7.6vw 5.31348rem;
+  }
+  .org-band h2 {
+    font-size: 1.82008rem;
+    line-height: 2.07992rem;
+  }
+  .home-org-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.26008rem 0.06776rem;
+    margin-top: 3.0498rem;
+  }
+  .home-org-media {
+    margin: 0 0.05338rem;
+    padding: 0.4875rem 0.73125rem;
+  }
+  .home-org-grid img {
+    height: 3.90137rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .org-section {
+    padding: 12.774rem calc(7.26vw + 1.6464rem) 0;
+  }
+  .org-intro {
+    width: calc(100% + 1.3rem);
+    min-height: calc(42.665rem + 16px);
+  }
+  .org-intro h2 {
+    font-size: 3.889vw;
+    line-height: 4.444vw;
+    margin-bottom: 0.52rem;
+  }
+  .org-intro p {
+    font-size: 2.222vw;
+    line-height: 3.333vw;
+  }
+  .org-section:not(.projects) .org-intro h2,
+  .org-section:not(.projects) .org-intro p {
+    width: 80%;
+  }
+  .projects .org-copy {
+    padding: 2.34rem 0 0;
+  }
+  .projects .org-intro p {
+    width: 75%;
+    margin-bottom: 0.52rem;
+  }
+  .logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.13rem;
+    margin-inline: -1.6464rem;
+  }
+  .org-logo {
+    margin: 0 0.1025rem;
+    width: calc(100% - 0.205rem);
+  }
+  .org-logo-media {
+    padding: 0.78rem 0.8207rem;
+    margin: 0.065rem 0;
+  }
+  .logo-grid img {
+    height: 6.265rem;
+  }
+  .org-section.projects {
+    padding: 13.554rem calc(7.26vw + 1.6464rem) 8.14rem;
+  }
+  .projects .org-intro {
+    min-height: 10.851rem;
+    width: calc(100% + 1.3rem);
+  }
+  .org-band {
+    padding: 3.09375rem 7.26vw 4.21rem;
+  }
+  .org-band h2 {
+    font-size: 1.82rem;
+    line-height: 2.08rem;
+  }
+  .home-org-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.13rem;
+    margin-top: 2.92rem;
+  }
+  .home-org-media {
+    margin: 0.1025rem;
+    padding: 1.404rem;
+  }
+  .home-org-grid img {
+    height: 4.869rem;
+  }
+}

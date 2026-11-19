@@ -1,0 +1,381 @@
+/* Decorative copy sheets measured independently from their ink tracks.
+   Four design tiers scale with the shared fluid unit. No clipping or layout heights. */
+.home-headline,
+.workload-tabs > h2,
+.workload-tabs > .tablist,
+.workload-tabs .workload-panel,
+.install-copy,
+.page-hero:has(.powered-art) .hero-copy,
+.page-hero:not(:has(.powered-art)) .hero-copy,
+.org-section:not(.projects) .org-intro,
+.projects .org-intro,
+.brand-logo-copy,
+.brand-type > div:first-child,
+.palette-copy {
+  position: relative;
+  isolation: isolate;
+}
+.home-headline::before,
+.workload-tabs > h2::before,
+.workload-tabs > .tablist::before,
+.workload-tabs .workload-panel::before,
+.install-copy::before,
+.page-hero:has(.powered-art) .hero-copy::before,
+.page-hero:not(:has(.powered-art)) .hero-copy::before,
+.org-section:not(.projects) .org-intro::before,
+.projects .org-intro::before,
+.brand-logo-copy::before,
+.brand-type > div:first-child::before,
+.palette-copy::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  left: var(--copy-paper-left);
+  top: var(--copy-paper-top);
+  width: var(--copy-paper-width);
+  height: var(--copy-paper-height);
+  background: var(--copy-paper-color);
+}
+.home-headline {
+  --copy-paper-left: 0.25rem;
+  --copy-paper-top: 0.2480469rem;
+  --copy-paper-width: 34.5rem;
+  --copy-paper-height: 19.2998047rem;
+  --copy-paper-color: #080815;
+}
+.workload-tabs > h2 {
+  --copy-paper-left: 15.0292969rem;
+  --copy-paper-top: -0.5810547rem;
+  --copy-paper-width: 39.5996094rem;
+  --copy-paper-height: 4.6796875rem;
+  --copy-paper-color: #080815;
+}
+.workload-tabs > .tablist {
+  --copy-paper-left: 0rem;
+  --copy-paper-top: 0.0097656rem;
+  --copy-paper-width: 69.6591797rem;
+  --copy-paper-height: 4.9492188rem;
+  --copy-paper-color: #080815;
+}
+.workload-tabs .workload-panel {
+  --copy-paper-left: 0rem;
+  --copy-paper-top: 0.0087891rem;
+  --copy-paper-width: 69.6591797rem;
+  --copy-paper-height: 29.5498047rem;
+  --copy-paper-color: #080815;
+}
+.install-copy {
+  --copy-paper-left: 0.25rem;
+  --copy-paper-top: -0.0019531rem;
+  --copy-paper-width: 29.6240234rem;
+  --copy-paper-height: 24.3896484rem;
+  --copy-paper-color: #080815;
+}
+.page-hero:has(.powered-art) .hero-copy {
+  --copy-paper-left: 0.25rem;
+  --copy-paper-top: -1.5019531rem;
+  --copy-paper-width: 39.4042969rem;
+  --copy-paper-height: 24.4384766rem;
+  --copy-paper-color: #080815;
+}
+.page-hero:not(:has(.powered-art)) .hero-copy {
+  --copy-paper-left: 0.25rem;
+  --copy-paper-top: -1.5019531rem;
+  --copy-paper-width: 39.4042969rem;
+  --copy-paper-height: 24.4384766rem;
+  --copy-paper-color: #080815;
+}
+.org-section:not(.projects) .org-intro {
+  --copy-paper-left: -2.5rem;
+  --copy-paper-top: -4.2656238rem;
+  --copy-paper-width: 39.4375rem;
+  --copy-paper-height: 19.78125rem;
+  --copy-paper-color: #ffffff;
+}
+.projects .org-intro {
+  --copy-paper-left: -2.5rem;
+  --copy-paper-top: -5.2041rem;
+  --copy-paper-width: 79.375rem;
+  --copy-paper-height: 19.78125rem;
+  --copy-paper-color: #ffffff;
+}
+.brand-logo-copy {
+  --copy-paper-left: -3.5rem;
+  --copy-paper-top: 5.3125rem;
+  --copy-paper-width: 39.4707031rem;
+  --copy-paper-height: 34.7763672rem;
+  --copy-paper-color: var(--logo-paper, #ffffff);
+}
+.brand-type > div:first-child {
+  --copy-paper-left: -3.5rem;
+  --copy-paper-top: calc(40px - 3.75rem);
+  --copy-paper-width: 39.5625rem;
+  --copy-paper-height: 23.1757812rem;
+  --copy-paper-color: #ffffff;
+}
+.palette-copy {
+  --copy-paper-left: -3.5rem;
+  --copy-paper-top: 0.3125rem;
+  --copy-paper-width: 39.5625rem;
+  --copy-paper-height: 29.6992188rem;
+  --copy-paper-color: var(--palette-paper, #fc6e6b);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .home-headline {
+    --copy-paper-left: 0.1044922rem;
+    --copy-paper-top: -3.3037109rem;
+    --copy-paper-width: 23.7333984rem;
+    --copy-paper-height: 19.9794922rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs > h2 {
+    --copy-paper-left: 5.3535156rem;
+    --copy-paper-top: -0.4140625rem;
+    --copy-paper-width: 30.2392578rem;
+    --copy-paper-height: 3.0712891rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs > .tablist {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: 0.0166016rem;
+    --copy-paper-width: 40.9462891rem;
+    --copy-paper-height: 3.2636719rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs .workload-panel {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: 0.0175781rem;
+    --copy-paper-width: 40.9462891rem;
+    --copy-paper-height: 20.1210938rem;
+    --copy-paper-color: #080815;
+  }
+  .install-copy {
+    --copy-paper-left: 0.1132812rem;
+    --copy-paper-top: 0.1474609rem;
+    --copy-paper-width: 20.2099609rem;
+    --copy-paper-height: 16.4150391rem;
+    --copy-paper-color: #080815;
+  }
+  .page-hero:has(.powered-art) .hero-copy {
+    --copy-paper-left: 0.1132812rem;
+    --copy-paper-top: 0.1044922rem;
+    --copy-paper-width: 20.2099609rem;
+    --copy-paper-height: 16.5917969rem;
+    --copy-paper-color: #080815;
+  }
+  .page-hero:not(:has(.powered-art)) .hero-copy {
+    --copy-paper-left: 0.1132812rem;
+    --copy-paper-top: 0.1044922rem;
+    --copy-paper-width: 20.2099609rem;
+    --copy-paper-height: 19.9511719rem;
+    --copy-paper-color: #080815;
+  }
+  .org-section:not(.projects) .org-intro {
+    --copy-paper-left: -1.33344rem;
+    --copy-paper-top: -2.4042969rem;
+    --copy-paper-width: 20.25rem;
+    --copy-paper-height: 13.5302734rem;
+    --copy-paper-color: #ffffff;
+  }
+  .projects .org-intro {
+    --copy-paper-left: -1.33344rem;
+    --copy-paper-top: -4.3486312rem;
+    --copy-paper-width: 40.765625rem;
+    --copy-paper-height: 13.5302734rem;
+    --copy-paper-color: #ffffff;
+  }
+  .brand-logo-copy {
+    --copy-paper-left: -1.9492188rem;
+    --copy-paper-top: 3.5302734rem;
+    --copy-paper-width: 20.3886719rem;
+    --copy-paper-height: 23.4804688rem;
+    --copy-paper-color: var(--logo-paper, #ffffff);
+  }
+  .brand-type > div:first-child {
+    --copy-paper-left: -1.9492188rem;
+    --copy-paper-top: -1.1875rem;
+    --copy-paper-width: 20.3164062rem;
+    --copy-paper-height: 24.0537109rem;
+    --copy-paper-color: #ffffff;
+  }
+  .palette-copy {
+    --copy-paper-left: -1.9189453rem;
+    --copy-paper-top: 0.1054688rem;
+    --copy-paper-width: 20.4414062rem;
+    --copy-paper-height: 27.0712891rem;
+    --copy-paper-color: var(--palette-paper, #fc6e6b);
+  }
+}
+@media (max-width: 767px) {
+  .home-headline {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: -2.75rem;
+    --copy-paper-width: 20.4746094rem;
+    --copy-paper-height: 19.6230469rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs > h2 {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: -0.0234375rem;
+    --copy-paper-width: 20.671875rem;
+    --copy-paper-height: 4.7285156rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs > .tablist {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: 0.0019531rem;
+    --copy-paper-width: 20.671875rem;
+    --copy-paper-height: 15.3554688rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs .workload-panel {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: 0.0136719rem;
+    --copy-paper-width: 20.671875rem;
+    --copy-paper-height: 39.4394531rem;
+    --copy-paper-color: #080815;
+  }
+  .install-copy {
+    --copy-paper-left: 1.9189453rem;
+    --copy-paper-top: 0.8916016rem;
+    --copy-paper-width: 20.3398438rem;
+    --copy-paper-height: 25.3496094rem;
+    --copy-paper-color: #080815;
+  }
+  .page-hero:has(.powered-art) .hero-copy {
+    --copy-paper-left: -0.3476562rem;
+    --copy-paper-top: -0.3896484rem;
+    --copy-paper-width: 20.3398438rem;
+    --copy-paper-height: 25.1054688rem;
+    --copy-paper-color: #080815;
+  }
+  .page-hero:not(:has(.powered-art)) .hero-copy {
+    --copy-paper-left: -0.3476562rem;
+    --copy-paper-top: 0.0009766rem;
+    --copy-paper-width: 20.3398438rem;
+    --copy-paper-height: 25.1054688rem;
+    --copy-paper-color: #080815;
+  }
+  .org-section:not(.projects) .org-intro {
+    --copy-paper-left: -0.6816406rem;
+    --copy-paper-top: -4.3798812rem;
+    --copy-paper-width: 20.4746094rem;
+    --copy-paper-height: 20.4746094rem;
+    --copy-paper-color: #ffffff;
+  }
+  .projects .org-intro {
+    --copy-paper-left: -0.6816406rem;
+    --copy-paper-top: -4.2451131rem;
+    --copy-paper-width: 20.4746094rem;
+    --copy-paper-height: 20.4746094rem;
+    --copy-paper-color: #ffffff;
+  }
+  .brand-logo-copy {
+    --copy-paper-left: -0.8105469rem;
+    --copy-paper-top: -0.609375rem;
+    --copy-paper-width: 20.6386719rem;
+    --copy-paper-height: 30.4863281rem;
+    --copy-paper-color: var(--logo-paper, #ffffff);
+  }
+  .brand-type > div:first-child {
+    --copy-paper-left: -0.8105469rem;
+    --copy-paper-top: -0.5947266rem;
+    --copy-paper-width: 20.5898438rem;
+    --copy-paper-height: calc(100% + 1.12890625rem);
+    --copy-paper-color: #ffffff;
+  }
+  .palette-copy {
+    --copy-paper-left: -0.8105469rem;
+    --copy-paper-top: -0.609375rem;
+    --copy-paper-width: 20.4746094rem;
+    --copy-paper-height: 30.46875rem;
+    --copy-paper-color: var(--palette-paper, #fc6e6b);
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .home-headline {
+    --copy-paper-left: 0.1022047rem;
+    --copy-paper-top: -0.0158174rem;
+    --copy-paper-width: 39.8014143rem;
+    --copy-paper-height: 19.4237521rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs > h2 {
+    --copy-paper-left: 5.2611065rem;
+    --copy-paper-top: -0.8456219rem;
+    --copy-paper-width: 29.4836106rem;
+    --copy-paper-height: 4.0005824rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs > .tablist {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: -0.0146007rem;
+    --copy-paper-width: 40.0058236rem;
+    --copy-paper-height: 3.743854rem;
+    --copy-paper-color: #080815;
+  }
+  .workload-tabs .workload-panel {
+    --copy-paper-left: 0rem;
+    --copy-paper-top: -0.0146007rem;
+    --copy-paper-width: 40.0058236rem;
+    --copy-paper-height: 43.8117304rem;
+    --copy-paper-color: #080815;
+  }
+  .install-copy {
+    --copy-paper-left: 3.5260607rem;
+    --copy-paper-top: 0.0851705rem;
+    --copy-paper-width: 39.7478785rem;
+    --copy-paper-height: 19.3750832rem;
+    --copy-paper-color: #080815;
+  }
+  .page-hero:has(.powered-art) .hero-copy {
+    --copy-paper-left: -0.0024334rem;
+    --copy-paper-top: -0.7689684rem;
+    --copy-paper-width: 39.7478785rem;
+    --copy-paper-height: calc(15.7614185rem + max(0px, 7.68px - 0.598rem));
+    --copy-paper-color: #080815;
+  }
+  .page-hero:not(:has(.powered-art)) .hero-copy {
+    --copy-paper-left: -0.0024334rem;
+    --copy-paper-top: -0.021901rem;
+    --copy-paper-width: 39.7478785rem;
+    --copy-paper-height: 19.1183548rem;
+    --copy-paper-color: #080815;
+  }
+  .org-section:not(.projects) .org-intro {
+    --copy-paper-left: -1.3rem;
+    --copy-paper-top: -4.3508rem;
+    --copy-paper-width: 39.3110753rem;
+    --copy-paper-height: 15.7237001rem;
+    --copy-paper-color: #ffffff;
+  }
+  .projects .org-intro {
+    --copy-paper-left: -1.3rem;
+    --copy-paper-top: -5.1312rem;
+    --copy-paper-width: 39.3110753rem;
+    --copy-paper-height: 15.7237001rem;
+    --copy-paper-color: #ffffff;
+  }
+  .brand-logo-copy {
+    --copy-paper-left: -1.5549709rem;
+    --copy-paper-top: -1.1145175rem;
+    --copy-paper-width: 39.6225562rem;
+    --copy-paper-height: calc(23.5508735rem + max(0px, 34px - 3.12rem));
+    --copy-paper-color: var(--logo-paper, #ffffff);
+  }
+  .brand-type > div:first-child {
+    --copy-paper-left: -1.7605969rem;
+    --copy-paper-top: 2.0221922rem;
+    --copy-paper-width: 39.9413374rem;
+    --copy-paper-height: 16.9209547rem;
+    --copy-paper-color: #ffffff;
+  }
+  .palette-copy {
+    --copy-paper-left: -1.56rem;
+    --copy-paper-top: -1.1696111rem;
+    --copy-paper-width: 39.3110753rem;
+    --copy-paper-height: 27.6110753rem;
+    --copy-paper-color: var(--palette-paper, #fc6e6b);
+  }
+}

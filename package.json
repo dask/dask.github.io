@@ -1,0 +1,32 @@
+{
+  "name": "dask-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "node scripts/test.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:redirects": "node scripts/redirect-checks.mjs",
+    "test:static": "node scripts/static-checks.mjs",
+    "check": "npm run format:check && npm run build && npm run test:static && npm test && npm run test:redirects && npm run test:readthedocs && npm run test:lottie",
+    "test:readthedocs": "node scripts/readthedocs-checks.mjs",
+    "test:lottie": "node scripts/lottie-checks.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.12",
+    "lottie-web": "5.13.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "prettier": "^3.10.1",
+    "prettier-plugin-astro": "^1.1.2"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

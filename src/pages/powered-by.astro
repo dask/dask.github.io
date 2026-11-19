@@ -1,0 +1,109 @@
+---
+import Site from '../layouts/Site.astro';
+import '../styles/powered-by.css';
+import '../styles/organizations.css';
+import Hero from '../components/Hero.astro';
+import { asset, supporters, companies, projects } from '../data/site';
+---
+
+<Site title="Dask | Powered By">
+  <Hero title="Powered by" art="dask-powered-by.svg">
+    <p>
+      Dask is an open-source project, which means there are a lot of people we’d
+      like to thank from code contributors to corporate support to the projects
+      using Dask. And, as a successful open-source project, there are some stats
+      to crow about, too. Collectively, maintained by hundreds of open source
+      contributors across dozens of companies.
+    </p>
+  </Hero>
+  <section class="sponsors light-grid large-grid">
+    <div class="sponsors-intro">
+      <div>
+        <h2 class="medium-title">Dask is supported by:</h2>
+        <a class="text-link" href="#">
+          Add us to Dask support
+        </a>
+      </div>
+    </div>
+    <div class="sponsor-grid">
+      {supporters.map((s) => (
+        <a href={s.href} class="sponsor-card">
+          <div class="sponsor-media">
+            <img src={asset(s.image)} alt={s.name} />
+          </div>
+          <div class="sponsor-divider" aria-hidden="true"></div>
+          <div class="sponsor-copy">
+            <h3>{s.name}</h3>
+            <p>{s.text}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+  <section class="org-section light-grid large-grid">
+    <div class="org-intro">
+      <h2 class="medium-title">
+        Companies <br />
+        Powered by Dask
+      </h2>
+      <p>
+        These companies are part of the larger Dask community. They’re either
+        well-integrated with Dask or use Dask to power components of their
+        infrastructure.
+      </p>
+    </div>
+    <div class="logo-grid">
+      {companies.map((name) => (
+        <div class="org-logo">
+          <div class="org-logo-media">
+            <img src={asset(name + '.png')} alt={name.replaceAll('-', ' ')} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="org-section projects light-grid large-grid">
+    <div class="org-intro">
+      <div class="org-copy">
+        <h2 class="medium-title">Projects Powered by Dask</h2>
+        <p>
+          These software projects are part of the larger Dask community. They’re
+          either well-integrated with Dask or use Dask to power components of
+          their infrastructure.
+        </p>
+      </div>
+    </div>
+    <div class="logo-grid">
+      {projects.map((name) => (
+        <div class="org-logo">
+          <div class="org-logo-media">
+            <img src={asset(name + '.png')} alt={name.replaceAll('-', ' ')} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="metrics light-grid">
+    <h2 class="medium-title">Dask Adoption Metrics</h2>
+    <div class="metric">
+      <strong>6,049,226*</strong>
+      <div>Monthly downloads</div>
+      <small>*Mostly bots</small>
+    </div>
+    <div class="metric">
+      <strong>Big Data Tools*</strong>
+      <small>*Python 2021 Developers Survey</small>
+      <a
+        class="text-link"
+        href="https://lp.jetbrains.com/python-developers-survey-2021/#FrameworksLibraries"
+      >
+        See Python Developers Survey
+      </a>
+    </div>
+    <img
+      class="adoption-chart"
+      src={asset('dask-chart-2.svg')}
+      alt="Python Developers Survey 2021: use of big-data frameworks, with Dask third after Apache Spark and Apache Hadoop"
+    />
+  </section>
+</Site>

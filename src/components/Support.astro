@@ -1,0 +1,43 @@
+---
+import '../styles/support.css';
+import { asset, supporters } from '../data/site';
+const { more = false } = Astro.props;
+const logos = [
+  ...supporters.slice(0, 2),
+  {
+    name: 'Quansight',
+    image: 'Quansight-01-01.svg',
+    href: 'http://quansight.com/',
+  },
+];
+---
+
+<section class="support light-grid">
+  <div class="support-copy">
+    <h2>{more ? 'Get More Help' : 'Get Paid Support'}</h2>
+    {more ? (
+      <p>
+        You can get help by posting questions on the{' '}
+        <a href="https://dask.discourse.group">Dask Discourse</a> forum or on{' '}
+        <a href="https://stackoverflow.com/questions/tagged/dask">
+          Stack Overflow
+        </a>
+        , or you can submit an issue on{' '}
+        <a href="https://github.com/dask/dask/issues">GitHub</a>. You can also
+        get paid support from these organizations:
+      </p>
+    ) : (
+      <p>
+        In addition to the previous options, paid support is available from the
+        following organizations
+      </p>
+    )}
+  </div>
+  <div class="support-logos">
+    {logos.map((l) => (
+      <a href={l.href}>
+        <img src={asset(l.image)} alt={l.name} />
+      </a>
+    ))}
+  </div>
+</section>

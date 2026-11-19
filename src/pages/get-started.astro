@@ -1,0 +1,166 @@
+---
+import Site from '../layouts/Site.astro';
+import '../styles/get-started.css';
+import '../styles/deeper.css';
+import '../styles/learn.css';
+import '../styles/explore.css';
+import Icon from '../components/Icon.astro';
+import Hero from '../components/Hero.astro';
+import Support from '../components/Support.astro';
+import Terminal from '../components/Terminal.astro';
+import { asset, learn, explore, deeper, docs } from '../data/site';
+---
+
+<Site title="Dask | Get Started">
+  <div class="get-started-intro dark-grid">
+    <Hero title="Get Started with Dask" center>
+      <p>Ready to dive in? We’re here to help.</p>
+    </Hero>
+    <section class="install-section dark-grid">
+      <div class="install-copy">
+        <h2 class="medium-title">Install Dask</h2>
+        <p>
+          Dask is included by default in Anaconda. You can also install Dask
+          with Pip, or you have several options for installing from source. You
+          can also use Conda to update Dask or to do a minimal Dask install.
+        </p>
+        <a class="button" href={docs + 'install.html'}>
+          Install Now
+        </a>
+      </div>
+      <Terminal
+        code="$ conda install dask"
+        hero
+        loopCodes={['$ conda install dask', '$ pip install "dask[complete]"']}
+      />
+    </section>
+  </div>
+  <section class="learn-section light-grid">
+    <div class="learn-artwork">
+      <img
+        class="learn-art-top"
+        src={asset('illustration-get-started-top.svg')}
+        alt=""
+      />
+      <img
+        class="learn-art"
+        src={asset('illustration-get-started-middle.svg')}
+        alt=""
+      />
+      <img
+        class="learn-art-bottom"
+        src={asset('illustration-get-started-bottom.svg')}
+        alt=""
+      />
+    </div>
+    <div class="learn-content">
+      <div class="learn-intro">
+        <h2>Learn Your Way Around</h2>
+        <p class="intro">
+          Do you have a few minutes – or a few hours? Either way, we’ve got you
+          covered.
+        </p>
+      </div>
+      <div class="learn-grid">
+        {learn.map(([title, text, label, href]) => (
+          <a href={href} class="learn-card">
+            <div class="learn-copy">
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+            <span class="text-link">{label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="explore-section light-grid large-grid">
+    <div class="explore-intro">
+      <h2>Explore the Possibilities</h2>
+      <p>
+        Dask is a versatile tool that supports a variety of workloads. Here are
+        some resources to help you explore your options and see what’s possible.
+      </p>
+    </div>
+    <div class="explore-tabs" data-tabs>
+      <div class="tablist" role="tablist" aria-label="Explore Dask">
+        {explore.map(([title, text, label, href, icon], i) => (
+          <button
+            id={`explore-tab-${i}`}
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            aria-controls={`explore-panel-${i}`}
+            tabindex={i === 0 ? 0 : -1}
+          >
+            <span class="tab-icon" aria-hidden="true">
+              <Icon name={['ecosystem', 'stories', 'examples'][i]} />
+            </span>
+            <span class="explore-label">{title}</span>
+            {i < 2 && <span class="explore-connector" aria-hidden="true" />}
+          </button>
+        ))}
+      </div>
+      {explore.map(([title, text, label, href], i) => (
+        <div
+          class="explore-panel"
+          id={`explore-panel-${i}`}
+          role="tabpanel"
+          aria-labelledby={`explore-tab-${i}`}
+          hidden={i !== 0}
+        >
+          <div class="explore-card">
+            <h3>{title}</h3>
+            <p>{text}</p>
+            <div class="explore-arrows">
+              {i > 0 && (
+                <button
+                  data-select-tab={i - 1}
+                  aria-label={`Previous exploration: ${explore[i - 1][0]}`}
+                >
+                  <svg viewBox="0 0 30 16" aria-hidden="true">
+                    <path d="M20 2l-6 6 6 6" />
+                  </svg>
+                </button>
+              )}
+              {i < explore.length - 1 && (
+                <button
+                  data-select-tab={i + 1}
+                  aria-label={`Next exploration: ${explore[i + 1][0]}`}
+                >
+                  <svg viewBox="0 0 30 16" aria-hidden="true">
+                    <path d="M10 2l6 6-6 6" />
+                  </svg>
+                </button>
+              )}
+            </div>
+          </div>
+          <a class="button" href={href}>
+            {label}
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="deeper dark-grid">
+    <div class="deeper-upper">
+      <div class="deeper-copy">
+        <h2 class="medium-title">Dig Deeper into Dask</h2>
+        <p>
+          Dask has published extensive resources to help make sure you’re
+          successful. Visit these sites to learn more:
+        </p>
+      </div>
+      <div class="deeper-art">
+        <img src={asset('illustration-home-stay-connected.svg')} alt="" />
+      </div>
+    </div>
+    <div class="deeper-links">
+      {deeper.map(([label, href]) => (
+        <div>
+          <a href={href}>{label}</a>
+        </div>
+      ))}
+    </div>
+  </section>
+  <Support more />
+</Site>

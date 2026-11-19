@@ -1,0 +1,24 @@
+---
+import { highlightedCode } from '../utils/code';
+const {
+  code = '',
+  light = false,
+  install = false,
+  hero = false,
+  loopCodes,
+} = Astro.props;
+---
+
+<div
+  class:list={['terminal', { light, install, hero }]}
+  data-loop-codes={loopCodes ? JSON.stringify(loopCodes) : undefined}
+>
+  <div class="window-bar">
+    <i></i>
+    <i></i>
+    <i></i>
+  </div>
+  <div class="terminal-body">
+    <pre><code set:html={highlightedCode(code)}/></pre>
+  </div>
+</div>

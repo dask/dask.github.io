@@ -1,0 +1,48 @@
+---
+import Site from '../layouts/Site.astro';
+import Hero from '../components/Hero.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Site title="Dask | Page not available">
+  <Hero title="Page not available" />
+  <section class="unavailable light-grid">
+    <h2>We couldn’t find that page.</h2>
+    <p>
+      Check the address, return to the core Dask site, or visit the{' '}
+      <a class="text-link" href="https://blog.dask.org/">
+        Dask blog
+      </a>{' '}
+      for blog posts and events.
+    </p>
+    <p>
+      <a class="text-link" href={`${base}/`}>
+        Return to Dask home
+      </a>{' '}
+      or{' '}
+      <a class="text-link" href={`${base}/get-started`}>
+        get started with Dask
+      </a>
+      .
+    </p>
+  </section>
+  <script>
+    import { excludedDestination } from '../lib/redirects';
+    const destination = excludedDestination(
+      window.location.pathname,
+      import.meta.env.BASE_URL,
+    );
+    if (destination) window.location.replace(destination);
+  </script>
+</Site>
+<style>
+  .unavailable {
+    padding: 100px 8vw;
+    min-height: 400px;
+  }
+  .unavailable h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+</style>
