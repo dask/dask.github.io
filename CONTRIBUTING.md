@@ -6,7 +6,10 @@ https://docs.dask.org/en/latest/develop.html.
 
 For website changes, use Node.js 24, install dependencies with `npm ci`,
 install Chromium with `npx playwright install --with-deps chromium`, and run
-`npm run check`.
+`npm run check`. For a focused run, build once with `npm run build`, then use
+`npm test -- tests/<name>.spec.mjs`. The runner serves the production build and
+a Read the Docs mount on local, ephemeral ports; artifacts from failed tests
+are written under `evidence/playwright/`.
 Keep route data and shared Astro components DRY; use native browser behavior,
 not Webflow/jQuery libraries. Commit the lockfile with dependency changes.
 Run `npm run format` before submitting a PR. Include reproducible test evidence

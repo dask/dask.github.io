@@ -1,7 +1,6 @@
 package-lock.json
 public/
 evidence/
-tests/fixtures/
 node_modules/
 dist/
 .astro/
